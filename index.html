@@ -10,7 +10,7 @@
   MODULE — MANAGER SES COLLABORATEURS EN TANT QU'ÉLU
   Congrès de la Nouvelle-Calédonie × IFAP — mandature 2026-2031
   Référence d’origine V10 — 24 août 2026.
-  COPIE DE TRAVAIL — ÉTAPE 9C — 3 septembre 2026.
+  CANDIDAT UX18G — embellissement visuel + plan d’action imprimable — 14 septembre 2026.
   Lot 9C : identité pédagogique, grammaire UX et accès aux ressources
   Marie-Noëlle, sans modification du noyau de navigation.
   Empreinte SHA-256 de l’index de référence :
@@ -3255,7 +3255,598 @@ body.mgt-cloture-active .g-page{
 .mgt-defi-accueil-vignette .mgt-defi-sceau,.mgt-page-resultat .mgt-defi-sceau{background:var(--seq-accent,var(--bleu-nuit));border-bottom-color:var(--seq-ink,var(--cnc-or))}
 .mgt-page-resultat{border-top:7px solid var(--seq-accent,var(--bleu-nuit))}
 @media(max-width:760px){.mgt-collab-medallion{float:none;margin:0 0 14px}.mgt-reference-visible,.mgt-seq-recap,.mgt-bilan-visible{padding:15px}}
+
+
+/* ===== UX18G — embellissement visuel + plan d’action imprimable ===== */
+body{
+  background:
+    radial-gradient(circle at 88% 8%, rgba(226,184,78,.10), transparent 25%),
+    radial-gradient(circle at 10% 18%, rgba(64,111,130,.08), transparent 28%),
+    linear-gradient(180deg,#f7f9fa 0%,#eef3f5 100%);
+}
+.g-page{padding-top:30px}
+.g-contenu{position:relative}
+.panel.actif{
+  border-radius:26px;
+}
+.panel[id^="mod-s"].actif{
+  overflow:visible;
+  padding:26px 28px 30px;
+  border:1px solid color-mix(in srgb,var(--seq-accent,#58788F) 18%,#d9e1e5);
+  background:
+    radial-gradient(circle at 95% 2%, color-mix(in srgb,var(--seq-soft,#EAF1F5) 75%,transparent), transparent 29%),
+    linear-gradient(180deg,color-mix(in srgb,var(--seq-soft,#EAF1F5) 42%,#fff) 0,#fff 285px);
+  box-shadow:0 16px 42px rgba(31,52,68,.09);
+}
+.panel[id^="mod-s"].actif::after{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:6px;
+  border-radius:26px 0 0 26px;
+  background:linear-gradient(180deg,var(--seq-accent),color-mix(in srgb,var(--seq-accent) 28%,transparent));
+  pointer-events:none;
+}
+.panel[id^="mod-s"] .mgt-seq-repere{
+  position:relative;
+  margin:0 0 20px;
+  padding:22px 24px 20px;
+  border:1px solid rgba(255,255,255,.85);
+  border-radius:22px;
+  background:rgba(255,255,255,.88);
+  box-shadow:0 10px 28px rgba(31,52,68,.07);
+  backdrop-filter:blur(7px);
+}
+.panel[id^="mod-s"] .mgt-seq-repere::after{
+  content:"";
+  position:absolute;
+  right:18px;
+  bottom:15px;
+  width:64px;
+  height:64px;
+  border-radius:50%;
+  background:radial-gradient(circle,var(--seq-soft) 0 42%,transparent 44%);
+  opacity:.8;
+  pointer-events:none;
+}
+.panel[id^="mod-s"] .mgt-seq-repere h1{
+  max-width:790px;
+  font-size:clamp(30px,4vw,43px);
+  line-height:1.06;
+  letter-spacing:-.02em;
+}
+.panel[id^="mod-s"] .mgt-seq-meta span{
+  border:1px solid color-mix(in srgb,var(--seq-accent) 24%,transparent);
+  background:var(--seq-soft);
+  color:var(--seq-ink);
+}
+.mgt-collab-medallion{
+  position:relative;
+  z-index:4;
+  gap:10px;
+  margin:2px 0 14px 20px;
+  padding:7px 14px 7px 7px;
+  border:0;
+  background:#fff;
+  box-shadow:0 10px 25px rgba(31,52,68,.13);
+  font-size:13px;
+  letter-spacing:.01em;
+}
+.mgt-collab-medallion img{
+  width:58px;
+  height:58px;
+  border:3px solid var(--seq-soft,#EAF1F5);
+  box-shadow:0 0 0 2px var(--seq-accent,#58788F);
+}
+.mgt-collab-medallion span::before{
+  content:"Avec ";
+  font-weight:500;
+  color:var(--gris-doux);
+}
+.mgt-activite-type{
+  display:inline-flex!important;
+  align-items:center;
+  gap:8px;
+  margin:4px 0 13px;
+  padding:7px 12px!important;
+  border:1px solid color-mix(in srgb,var(--seq-accent,#58788F) 22%,transparent)!important;
+  border-radius:999px!important;
+  background:var(--seq-soft,#EAF1F5)!important;
+  color:var(--seq-ink,#304D61)!important;
+  font-size:12px!important;
+  font-weight:850!important;
+  letter-spacing:.02em;
+  text-transform:none!important;
+}
+.mgt-activite-type::before{content:"✦";color:var(--seq-accent,#58788F);font-size:13px}
+.panel[id^="mod-s"] .mgt-situation-titre{
+  margin-top:2px;
+  font-size:clamp(24px,3vw,31px);
+}
+.panel[id^="mod-s"] .g-apport,
+.panel[id^="mod-s"] .g-consigne,
+.panel[id^="mod-s"] .encadre,
+.panel[id^="mod-s"] .mgt-pause,
+.panel[id^="mod-s"] .mgt-guidee{
+  border-radius:18px;
+  box-shadow:0 6px 18px rgba(31,52,68,.045);
+}
+.panel[id^="mod-s"] .g-apport{
+  border-color:color-mix(in srgb,var(--seq-accent,#58788F) 18%,var(--bordure));
+}
+.panel[id^="mod-s"] .g-consigne{
+  position:relative;
+  overflow:hidden;
+  border-left:5px solid var(--seq-accent,#58788F);
+  background:linear-gradient(135deg,var(--seq-soft,#EAF1F5),#fff 72%);
+}
+.panel[id^="mod-s"] .g-consigne::after{
+  content:"";
+  position:absolute;
+  right:-22px;
+  top:-24px;
+  width:82px;
+  height:82px;
+  border-radius:50%;
+  background:color-mix(in srgb,var(--seq-accent,#58788F) 10%,transparent);
+}
+.mgt-reflexion-card{
+  border-top:4px solid var(--seq-accent,#58788F)!important;
+  border-radius:16px!important;
+  box-shadow:0 5px 15px rgba(31,52,68,.045);
+}
+.mgt-reflexion-card > strong{
+  display:grid;
+  place-items:center;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:var(--seq-accent,#58788F);
+  color:#fff;
+}
+.mgt-guide-card{
+  border-radius:22px;
+  background:linear-gradient(135deg,var(--bleu-nuit),color-mix(in srgb,var(--seq-ink,#304D61) 82%,#233948));
+  box-shadow:0 14px 30px rgba(31,52,68,.16);
+}
+.mgt-guide-card img{
+  width:124px;
+  height:142px;
+  filter:drop-shadow(0 8px 10px rgba(0,0,0,.16));
+}
+.mgt-cas-intro,
+.mgt-conv-intro{
+  border-radius:22px!important;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(31,52,68,.08);
+}
+.mgt-cards > article,
+.mgt-cards > button,
+.mgt-cards .g-carte{
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+.mgt-cards > article:hover,
+.mgt-cards > button:hover,
+.mgt-cards .g-carte:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(31,52,68,.10);
+}
+
+/* Accueil et clôture : davantage de relief sans changer les contenus */
+#g-contrat.actif,#g-fin.actif{
+  padding:28px;
+  border:1px solid #dce5e9;
+  background:linear-gradient(180deg,#fff,#fbfcfd);
+  box-shadow:0 16px 42px rgba(31,52,68,.08);
+}
+#g-fin .mgt-plan-preview-ux7{
+  border:1px solid rgba(59,105,126,.18);
+  background:linear-gradient(145deg,#edf5f6,#fff 72%);
+  box-shadow:0 12px 28px rgba(31,52,68,.08);
+}
+#g-fin #mgt-feuille-contenu{
+  border:1px solid #dde7ea;
+  box-shadow:0 8px 22px rgba(31,52,68,.05);
+}
+/* Le gabarit historique masque .mgt-plan-intro hors impression.
+   UX18G réutilise cette classe pour l’aperçu final : on la rend visible
+   uniquement dans la zone d’aperçu afin de ne pas modifier les anciens écrans. */
+#g-fin #mgt-feuille-contenu .mgt-plan-intro{
+  display:flex;
+  flex-direction:column;
+  padding:22px;
+  border-radius:16px;
+  background:#fff;
+}
+#g-fin #mgt-feuille-contenu .mgt-plan-print-section{
+  margin:12px 0 0;
+  padding:13px 14px;
+  border:1px solid #dce5e9;
+  border-radius:12px;
+  background:#fafcfd;
+}
+#g-fin #mgt-feuille-contenu .mgt-plan-print-priorite{
+  border-left:5px solid var(--cnc-or);
+  background:#fff9e8;
+}
+#g-fin #mgt-feuille-contenu .mgt-plan-repere{
+  margin-top:14px;
+  padding:12px 14px;
+  border-radius:12px;
+  background:#eaf3f4;
+}
+#g-fin #mgt-feuille-contenu .mgt-plan-pied{
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:16px;
+  padding-top:10px;
+  border-top:1px solid #dce5e9;
+  color:#6e7f8a;
+  font-size:11px;
+}
+.mgt-print-help{
+  display:flex;
+  align-items:flex-start;
+  gap:9px;
+  margin:12px 0 0;
+  padding:11px 13px;
+  border-radius:12px;
+  background:#fff7df;
+  color:#5a4a24;
+  font-size:13px;
+  line-height:1.4;
+}
+.mgt-print-help::before{content:"🖨️";font-size:18px;line-height:1.1}
+#mgt-btn-imprimer{
+  position:relative;
+  padding-left:46px;
+  box-shadow:0 9px 22px rgba(31,52,68,.15);
+}
+#mgt-btn-imprimer::before{
+  content:"↓";
+  position:absolute;
+  left:17px;
+  top:50%;
+  transform:translateY(-50%);
+  display:grid;
+  place-items:center;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  background:rgba(255,255,255,.18);
+  font-size:15px;
+}
+
+@media(max-width:860px){
+  .panel[id^="mod-s"].actif{padding:20px 18px 26px;border-radius:20px}
+  .panel[id^="mod-s"].actif::after{width:4px;border-radius:20px 0 0 20px}
+  .panel[id^="mod-s"] .mgt-seq-repere{padding:18px 18px 17px}
+  .mgt-collab-medallion{float:none;margin:0 0 14px 0;width:max-content;max-width:100%}
+  .mgt-collab-medallion img{width:50px;height:50px}
+  #g-contrat.actif,#g-fin.actif{padding:20px 18px;border-radius:20px}
+}
+@media(max-width:560px){
+  .g-page{padding-left:10px;padding-right:10px}
+  .panel[id^="mod-s"].actif{padding:17px 14px 22px}
+  .panel[id^="mod-s"] .mgt-seq-repere h1{font-size:31px}
+  .mgt-collab-medallion{font-size:12.5px}
+  .mgt-collab-medallion img{width:46px;height:46px}
+  .mgt-guide-card{grid-template-columns:82px 1fr;padding:14px}
+  .mgt-guide-card img{width:82px;height:104px}
+  #mgt-btn-imprimer{width:100%;padding-left:42px}
+}
+
 </style>
+
+<style id="ux18h-high-end">
+/* =====================================================================
+   UX18H — refonte visuelle contrôlée "institutionnelle éditoriale premium"
+   Aucun contenu pédagogique, moteur de quiz/simulateur/radar ou tracking modifié.
+   ===================================================================== */
+:root{
+  --police:"Lato","Segoe UI",Arial,sans-serif;
+  --poids-normal:400;
+  --poids-medium:600;
+  --poids-fort:700;
+  --poids-noir:900;
+  --mesure:64ch;
+  --r-xs:6px;
+  --r-sm:8px;
+  --r-md:12px;
+  --r-lg:16px;
+  --surface:#FFFFFF;
+  --surface-soft:#F4F7F8;
+  --ink:#243746;
+  --muted:#657783;
+  --line:#DDE5E9;
+  --shadow-soft:0 10px 28px rgba(31,52,68,.07);
+}
+html{scroll-behavior:smooth}
+body{
+  background:#F4F7F8!important;
+  color:var(--ink);
+  font-family:var(--police);
+  font-feature-settings:"kern" 1,"liga" 1;
+  text-rendering:optimizeLegibility;
+}
+h1,h2,h3{letter-spacing:-.018em;text-wrap:balance}
+h1{font-weight:900;line-height:1.05}
+h2{font-weight:800;line-height:1.12}
+h3{font-weight:700;line-height:1.2}
+p,.chapo{max-width:var(--mesure)}
+.eyebrow{letter-spacing:.105em;font-weight:800}
+
+/* Chrome : plus fin, moins "outil" */
+.g-chrome{box-shadow:0 1px 0 rgba(255,255,255,.05),0 5px 16px rgba(31,52,68,.08)}
+.g-chrome-inner{padding:11px 22px;gap:12px}
+.g-chrome .g-titre{font-weight:700;letter-spacing:-.01em}
+.g-chrome-btn{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:8px;
+  font-weight:700;
+  transition:background-color 160ms ease,border-color 160ms ease;
+}
+.g-chrome-btn:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.38)}
+#g-btn-acces::before,#g-btn-plein-ecran::before,#mgt-btn-imprimer::before,.mgt-print-help::before{
+  content:"";display:block;flex:none;background-repeat:no-repeat;background-position:center;background-size:contain;
+}
+#g-btn-acces::before{width:17px;height:17px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 4.5 13H11l-1 9L19.5 11H13l0-9Z'/%3E%3C/svg%3E")}
+#g-btn-plein-ecran::before{width:17px;height:17px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round'%3E%3Cpath d='M8 3H3v5M16 3h5v5M3 16v5h5M21 16v5h-5'/%3E%3C/svg%3E")}
+.g-progression{height:4px}
+.hero::after{display:none!important}
+.hero{border-radius:12px!important;box-shadow:none!important}
+
+/* Châssis éditorial */
+.g-page{max-width:1500px;padding:30px 28px 112px}
+.g-layout{grid-template-columns:228px minmax(0,1040px);gap:46px;justify-content:center}
+.g-contenu{max-width:1040px}
+.g-menu{
+  top:82px;
+  padding:4px 0 16px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+}
+.g-menu-head{margin:0 10px 15px 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.g-menu-titre{font-size:16px;font-weight:800}
+.g-menu-pct{padding:4px 8px;background:#E7EDF0;border-radius:999px;font-size:11.5px}
+.g-menu li{margin-bottom:2px}
+.g-menu a{min-height:44px;padding:8px 10px 8px 14px;border-radius:6px;background:transparent;transition:background-color 140ms ease,color 140ms ease}
+.g-menu a:hover{background:#EAF0F2}
+.g-menu .g-menu-kicker{font-size:10px;letter-spacing:.07em}
+.g-menu .g-menu-libelle{font-size:13px;font-weight:650}
+.g-menu li.est-actif a{background:transparent;color:var(--bleu-nuit);box-shadow:inset 3px 0 0 var(--cnc-or)}
+.g-menu li.est-actif .g-menu-kicker,.g-menu li.est-actif .g-menu-libelle{color:var(--bleu-nuit)}
+.g-menu li.est-actif .g-menu-statut{color:var(--or-texte)}
+.g-menu-outils{margin:16px 10px 0 14px;padding-top:13px}
+.g-menu-outils a{border:0;border-radius:6px;background:#EAF0F2;padding:9px 10px}
+
+/* Navigation basse : fine et calme */
+.g-nav-bas{border-top:1px solid #E2E8EB;box-shadow:0 -1px 8px rgba(30,45,58,.05);padding-bottom:env(safe-area-inset-bottom)}
+.g-nav-bas-inner{max-width:1040px;padding:9px 18px}
+.g-nav-bas .g-position{font-size:12.5px}
+
+/* Boutons : trois niveaux, pas de pilules */
+.btn{min-height:44px;border-radius:8px;padding:12px 19px;font-weight:700;transition:background-color 160ms ease,border-color 160ms ease,color 160ms ease,transform 120ms ease,box-shadow 160ms ease}
+.btn:active{transform:translateY(1px)}
+.btn-primaire{box-shadow:0 5px 14px rgba(31,52,68,.10)}
+.btn-accent{box-shadow:none}
+.btn-secondaire{border-width:1px}
+
+/* Accueil : composition éditoriale, sans grande carte */
+#g-contrat.actif{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.22fr) minmax(330px,.78fr);
+  gap:34px 54px;
+  align-items:start;
+  padding:6px 0 34px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+#g-contrat>.mgt-accueil-hero{grid-column:1;display:block;margin:0;min-width:0}
+#g-contrat>.mgt-personnages{grid-column:2;grid-row:1;margin:0}
+#g-contrat>.mgt-accueil-blocs,
+#g-contrat>.mgt-defis-accueil,
+#g-contrat>.g-accueil-detail,
+#g-contrat>.mgt-guide-v9{grid-column:1/-1}
+.mgt-accueil-titre{margin-bottom:19px}
+.mgt-accueil-titre h1{
+  max-width:820px;
+  margin:8px 0 16px;
+  font-size:clamp(46px,5.2vw,68px);
+  line-height:.98;
+  letter-spacing:-.042em;
+}
+.mgt-promesse{max-width:720px!important;margin:0 0 15px;font-size:clamp(21px,2.2vw,28px);line-height:1.27;letter-spacing:-.018em}
+.mgt-duree-pilule{margin:0 0 18px;padding:7px 0;border-radius:0;background:transparent;color:#6B4E00;font-size:13.5px}
+.mgt-duree-pilule svg{width:17px;height:17px}
+.mgt-hero-actions{margin:3px 0 27px}.mgt-hero-actions .btn{min-width:154px}
+.mgt-pourquoi{margin:24px 0 0;padding:19px 0 18px 22px;border-left:3px solid var(--mgt-accent-1);border-radius:0;background:transparent}
+.mgt-pourquoi h2{font-size:22px;margin-bottom:10px}
+.mgt-pourquoi p{max-width:690px}
+.mgt-accueil-acquis{margin:28px 0 0;padding:23px 0 0;border:0;border-top:1px solid var(--line);border-radius:0;background:transparent;box-shadow:none;max-width:760px!important}
+.mgt-accueil-acquis h2{font-size:24px;margin-bottom:15px}
+.mgt-accueil-acquis ul{grid-template-columns:1fr 1fr;gap:0 28px}
+.mgt-accueil-acquis li{min-height:70px;padding:10px 0 14px 32px;border-radius:0;background:transparent!important;border-bottom:1px solid var(--line)}
+.mgt-accueil-acquis li::before{left:0;top:11px;width:19px;height:19px;background:var(--bleu-nuit);font-size:11px}
+.mgt-parcours-clin{margin:30px 0 0;padding-top:22px;border-top:1px solid var(--line)}
+.mgt-parcours-clin h2{font-size:20px;margin-bottom:15px}
+.mgt-chemin{counter-reset:mgt-chemin;display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:0!important;margin:0!important}
+.mgt-chemin span{counter-increment:mgt-chemin;position:relative;display:block!important;min-height:78px;padding:31px 16px 13px 0!important;border:0!important;border-top:1px solid #BBC8CE!important;border-radius:0!important;background:transparent!important;font-size:12.5px!important;line-height:1.28;color:var(--muted)!important}
+.mgt-chemin span::before{content:counter(mgt-chemin,decimal-leading-zero);position:absolute;left:0;top:8px;color:var(--bleu-nuit);font-size:11px;font-weight:900;letter-spacing:.08em}
+.mgt-chemin span::after{content:"";position:absolute;left:0;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--cnc-or)}
+.mgt-chemin i{display:none!important}
+
+/* Accueil : trois personnes = une vraie composition visuelle */
+#g-contrat>.mgt-personnages{padding:24px 22px 22px;border-radius:var(--r-lg);background:#E9EFF1;overflow:hidden;position:relative}
+#g-contrat>.mgt-personnages::before{content:"";position:absolute;right:-70px;top:-95px;width:230px;height:230px;border-radius:50%;background:rgba(255,255,255,.58);pointer-events:none}
+.mgt-personnages-entete{display:block;margin:0 0 18px;position:relative;z-index:1}
+.mgt-personnages-entete h2{max-width:310px;font-size:23px;line-height:1.06}
+.mgt-personnages-entete p{max-width:310px;margin-top:8px;font-size:13px;line-height:1.42}
+#g-contrat .mgt-personnages-grid{grid-template-columns:repeat(3,1fr);gap:9px;align-items:start;position:relative;z-index:1}
+#g-contrat .mgt-personnage{display:block;padding:0;border:0;border-radius:0;background:transparent;box-shadow:none;min-width:0}
+#g-contrat .mgt-personnage:nth-child(2){padding-top:23px}
+#g-contrat .mgt-personnage img{width:100%;height:176px;display:block;object-fit:cover;object-position:center 20%;border:0;border-radius:10px;background:#DDE6E9;filter:saturate(.92) contrast(1.02)}
+#g-contrat .mgt-personnage h3{margin:9px 0 3px;font-size:16px}
+#g-contrat .mgt-personnage p{font-size:11.5px;line-height:1.36;color:#5B6D78}
+
+/* Accueil : sortie concrète et défis moins "cards" */
+.mgt-accueil-blocs-simple{margin:14px 0 0;padding-top:25px;border-top:1px solid var(--line)}
+.mgt-accueil-blocs-simple .mgt-engagements-grid{grid-template-columns:repeat(4,1fr);gap:0 26px}
+.mgt-accueil-blocs-simple .mgt-engagement{padding:13px 0 16px 31px;border:0;border-bottom:1px solid var(--line);border-radius:0;background:transparent;position:relative}
+.mgt-accueil-blocs-simple .mgt-engagement::before{content:"";position:absolute;left:0;top:16px;width:9px;height:9px;border:2px solid var(--cnc-or);border-radius:50%}
+.mgt-defis-accueil{margin:8px 0 0!important;padding:26px 0!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;background:transparent!important}
+.mgt-defis-compacts{grid-template-columns:repeat(4,1fr);gap:10px 20px}
+.mgt-defi-accueil-vignette{min-height:86px;padding:10px 0;border:0;border-top:2px solid var(--seq-accent,var(--bleu-nuit));border-radius:0;background:transparent;box-shadow:none}
+.mgt-defi-accueil-vignette img{width:58px;height:64px;border-radius:8px}
+.mgt-guide-v9{margin:16px 0 0;padding:20px 24px;border:0;border-left:3px solid var(--cnc-or);border-radius:0;background:#EDF2F3;box-shadow:none}
+.mgt-guide-v9 img{width:108px;height:132px}
+.mgt-guide-v9.sans-image,.mgt-guide-card.sans-image{grid-template-columns:1fr!important}
+.mgt-guide-v9.sans-image img,.mgt-guide-card.sans-image img{display:none!important}
+.g-accueil-detail{margin:8px 0;border:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:0;background:transparent}
+.g-accueil-detail summary{padding:15px 2px}.g-accueil-detail summary:hover{background:transparent}
+
+/* Séquences : la page remplace la carte */
+.panel[id^="mod-s"].actif,
+.mgt-page-resultat.actif{
+  overflow:visible;
+  padding:0 0 36px!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.panel[id^="mod-s"].actif::after{display:none!important}
+.panel[id^="mod-s"] .mgt-seq-repere{
+  margin:0 0 34px;
+  padding:27px 0 24px 26px;
+  border:0;
+  border-left:4px solid var(--seq-accent);
+  border-radius:0;
+  background:linear-gradient(90deg,color-mix(in srgb,var(--seq-soft) 72%,#fff) 0,transparent 74%);
+  box-shadow:none;
+}
+.panel[id^="mod-s"] .mgt-seq-repere h1{max-width:780px;font-size:clamp(32px,4vw,46px);line-height:1.03;letter-spacing:-.03em}
+.panel[id^="mod-s"] .mgt-seq-repere p{max-width:720px;font-size:15.5px;line-height:1.5}
+.mgt-seq-meta{font-size:10.5px;letter-spacing:.085em}
+.mgt-activite-type{font-size:10.5px;letter-spacing:.09em}
+.mgt-activite-type::before{content:""!important;display:inline-block;width:7px;height:7px;margin-right:8px;border-radius:50%;background:var(--seq-accent,#58788F);vertical-align:1px}
+.mgt-situation-titre{font-size:clamp(27px,3.2vw,38px);line-height:1.06;letter-spacing:-.025em}
+
+/* Présence narrative des collaborateurs */
+.mgt-collab-medallion{float:right;gap:10px;margin:0 0 18px 24px;padding:5px 12px 5px 5px;border:0;border-radius:999px;background:var(--seq-soft);box-shadow:none;font-size:11.5px;letter-spacing:.01em}
+.mgt-collab-medallion img{width:54px;height:54px;border:0!important;box-shadow:none!important}
+.mgt-cas-intro,.mgt-conv-intro{border-radius:var(--r-md)!important;box-shadow:none!important;border:1px solid color-mix(in srgb,var(--seq-accent,#58788F) 19%,#DDE5E9)!important}
+
+/* Apports = compositions ouvertes ; actions = surfaces explicites */
+.panel[id^="mod-s"] .g-apport,
+.g-apport{
+  margin:25px 0;
+  padding:3px 0 3px 20px;
+  border:0!important;
+  border-left:3px solid color-mix(in srgb,var(--seq-accent,#58788F) 55%,#C9D5DB)!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+.g-consigne{margin:24px 0;padding:16px 18px;border:1px solid color-mix(in srgb,var(--seq-accent,#B68B00) 24%,#DDE5E9)!important;border-left:4px solid var(--seq-accent,#B68B00)!important;border-radius:var(--r-md)!important;background:#fff!important;box-shadow:none!important}
+.panel[id^="mod-s"] .g-consigne::after{display:none!important}
+.g-guidance{border:0;border-left:2px solid #A9BAC3;border-radius:0;background:transparent;padding:4px 0 4px 17px}
+.mgt-reflexion-card,.mgt-checklist-card{box-shadow:none!important}
+div.mgt-reflexion-card{padding:18px 0!important;border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;background:transparent!important}
+label.mgt-reflexion-card,label.mgt-checklist-card{padding:18px!important;border:1px solid #D8E2E6!important;border-top:3px solid var(--seq-accent,#58788F)!important;border-radius:var(--r-md)!important;background:#fff!important;box-shadow:none!important}
+.mgt-reflexion-card>strong{display:block!important;width:auto!important;height:auto!important;border-radius:0!important;background:transparent!important;color:var(--bleu-nuit)!important;font-size:15px}
+textarea,input,select{border-color:#C9D5DB!important;border-radius:8px!important;box-shadow:none!important}
+textarea:focus,input:focus,select:focus{border-color:var(--seq-accent,var(--bleu-nuit))!important;outline:2px solid color-mix(in srgb,var(--seq-accent,var(--bleu-nuit)) 22%,transparent)!important;outline-offset:1px}
+
+/* Guide : grande apparition aux moments clés, signature légère ailleurs */
+.mgt-guide-card{border-radius:var(--r-lg);background:var(--bleu-nuit);box-shadow:0 10px 24px rgba(31,52,68,.11)}
+.mgt-guide-card img{width:114px;height:136px;filter:none}
+.mgt-guidee{margin:22px 0!important;padding:13px 70px 13px 18px!important;border:0!important;border-left:3px solid var(--cnc-or)!important;border-radius:0!important;background:#EDF2F3!important;box-shadow:none!important}
+.mgt-guidee::after{right:12px!important;bottom:8px!important;width:50px!important;height:50px!important;border:0!important;box-shadow:none!important}
+
+/* Cartes et interactions : aucun lift décoratif */
+.mgt-cards>article,.mgt-cards>button,.mgt-cards .g-carte{transition:border-color 160ms ease,background-color 160ms ease,box-shadow 160ms ease!important}
+.mgt-cards>article:hover,.mgt-cards>button:hover,.mgt-cards .g-carte:hover{transform:none!important;box-shadow:none!important}
+.opt,.g-echelle button,.mgt-card,.mgt-priorite-carte{border-radius:var(--r-sm);box-shadow:none;transition:border-color 160ms ease,background-color 160ms ease,color 160ms ease,transform 120ms ease}
+.opt:active,.g-echelle button:active,.mgt-card:active,.mgt-priorite-carte:active{transform:translateY(1px)}
+
+/* Clôture et plan d'action : un document, pas une carte dans une carte */
+#g-fin.actif{padding:0 0 36px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important}
+#g-fin .mgt-plan-preview-ux7{border:0!important;border-top:1px solid var(--line)!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;padding-top:24px!important}
+#g-fin #mgt-feuille-contenu{border:0!important;border-radius:0!important;background:#fff;box-shadow:0 6px 20px rgba(31,52,68,.06)!important}
+#g-fin #mgt-feuille-contenu .mgt-plan-intro{padding:28px 30px!important;border-radius:0!important;background:#fff!important}
+#g-fin #mgt-feuille-contenu .mgt-plan-print-section{margin:0!important;padding:19px 0!important;border:0!important;border-bottom:1px solid #DCE5E9!important;border-radius:0!important;background:transparent!important}
+#g-fin #mgt-feuille-contenu .mgt-plan-print-priorite{margin:20px 0!important;padding:18px 20px!important;border:0!important;border-left:4px solid var(--cnc-or)!important;background:#FFF8E6!important}
+#g-fin #mgt-feuille-contenu .mgt-plan-repere{margin-top:20px;padding:15px 0;border-radius:0;background:transparent;border-top:2px solid #DCE5E9;border-bottom:1px solid #DCE5E9}
+#g-fin #mgt-feuille-contenu .mgt-plan-pied{margin-top:22px}
+.mgt-print-help{position:relative;gap:10px;padding:11px 0;border-radius:0;background:transparent;color:#5F6E77}
+.mgt-print-help::before{width:19px;height:19px;margin-top:1px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2358788F' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2'/%3E%3Cpath d='M6 14h12v7H6z'/%3E%3C/svg%3E")}
+#mgt-btn-imprimer{display:inline-flex;align-items:center;gap:10px;padding-left:18px;box-shadow:none}
+#mgt-btn-imprimer::before{position:static!important;transform:none!important;width:20px!important;height:20px!important;border-radius:0!important;background-color:transparent!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3v12M7 10l5 5 5-5'/%3E%3Cpath d='M5 21h14'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:center!important;background-size:contain!important;font-size:0!important}
+
+/* Focus & mouvement */
+h1[tabindex="-1"]:focus,h2[tabindex="-1"]:focus{outline:none!important;box-shadow:none!important}
+:focus-visible{outline:2px solid var(--bleu-nuit);outline-offset:3px}
+@media (prefers-reduced-motion:no-preference){
+  .panel.actif{animation:ux18h-enter 180ms ease-out}
+  @keyframes ux18h-enter{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+}
+
+/* Responsive : tablette paysage puis portrait */
+@media(max-width:1180px){
+  .g-page{padding-left:20px;padding-right:20px}
+  #g-contrat.actif{grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);gap:30px}
+  .mgt-accueil-titre h1{font-size:clamp(43px,6vw,60px)}
+}
+@media(max-width:900px){
+  #g-contrat.actif{grid-template-columns:1fr;gap:26px}
+  #g-contrat>.mgt-accueil-hero,#g-contrat>.mgt-personnages{grid-column:1;grid-row:auto}
+  #g-contrat>.mgt-personnages{padding:20px}
+  #g-contrat .mgt-personnage:nth-child(2){padding-top:0}
+  #g-contrat .mgt-personnage img{height:190px}
+  .mgt-accueil-acquis ul{grid-template-columns:1fr 1fr}
+  .mgt-chemin{grid-template-columns:repeat(2,1fr)}
+  .mgt-accueil-blocs-simple .mgt-engagements-grid,.mgt-defis-compacts{grid-template-columns:repeat(2,1fr)}
+  .panel[id^="mod-s"] .mgt-seq-repere{padding-left:20px}
+}
+@media(max-width:760px){
+  .g-page{padding:22px 15px 106px}
+  .mgt-accueil-titre h1{font-size:clamp(39px,10.5vw,54px)}
+  .mgt-promesse{font-size:21px}
+  .mgt-accueil-acquis ul{grid-template-columns:1fr}
+  #g-contrat .mgt-personnages-grid{grid-template-columns:repeat(3,1fr)}
+  #g-contrat .mgt-personnage img{height:145px}
+  #g-contrat .mgt-personnage p{display:none}
+  .mgt-chemin{grid-template-columns:1fr 1fr}
+  .mgt-collab-medallion{float:none;margin:0 0 16px;width:max-content;max-width:100%}
+}
+@media(max-width:520px){
+  .g-chrome-inner{padding:9px 12px}
+  .g-chrome-btn{padding:8px 9px;font-size:12px}
+  #g-contrat.actif{padding-top:0!important}
+  .mgt-accueil-titre h1{font-size:39px}
+  #g-contrat>.mgt-personnages{padding:16px}
+  #g-contrat .mgt-personnage img{height:115px}
+  #g-contrat .mgt-personnage h3{font-size:14px}
+  .mgt-chemin{grid-template-columns:1fr}
+  .mgt-chemin span{min-height:60px;padding-bottom:11px!important}
+  .mgt-accueil-blocs-simple .mgt-engagements-grid,.mgt-defis-compacts{grid-template-columns:1fr}
+  .panel[id^="mod-s"] .mgt-seq-repere{padding:20px 0 20px 16px;margin-bottom:26px}
+  .panel[id^="mod-s"] .mgt-seq-repere h1{font-size:31px}
+  #mgt-btn-imprimer{width:100%;justify-content:center;padding-left:18px}
+}
+</style>
+
 </head>
 <body>
 <header class="g-chrome" role="banner">
@@ -3263,8 +3854,8 @@ body.mgt-cloture-active .g-page{
 <p class="g-titre" id="g-titre-module">Titre du module
       <span id="g-sous-titre">Congrès de la Nouvelle-Calédonie × IFAP — mandature 2026-2031</span></p>
 <button aria-expanded="false" class="g-chrome-btn" id="g-btn-menu">Parcours</button>
-<button class="g-chrome-btn" data-ouvrir-modal="g-acces" id="g-btn-acces">⚡ Accès direct</button>
-<button aria-pressed="false" class="g-chrome-btn" hidden="" id="g-btn-plein-ecran">⛶ Plein écran</button>
+<button class="g-chrome-btn" data-ouvrir-modal="g-acces" id="g-btn-acces">Accès direct</button>
+<button aria-pressed="false" class="g-chrome-btn" hidden="" id="g-btn-plein-ecran">Plein écran</button>
 </div>
 <div aria-label="Progression" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="g-progression" role="progressbar">
 <div class="g-avancee" id="g-jauge"></div>
@@ -3297,6 +3888,7 @@ body.mgt-cloture-active .g-page{
 <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v6l4 2"></path></svg>
 <span>Environ 2 h · jusqu’à 2 h 30 en exploration complète</span>
 </div>
+<div class="mgt-hero-actions"><button class="btn btn-accent" data-go="g-pre" data-termine-ecran="">Je commence</button></div>
 <div aria-labelledby="mgt-pourquoi-titre" class="mgt-pourquoi">
 <h2 id="mgt-pourquoi-titre">Donner du cap sans tout contrôler</h2>
 <p><strong>Manager un cabinet, dans le cadre d’un mandat électif, constitue une situation de management à part entière.</strong> Vous exercez une responsabilité humaine dans un environnement exigeant : décisions rapides, exposition médiatique, attentes multiples, temporalité politique.</p>
@@ -3363,7 +3955,7 @@ body.mgt-cloture-active .g-page{
 <img alt="Le guide du parcours, carnet à la main, accueille l’apprenant." src="img/Guide e-learning sur fond transparent.webp"/>
 <div><h2>Votre guide tout au long du parcours</h2><p>Je serai présent aux moments clés pour éclairer un repère, vous inviter à prendre du recul et vous aider à le transposer dans vos situations de management.</p></div>
 </aside>
-<p style="margin-top:20px"><button class="btn btn-accent" data-go="g-pre" data-termine-ecran="">Je commence</button></p>
+
 </section>
 <!-- ============ NOYAU · POSITIONNEMENT D'ENTRÉE (E03) ============ -->
 <section class="panel" data-obligatoire="" data-titre="Positionnement d'entrée" id="g-pre">
@@ -4498,7 +5090,7 @@ body.mgt-cloture-active .g-page{
 <p class="mgt-mini-aide">L’aperçu n’affiche que ce que vous avez réellement renseigné.</p>
 <div id="mgt-feuille-contenu"></div>
 <div class="mgt-plan-preview-actions">
-<button class="btn btn-primaire" id="mgt-btn-imprimer" type="button">Imprimer / enregistrer mon plan en PDF</button>
+<button class="btn btn-primaire" id="mgt-btn-imprimer" type="button">Imprimer / enregistrer mon plan en PDF</button><p class="mgt-print-help">Sur tablette ou ordinateur, le bouton ouvre une version propre du plan puis la fenêtre d’impression. Vous pouvez choisir « Enregistrer au format PDF » si votre appareil le propose.</p>
 <button class="btn btn-secondaire" data-plan-aller="2" type="button">← Modifier mon plan</button>
 </div>
 </div>
@@ -4847,7 +5439,7 @@ function initPleinEcran(){
  function actif(){return document.fullscreenElement||document.webkitFullscreenElement||null}
  function entrer(){cible.requestFullscreen?cible.requestFullscreen():cible.webkitRequestFullscreen()}
  function sortir(){document.exitFullscreen?document.exitFullscreen():(document.webkitExitFullscreen&&document.webkitExitFullscreen())}
- function maj(){var a=!!actif();btn.textContent=a?'⛶ Quitter':'⛶ Plein écran';btn.setAttribute('aria-pressed',a?'true':'false')}
+ function maj(){var a=!!actif();btn.textContent=a?'Quitter':'Plein écran';btn.setAttribute('aria-pressed',a?'true':'false')}
  btn.addEventListener('click',function(){actif()?sortir():entrer()});
  document.addEventListener('fullscreenchange',maj);
  document.addEventListener('webkitfullscreenchange',maj)}
@@ -6423,9 +7015,13 @@ function mgtPlanSection(titre,texte){
  if(!texte)return '';
  return '<section class="mgt-plan-print-section"><h3>'+mgtPlanEchapper(titre)+'</h3><p>'+mgtPlanEchapper(texte)+'</p></section>'
 }
+function mgtImagePlanGuide(){
+ try{return new URL('img/Guide e-learning sur fond transparent.webp',document.baseURI).href}catch(e){return ''}
+}
 function mgtBuildFeuille(){
  var zone=document.getElementById('mgt-feuille-contenu');if(!zone)return;
  var retention=mgtPlanValeur('plan-chemin-surprise'),p=MGT_REPONSES['plan-priorite'];
+ var dateDoc='';try{dateDoc=new Date().toLocaleDateString('fr-FR',{day:'2-digit',month:'2-digit',year:'numeric'})}catch(e){dateDoc=new Date().toLocaleDateString('fr-FR')}
  var engagement=p?mgtPlanValeur('plan-'+p):'';
  var sections='';
  sections+=mgtPlanSection('Ce que je retiens du parcours',retention);
@@ -6441,18 +7037,49 @@ function mgtBuildFeuille(){
  if(!sections)sections='<p class="mgt-note-discrete">Votre aperçu se construira à partir des éléments que vous choisissez de renseigner.</p>';
  zone.innerHTML='<article class="mgt-plan-page-9f mgt-plan-intro">'+
   '<p class="mgt-plan-intro-marque">Congrès de la Nouvelle-Calédonie × IFAP · Mandature 2026-2031</p>'+
-  '<div class="mgt-plan-intro-hero"><div><h1>Mon plan d’action managérial</h1><p>Manager ses collaborateurs en tant qu’élu</p></div><img src="img/Guide e-learning sur fond transparent.webp" alt="Le guide du parcours, carnet à la main."></div>'+
+  '<div class="mgt-plan-intro-hero"><div><h1>Mon plan d’action managérial</h1><p>Manager ses collaborateurs en tant qu’élu</p></div><img src="'+mgtPlanEchapper(mgtImagePlanGuide())+'" alt="" onerror="this.style.display=\'none\'"></div>'+
   sections+
   '<div class="mgt-plan-repere"><strong>Repère à emporter</strong><p>Une intention se rappelle. Un plan se déclenche.</p></div>'+
-  '<footer class="mgt-plan-pied"><span>Plan d’action personnalisé – Manager ses collaborateurs en tant qu’élu</span><span>Document personnel</span></footer></article>'
+  '<footer class="mgt-plan-pied"><span>Plan d’action personnalisé – Manager ses collaborateurs en tant qu’élu</span><span>Document personnel · '+mgtPlanEchapper(dateDoc)+'</span></footer></article>'
 }
 
 mgtBuildRevisions();
 mgtInitChampsPlan();
 mgtBuildFeuille();
 mgtAfficherEtapePlan(1);
+function mgtPlanDocumentImprimable(){
+ mgtBuildFeuille();
+ var source=document.querySelector('#mgt-feuille-contenu .mgt-plan-page-9f');
+ if(!source)return '';
+ var copie=source.cloneNode(true);
+ copie.querySelectorAll('img').forEach(function(img){
+  var src=img.getAttribute('src');
+  if(src){try{img.src=new URL(src,document.baseURI).href}catch(e){}}
+ });
+ var titre='Mon plan d’action managérial';
+ return '<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'+
+  '<title>'+titre+'</title><style>'+ 
+  '@page{size:A4;margin:14mm}*{box-sizing:border-box}body{margin:0;font-family:Lato,Arial,sans-serif;color:#243746;background:#f4f7f8}'+
+  '.mgt-plan-page-9f{width:100%;max-width:800px;min-height:calc(297mm - 28mm);margin:18px auto;padding:18mm 16mm 14mm;background:#fff;border-radius:0;box-shadow:0 5px 20px rgba(31,52,68,.08)}'+
+  '.mgt-plan-intro-marque{margin:0 0 12px;color:#5f7280;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.mgt-plan-intro-hero{display:grid;grid-template-columns:1fr 100px;gap:18px;align-items:center;padding-bottom:16px;border-bottom:4px solid #d7b35a}.mgt-plan-intro-hero h1{margin:0 0 5px;font-size:29px;line-height:1.05;color:#1f3444}.mgt-plan-intro-hero p{margin:0;color:#596d7a}.mgt-plan-intro-hero img{width:94px;height:108px;object-fit:contain}'+
+  '.mgt-plan-print-section{margin:0;padding:17px 0;border:0;border-bottom:1px solid #dce5e9;background:transparent;break-inside:avoid}.mgt-plan-print-section h3{margin:0 0 7px;color:#1f3444;font-size:15px}.mgt-plan-print-section p{margin:0;white-space:pre-wrap;line-height:1.55}.mgt-plan-print-priorite{margin:18px 0;padding:17px 18px;border:0;border-left:4px solid #d7b35a;background:#fff8e6}.mgt-plan-print-priorite h2{margin:0 0 8px;color:#1f3444;font-size:19px}'+
+  '.mgt-plan-repere{margin-top:18px;padding:13px 15px;border-radius:12px;background:#eaf3f4}.mgt-plan-repere strong{color:#244d59}.mgt-plan-repere p{margin:4px 0 0}.mgt-plan-pied{display:flex;justify-content:space-between;gap:14px;margin-top:22px;padding-top:10px;border-top:1px solid #dce5e9;color:#6e7f8a;font-size:10px}'+
+  '.mgt-print-actions{max-width:800px;margin:0 auto 24px;display:flex;gap:10px;justify-content:flex-end}.mgt-print-actions button{border:0;border-radius:10px;padding:11px 15px;font:700 14px Lato,Arial,sans-serif;cursor:pointer}.mgt-print-actions .primary{background:#1f3444;color:#fff}.mgt-print-actions .secondary{background:#fff;color:#1f3444;border:1px solid #cfdade}'+
+  '@media(max-width:700px){body{background:#fff}.mgt-plan-page-9f{margin:0;padding:22px 18px;min-height:0;border-radius:0;box-shadow:none}.mgt-plan-intro-hero{grid-template-columns:1fr 76px}.mgt-plan-intro-hero img{width:72px;height:88px}.mgt-print-actions{padding:10px 14px;position:sticky;bottom:0;background:rgba(255,255,255,.96)}}'+
+  '@media print{body{background:#fff}.mgt-plan-page-9f{margin:0;max-width:none;min-height:auto;padding:0;border-radius:0;box-shadow:none}.mgt-print-actions{display:none!important}}'+
+  '</style></head><body><div class="mgt-print-actions"><button class="secondary" onclick="window.close()">Retour au module</button><button class="primary" onclick="window.print()">Imprimer / enregistrer en PDF</button></div>'+copie.outerHTML+'</body></html>';
+}
+function mgtImprimerPlan(){
+ mgtBuildFeuille();ecrirePersistanceMgt();
+ var html=mgtPlanDocumentImprimable();
+ if(!html){window.print();return}
+ var fenetre=window.open('','_blank');
+ if(!fenetre){window.print();return}
+ fenetre.document.open();fenetre.document.write(html);fenetre.document.close();
+ setTimeout(function(){try{fenetre.focus();fenetre.print()}catch(e){}},420)
+}
 var btnImp=document.getElementById('mgt-btn-imprimer');
-if(btnImp)btnImp.addEventListener('click',function(){mgtBuildFeuille();ecrirePersistanceMgt();window.print()});
+if(btnImp)btnImp.addEventListener('click',mgtImprimerPlan);
 
 /* V9 — suivi ludifié des huit défis, résultats et banque de nouvelles situations. */
 var MGT_DEFIS_ETAT={};
@@ -6862,7 +7489,7 @@ function initialiserAccrocheMgt(){
    sans modification du moteur GABARIT gelé. */
 function renforcerAccessibiliteMgt(){
  var style=document.createElement('style');
- style.textContent='.mgt-skip{position:fixed;left:12px;top:8px;z-index:1000;padding:10px 14px;background:#FFFFFF;color:#2F4354;border:3px solid #2F4354;border-radius:7px;font-weight:600;transform:translateY(-160%)}.mgt-skip:focus{transform:none}';
+ style.textContent='.mgt-skip{position:fixed;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.mgt-skip:focus-visible{width:auto;height:auto;clip:auto;margin:0;left:12px;top:8px;padding:10px 14px;background:#fff;color:#2F4354;border:2px solid #2F4354;border-radius:8px;font-weight:700;z-index:1000}';
  document.head.appendChild(style);
  var skip=document.createElement('a');skip.className='mgt-skip';skip.href='#g-app';skip.textContent='Aller au contenu principal';
  document.body.insertBefore(skip,document.body.firstChild);
@@ -6886,7 +7513,7 @@ function installerGuideMgt(){
  document.querySelectorAll('.panel[data-composant="reponse-ouverte"] .g-consigne,.panel[data-composant="comparaison-reflexive"] .g-consigne').forEach(function(bloc){bloc.classList.add('mgt-guidee','mgt-guide-questionne')});
  document.querySelectorAll('.g-guidance').forEach(function(bloc){bloc.classList.add('mgt-guidee','mgt-guide-alerte')});
  document.querySelectorAll('.mgt-pause').forEach(function(bloc){bloc.classList.add('mgt-guidee','mgt-guide-felicite')});
- document.querySelectorAll('.mgt-guide-card img,.mgt-guide-v9 img').forEach(function(img){img.src='img/Guide e-learning sur fond transparent.webp';img.alt='Le guide du parcours, carnet à la main, accueille l’apprenant.'})
+ document.querySelectorAll('.mgt-guide-card img,.mgt-guide-v9 img').forEach(function(img){img.src='img/Guide e-learning sur fond transparent.webp';img.alt='Le guide du parcours, carnet à la main, accueille l’apprenant.';img.onerror=function(){this.style.display='none';this.removeAttribute('alt');var p=this.closest('.mgt-guide-v9,.mgt-guide-card');if(p)p.classList.add('sans-image')}})
  document.querySelectorAll('.mgt-enjeu-intro img').forEach(function(img){img.alt='Le guide du parcours introduit l’enjeu de la séquence.'})
 }
 
@@ -6953,5 +7580,6 @@ installerGuideMgt();
 
 <!-- UX18D · passe de couverture M6 : MNL-0821 à MNL-0902 vérifiés ; fidélisation 0840-0856 ; restitution 0857-0865 ; essentiels 0896-0901 ; transition 0902 déplacée en S6. -->
 <!-- UX18F : passe corpus M3-M4-M5, repères éditoriaux et contenus experts restaurés sans modification des moteurs -->
+<!-- UX18H_HIGH_END_APPLIED -->
 </body>
 </html>
