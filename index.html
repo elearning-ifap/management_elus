@@ -651,6 +651,9 @@ table.tab td.revele::after{content:none}
 .mgt-bucket{border:2px dashed var(--bordure);border-radius:var(--r-1);padding:12px;min-height:96px;background:var(--page)}
 .mgt-bucket.g-app-actif{border-color:var(--cnc-or-fonce);background:var(--ivoire)}
 .mgt-bucket h4{margin:0 0 8px;font-size:14px;color:var(--bleu-nuit)}
+.mgt-tri-classer{width:100%;min-height:44px;margin:0 0 10px;padding:8px 10px;border:1.5px solid var(--bleu-ardoise);border-radius:8px;background:var(--blanc);color:var(--bleu-nuit);font:inherit;font-size:13px;font-weight:750;text-align:left;cursor:pointer}
+.mgt-tri-classer:hover,.mgt-tri-classer:focus-visible{background:var(--brume);border-color:var(--bleu-nuit)}
+.mgt-tri-classer:disabled{opacity:.48;cursor:not-allowed;border-color:var(--bordure);background:var(--page)}
 .mgt-bucket ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;min-height:30px}
 .mgt-bucket li{background:var(--blanc);border:1px solid var(--bordure);border-radius:7px;padding:8px 10px;font-size:14px}
 .mgt-bucket li p{margin:4px 0 0;font-size:12.5px;color:var(--gris-doux)}
@@ -836,7 +839,7 @@ table.tab td.revele::after{content:none}
 .mgt-accueil-questions{grid-area:video;align-self:start;background:var(--bleu-nuit);color:#fff;border-radius:20px;padding:18px;box-shadow:var(--ombre);max-width:430px;justify-self:end}
 .mgt-accueil-questions h2{margin:0 0 5px;color:#fff;font-size:20px}.mgt-accueil-questions>p{margin:0 0 13px;color:#DCE5EB;font-size:13px}
 .mgt-hook-list{display:grid;gap:8px}.mgt-hook-card{appearance:none;width:100%;display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:start;text-align:left;border:1px solid rgba(255,255,255,.20);border-radius:13px;padding:10px;background:rgba(255,255,255,.07);color:#fff;cursor:pointer;font:inherit;transition:background .2s,border-color .2s,transform .2s}
-.mgt-hook-card:hover,.mgt-hook-card:focus-visible{background:rgba(255,255,255,.13);border-color:var(--or);outline:none}.mgt-hook-card[aria-pressed="true"]{background:#fff;color:var(--bleu-nuit);border-color:var(--or);transform:translateX(-4px)}
+.mgt-hook-card:hover,.mgt-hook-card:focus-visible{background:rgba(255,255,255,.13);border-color:var(--or)}.mgt-hook-card[aria-pressed="true"]{background:#fff;color:var(--bleu-nuit);border-color:var(--or);transform:translateX(-4px)}
 .mgt-hook-num{display:grid;place-items:center;width:36px;height:36px;border-radius:10px;background:var(--or);color:var(--bleu-nuit);font-weight:800;font-size:13px}.mgt-hook-card span:last-child{line-height:1.35;font-size:14px}
 .mgt-hook-conclusion{margin:12px 2px 0!important;padding:11px 12px;border-left:4px solid var(--or);background:rgba(255,255,255,.10);border-radius:0 10px 10px 0;color:#fff!important;font-weight:700}.mgt-hook-conclusion[hidden]{display:none}
 .mgt-pourquoi{margin-top:14px;padding:15px 17px;border-left:4px solid var(--mgt-accent-1);background:var(--mgt-repere-1);border-radius:0 12px 12px 0}.mgt-pourquoi p{margin:0 0 8px}.mgt-pourquoi p:last-child{margin-bottom:0}
@@ -5844,12 +5847,13 @@ function triCartes(rootId,cfg){
  cfg.jetons.forEach(function(j){var b=document.createElement('button');b.type='button';b.className='mgt-tri-jeton';b.textContent=j.texte;b.dataset.id=j.id;b.draggable=true;src.appendChild(b)});
  root.appendChild(src);
  var buckets=document.createElement('div');buckets.className='mgt-tri-buckets';
- cfg.buckets.forEach(function(bk){var d=document.createElement('div');d.className='mgt-bucket';d.dataset.id=bk.id;d.innerHTML='<h4>'+bk.label+'</h4><ul></ul>';buckets.appendChild(d)});
+ cfg.buckets.forEach(function(bk){var d=document.createElement('div');d.className='mgt-bucket';d.dataset.id=bk.id;var h=document.createElement('h4');h.textContent=bk.label;var classer=document.createElement('button');classer.type='button';classer.className='mgt-tri-classer';classer.dataset.bucket=bk.id;classer.disabled=true;classer.textContent='Classer ici';classer.setAttribute('aria-label','Classer la carte sélectionnée dans « '+bk.label+' »');var ul=document.createElement('ul');d.appendChild(h);d.appendChild(classer);d.appendChild(ul);buckets.appendChild(d)});
  root.appendChild(buckets);
  var actions=document.createElement('div');actions.className='g-app-actions';
  var bVerif=document.createElement('button');bVerif.type='button';bVerif.className='btn btn-primaire';bVerif.textContent='Je valide ma répartition';bVerif.disabled=true;
  var bReset=document.createElement('button');bReset.type='button';bReset.className='btn';bReset.textContent='Réinitialiser';
  actions.appendChild(bVerif);actions.appendChild(bReset);root.appendChild(actions);
+ var annonce=document.createElement('div');annonce.className='g-app-annonce';annonce.setAttribute('role','status');annonce.setAttribute('aria-live','polite');annonce.setAttribute('aria-atomic','true');annonce.style.cssText='position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap';root.appendChild(annonce);
  var fbZone=document.createElement('div');root.appendChild(fbZone);
  var affect={},actif=null;
  function labelJeton(id){var j=cfg.jetons.filter(function(x){return x.id===id})[0];return j?j.texte:id}
@@ -5860,9 +5864,10 @@ function triCartes(rootId,cfg){
    var li=document.createElement('li');li.draggable=true;li.dataset.jeton=jid;li.setAttribute('aria-label',labelJeton(jid)+' — faites glisser vers une autre catégorie ou utilisez le bouton Repositionner');var span=document.createElement('span');span.textContent=labelJeton(jid);li.appendChild(span);
    var replacer=document.createElement('button');replacer.type='button';replacer.className='mgt-tri-replacer';replacer.dataset.replacer=jid;replacer.textContent='Repositionner';replacer.setAttribute('aria-label','Repositionner : '+labelJeton(jid));li.appendChild(replacer);ul.appendChild(li)});
   mqa('.mgt-tri-jeton',src).forEach(function(b){b.hidden=!!affect[b.dataset.id]});
+  mqa('.mgt-tri-classer',buckets).forEach(function(b){b.disabled=!actif});
   bVerif.disabled=Object.keys(affect).length<cfg.jetons.length;bReset.disabled=!Object.keys(affect).length}
  src.addEventListener('click',function(e){var b=e.target.closest('.mgt-tri-jeton');if(!b||b.disabled)return;
-  mqa('.mgt-tri-jeton',src).forEach(function(x){x.classList.remove('g-app-actif')});b.classList.add('g-app-actif');actif=b.dataset.id});
+  mqa('.mgt-tri-jeton',src).forEach(function(x){x.classList.remove('g-app-actif')});b.classList.add('g-app-actif');actif=b.dataset.id;mqa('.mgt-tri-classer',buckets).forEach(function(x){x.disabled=false})});
  src.addEventListener('dragstart',function(e){var b=e.target.closest('.mgt-tri-jeton');if(!b)return;actif=b.dataset.id;e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',actif)});
  src.addEventListener('dragend',function(){mqa('.mgt-bucket',buckets).forEach(function(x){x.classList.remove('mgt-zone-depot')});actif=null});
  buckets.addEventListener('dragstart',function(e){var li=e.target.closest('[data-jeton]');if(!li)return;actif=li.dataset.jeton;e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',actif)});
@@ -5870,8 +5875,10 @@ function triCartes(rootId,cfg){
  buckets.addEventListener('dragleave',function(e){var col=e.target.closest('.mgt-bucket');if(col&&!col.contains(e.relatedTarget))col.classList.remove('mgt-zone-depot')});
  buckets.addEventListener('drop',function(e){var col=e.target.closest('.mgt-bucket');if(!col)return;e.preventDefault();var jid=actif||e.dataTransfer.getData('text/plain');mqa('.mgt-bucket',buckets).forEach(function(x){x.classList.remove('mgt-zone-depot')});if(!jid)return;affect[jid]=col.dataset.id;actif=null;fbZone.innerHTML='';rafraichir()});
  buckets.addEventListener('dragend',function(){mqa('.mgt-bucket',buckets).forEach(function(x){x.classList.remove('mgt-zone-depot')});actif=null});
- buckets.addEventListener('click',function(e){var col=e.target.closest('.mgt-bucket');if(!col||!actif)return;
-  affect[actif]=col.dataset.id;actif=null;rafraichir()});
+ buckets.addEventListener('click',function(e){var classer=e.target.closest('.mgt-tri-classer');var col=classer?classer.closest('.mgt-bucket'):e.target.closest('.mgt-bucket');if(!col||!actif)return;
+  if(e.target.closest('[data-replacer]'))return;
+  var jid=actif;affect[jid]=col.dataset.id;actif=null;fbZone.innerHTML='';rafraichir();
+  annonce.textContent=labelJeton(jid)+' classé dans '+bucketLabel(col.dataset.id)+'.'});
  buckets.addEventListener('click',function(e){var btn=e.target.closest('[data-replacer]');if(!btn)return;
   e.stopPropagation();delete affect[btn.dataset.replacer];actif=null;fbZone.innerHTML='';rafraichir();
   var sourceBtn=mq('.mgt-tri-jeton[data-id="'+btn.dataset.replacer+'"]',src);if(sourceBtn)sourceBtn.focus()});
