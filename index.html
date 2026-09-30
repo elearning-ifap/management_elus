@@ -3926,6 +3926,15 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 .panel.mgt-screen-repere > .mgt-collab-medallion{display:none}
 @media(max-width:760px){.mgt-persona-rappel-ux18j{grid-template-columns:64px 1fr;padding:12px}.mgt-persona-rappel-ux18j img{width:64px;height:64px}}
 </style>
+
+<style id="mgt-lot2b-ux-dedoublonnage">
+/* Correctif UX lot 2b : un seul rappel visuel fort du personnage sur cet écran */
+#mod-s2-03 > .mgt-collab-medallion{display:none!important}
+#mod-s2-03 .mgt-cas-intro{grid-template-columns:1fr!important}
+#mod-s2-03 .mgt-cas-intro > img{display:none!important}
+#mod-s2-03 .mgt-cas-intro .chapo{padding:2px 0}
+</style>
+
 </head>
 <body>
 <header class="g-chrome" role="banner">
@@ -4231,7 +4240,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-1" data-composant="tri-cartes" data-titre="S1 · Qui fait quoi ?" id="mod-s1-03">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Thomas"><img src="img/Thomas examine un dossier urgent.jpg" alt=""/><span>Thomas</span></div>
-<p class="eyebrow">Séquence 1</p>
+
 <h1>Qui fait quoi ?</h1>
 <div class="g-consigne"><p>Répartissez chaque carte entre les trois catégories : ce que je porte comme élu, ce que je confie au collaborateur, ce que nous clarifions ensemble.</p></div>
 <div id="mgt-s1-03-zone"></div>
@@ -4305,7 +4314,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Thomas"><img src="img/Thomas examine un dossier urgent.jpg" alt=""/><span>Thomas</span></div><div class="mgt-resultat-contenu"></div></section>
 <section class="panel mgt-seq-1 mgt-screen-action" data-composant="boucle-reflexive" data-titre="S1 · Je relis ma première réaction" id="mod-s1-06">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Thomas"><img src="img/Thomas examine un dossier urgent.jpg" alt=""/><span>Thomas</span></div>
-<p class="eyebrow">Séquence 1</p>
+
 <h1>Je relis ma première réaction</h1>
 <div id="mgt-s1-06-zone"></div>
 <div class="g-apport mgt-relecture-source" data-source-mnl="MNL-0117–MNL-0122" style="margin-top:18px">
@@ -4345,7 +4354,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-2 mgt-screen-situation" data-composant="reponse-ouverte" data-titre="S2 · Le profil dont je pense avoir besoin" id="mod-s2-01b">
 
-<p class="eyebrow">Séquence 2</p>
+
 <h1>Le profil dont je pense avoir besoin</h1>
 <div class="g-apport mgt-source-triptyque" data-source-mnl="MNL-0239–MNL-0244" style="margin-top:18px">
 <h2>Avant de commencer : votre instantané</h2>
@@ -4359,7 +4368,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-2" data-composant="boussole" data-titre="S2 · La boussole du besoin" id="mod-s2-02">
 
-<p class="eyebrow">Séquence 2</p>
+
 <h1>La boussole du besoin</h1>
 <div class="g-consigne"><p>Construisez votre boussole en répondant aux quatre questions.</p></div>
 <div class="mgt-boussole" id="mgt-s2-02-zone"></div>
@@ -4367,7 +4376,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-2" data-composant="tri-cartes" data-titre="S2 · Les premiers jours de la personne retenue" id="mod-s2-03">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Maëva"><img src="img/maeva-carnet-attentive.jpg" alt=""/><span>Maëva</span></div>
-<p class="eyebrow">Séquence 2</p>
+
 <h1>Les premiers jours de <span data-s2-persona-name>la personne retenue</span></h1>
 <div class="mgt-cas-intro"><img alt="Portrait illustré de la personne retenue." src="img/maeva-carnet-attentive.jpg"/><p class="chapo"><strong data-s2-persona-name>La personne retenue</strong> · <span data-s2-persona-pronom>Elle</span> arrive alors que deux dossiers sont urgents. Vous lui transmettez beaucoup d'informations et lui demandez de « prendre rapidement ses marques ».</p></div>
 <div class="g-apport"><p><strong>Avant de classer, découvrez les six repères.</strong> Ils forment le cadre minimum qui permet à <span data-s2-persona-name>la personne retenue</span> d’agir sans devoir tout deviner.</p></div>
@@ -4444,7 +4453,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Maëva"><img src="img/maeva-carnet-attentive.jpg" alt=""/><span>Maëva</span></div><div class="mgt-resultat-contenu"></div></section>
 <section class="panel mgt-seq-2 mgt-screen-action" data-composant="boucle-reflexive" data-titre="S2 · Je relis mon idée de profil" id="mod-s2-06">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Maëva"><img src="img/maeva-carnet-attentive.jpg" alt=""/><span>Maëva</span></div>
-<p class="eyebrow">Séquence 2</p>
+
 <h1>Je relis mon idée de profil</h1>
 <div id="mgt-s2-06-zone"></div>
 <div class="g-apport mgt-relecture-source" data-source-mnl="MNL-0239–MNL-0244" style="margin-top:18px">
@@ -4492,7 +4501,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 <!-- média officiel §12 : MGT-HTML-SIMULATEUR-CLARTE (composant codé, sans asset à produire) -->
 <section class="panel mgt-seq-3 mgt-screen-situation" data-composant="simulateur" data-titre="S3 · Simulateur 1 — clarifier ma demande" id="mod-s3-02">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Maëva"><img src="img/maeva-trois-demandes.jpg" alt=""/><span>Maëva</span></div>
-<p class="eyebrow">Séquence 3</p>
+
 <h1>Simulateur 1 — clarifier ma demande</h1>
 <p class="chapo">Choisissez successivement le résultat attendu, le destinataire/usage, la priorité, l'échéance, la marge d'initiative et le point de suivi. Vos choix font évoluer quatre jauges.</p>
 <div class="mgt-conv-intro">
@@ -4509,7 +4518,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-3 mgt-screen-situation" data-composant="comparateur" data-titre="S3 · Observer les conséquences" id="mod-s3-03">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Maëva"><img src="img/maeva-trois-demandes.jpg" alt=""/><span>Maëva</span></div>
-<p class="eyebrow">Séquence 3</p>
+
 <h1>Observer les conséquences</h1>
 <p class="chapo">Deux temps : juste après la consigne, puis le jour de la commission. Comparez votre trajectoire à une seconde option.</p>
 <div class="mgt-comparateur" id="mgt-s3-03-zone"></div>
@@ -4541,7 +4550,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-3 mgt-screen-repere" data-composant="points-cles" data-titre="S3 · Les six points d'une attente claire" id="mod-s3-04">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Maëva"><img src="img/maeva-trois-demandes.jpg" alt=""/><span>Maëva</span></div>
-<p class="eyebrow">Séquence 3</p>
+
 <h1>Les six points d'une attente claire</h1>
 <div class="g-repere"><p>« Une demande claire dit où aller et laisse une place adaptée à la manière d'y parvenir. »</p></div>
 <div class="g-consigne"><p>Cliquez sur chaque point pour afficher un exemple appliqué.</p></div>
@@ -4608,7 +4617,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-3 mgt-screen-action" data-composant="boucle-reflexive" data-titre="S3 · Je relis ma première réponse" id="mod-s3-05">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Maëva"><img src="img/maeva-trois-demandes.jpg" alt=""/><span>Maëva</span></div>
-<p class="eyebrow">Séquence 3</p>
+
 <h1>Je relis ma première réponse</h1>
 <p class="chapo">Retrouvez ce que vous aviez écrit, puis évaluez-le avant de le reformuler si vous le souhaitez.</p>
 <div id="mgt-s3-05-zone"></div>
@@ -4667,7 +4676,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 <!-- média officiel §12 : MGT-HTML-SIMULATEUR-DELEGATION (composant codé, sans asset à produire) -->
 <section class="panel mgt-seq-4 mgt-screen-situation" data-composant="simulateur" data-titre="S4 · Simulateur 2 — déléguer et autonomiser" id="mod-s4-02">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Thomas"><img src="img/thomas-plan-action.jpg" alt=""/><span>Thomas</span></div>
-<p class="eyebrow">Séquence 4</p>
+
 <h1>Simulateur 2 — déléguer et autonomiser</h1>
 <p class="chapo">Résultat attendu, éléments non négociables, décisions laissées au collaborateur, fréquence du suivi, réaction à une première divergence, reconnaissance de la contribution.</p>
 <div class="mgt-conv-intro">
@@ -4684,7 +4693,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-4 mgt-screen-situation" data-composant="scenario-branches" data-titre="S4 · Quand le contrôle prend toute la place" id="mod-s4-03">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Thomas"><img src="img/thomas-plan-action.jpg" alt=""/><span>Thomas</span></div>
-<p class="eyebrow">Séquence 4</p>
+
 <h1>Quand le contrôle prend toute la place</h1>
 <p class="chapo">Conséquence différée : Thomas soumet désormais chaque détail avant d'agir. Vous avez sécurisé certaines décisions, mais vous êtes devenu le point de passage de tout le dossier.</p>
 <div class="g-consigne"><p>Quelle action engagez-vous pour restaurer une marge d'action ?</p></div>
@@ -4692,7 +4701,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-4 mgt-screen-repere" data-composant="triptyque" data-titre="S4 · Déléguer, ce n'est pas disparaître" id="mod-s4-04">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Thomas"><img src="img/thomas-plan-action.jpg" alt=""/><span>Thomas</span></div>
-<p class="eyebrow">Séquence 4</p>
+
 <h1>Déléguer, ce n'est pas disparaître</h1>
 <div class="g-apport"><p>« Déléguer consiste à <strong>confier un résultat et une marge d'action</strong>, tout en restant disponible pour un suivi convenu. »</p></div>
 <div class="g-consigne"><p>Cliquez sur chacune des trois composantes pour construire votre accord de délégation.</p></div>
@@ -4789,7 +4798,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-4 mgt-screen-action" data-composant="boucle-reflexive" data-titre="S4 · J'apprécie ma manière de déléguer" id="mod-s4-06">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Thomas"><img src="img/thomas-plan-action.jpg" alt=""/><span>Thomas</span></div>
-<p class="eyebrow">Séquence 4</p>
+
 <h1>J'apprécie ma manière de déléguer</h1>
 <p class="chapo">Retrouvez ce que vous aviez écrit, puis évaluez-le avant de le reformuler si vous le souhaitez.</p>
 <div id="mgt-s4-06-zone"></div>
@@ -4863,7 +4872,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 <!-- média officiel §12 : MGT-HTML-SIMULATEUR-REGULATION (composant codé, sans asset à produire) -->
 <section class="panel mgt-seq-5 mgt-screen-situation" data-composant="dialogue" data-titre="S5 · Simulateur 3 — réguler une difficulté" id="mod-s5-02">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Léon"><img src="img/leon-dialogue-apaise.jpg" alt=""/><span>Léon</span></div>
-<p class="eyebrow">Séquence 5</p>
+
 <h1>Simulateur 3 — réguler une difficulté</h1>
 <p class="chapo">Dans ce dialogue avec Léon, vos choix font évoluer trois indicateurs : dialogue, compréhension de la difficulté et responsabilisation.</p>
 <div class="mgt-conv-intro">
@@ -4881,7 +4890,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-5 mgt-screen-situation" data-composant="comparateur" data-titre="S5 · Observer les conséquences" id="mod-s5-03">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Léon"><img src="img/leon-dialogue-apaise.jpg" alt=""/><span>Léon</span></div>
-<p class="eyebrow">Séquence 5</p>
+
 <h1>Observer les conséquences</h1>
 <p class="chapo">Une intention légitime peut produire des effets différents selon la formulation choisie pour ouvrir l'échange.</p>
 <div class="mgt-comparateur" id="mgt-s5-03-zone"></div>
@@ -4890,14 +4899,14 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-5" data-composant="tri-cartes" data-titre="S5 · Intervenir avant l'escalade" id="mod-s5-04">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Léon"><img src="img/leon-dialogue-apaise.jpg" alt=""/><span>Léon</span></div>
-<p class="eyebrow">Séquence 5</p>
+
 <h1>Intervenir avant l'escalade</h1>
 <div class="g-consigne"><p><strong>Que vérifiez-vous avant d'interpréter ?</strong> Classez chaque carte.</p></div>
 <div id="mgt-s5-04-zone"></div>
 </section>
 <section class="panel mgt-seq-5 mgt-screen-repere" data-composant="ordonnancement" data-titre="S5 · Une trame pour l'échange" id="mod-s5-05">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Léon"><img src="img/leon-dialogue-apaise.jpg" alt=""/><span>Léon</span></div>
-<p class="eyebrow">Séquence 5</p>
+
 <h1>Une trame pour l'échange</h1>
 <div class="g-consigne"><p>Remettez les cinq temps dans un ordre qui vous semble cohérent.</p></div>
 <div id="mgt-s5-05-zone"></div>
@@ -4959,7 +4968,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 </section>
 <section class="panel mgt-seq-5 mgt-screen-action" data-composant="boucle-reflexive" data-titre="S5 · Je relis mon ouverture" id="mod-s5-06">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Léon"><img src="img/leon-dialogue-apaise.jpg" alt=""/><span>Léon</span></div>
-<p class="eyebrow">Séquence 5</p>
+
 <h1>Je relis mon ouverture</h1>
 <p class="chapo">Retrouvez ce que vous aviez écrit, puis évaluez-le avant de le reformuler si vous le souhaitez.</p>
 <div id="mgt-s5-06-zone"></div>
@@ -6057,7 +6066,8 @@ function mgtPersonaRappel(panelId,p){
  var old=panel.querySelector(':scope > .mgt-persona-rappel-ux18j');if(old)old.remove();
  var anchor=panel.querySelector(':scope > .mgt-collab-medallion')||panel.querySelector(':scope > .mgt-pedago-rail');
  var box=document.createElement('aside');box.className='mgt-persona-rappel-ux18j';
- box.innerHTML='<img src="'+p.image+'" alt="Portrait illustré de '+p.nom+'."><div><strong>'+p.nom+'</strong><span>'+p.role+'</span><p>'+p.phrase+'</p></div>';
+ var phrasePersona=(p.phrase||p.description||'').trim();
+ box.innerHTML='<img src="'+p.image+'" alt="Portrait illustré de '+p.nom+'."><div><strong>'+p.nom+'</strong><span>'+p.role+'</span>'+(phrasePersona?'<p>'+phrasePersona+'</p>':'')+'</div>';
  if(anchor)anchor.insertAdjacentElement('afterend',box);else panel.insertBefore(box,panel.firstChild)
 }
 function mgtAppliquerProfilS2(p){
@@ -6075,7 +6085,7 @@ function mgtAppliquerProfilS2(p){
   target.querySelectorAll('[data-s2-persona-pronom]').forEach(function(x){x.textContent=p?p.pronom:'La personne retenue'});
   var img=target.querySelector('.mgt-cas-intro img');if(img&&p){img.src=p.image;img.alt='Portrait illustré de '+p.nom+'.'}
  }
- if(p)mgtPersonaRappel('mod-s2-03',p)
+ if(p){var pc=(p.id&&MGT_PERSONAS[p.id])?MGT_PERSONAS[p.id]:p;mgtPersonaRappel('mod-s2-03',pc)}
 }
 function mgtInstallerPersonasCanoniques(){
  mgtPersonaRappel('mod-s1-01',MGT_PERSONAS.thomas);
@@ -7808,5 +7818,6 @@ installerGuideMgt();
 
 </script>
 </body>
+</html>
 </html>
 </html>
