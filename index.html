@@ -3850,6 +3850,72 @@ h1[tabindex="-1"]:focus,h2[tabindex="-1"]:focus{outline:none!important;box-shado
 }
 </style>
 
+
+<style id="mgt-lot1-premium">
+
+/* ======================================================================
+   LOT 1 — évolution UX18I : accueil, grammaire pédagogique et respiration
+   Source : cahier des charges d'évolution validé. Patch additif uniquement.
+   ====================================================================== */
+:root{
+  --mgt-premium-reading:760px;
+  --mgt-premium-gap:34px;
+  --mgt-premium-soft:#f7f9fa;
+}
+/* MGT-01 : redonner une vraie présence au parcours d'accueil */
+#mgt-parcours-clin-titre{font-size:28px!important;line-height:1.18!important;margin-bottom:18px!important;color:var(--bleu-nuit)!important}
+.mgt-parcours-clin{padding-top:24px!important;padding-bottom:26px!important}
+.mgt-parcours-clin .mgt-chemin{gap:10px 12px!important;line-height:1.45!important}
+/* Premiumisation légère : plus d'air, sans restructuration */
+#g-contrat h1{font-size:clamp(34px,4vw,42px)!important;line-height:1.1!important}
+#g-contrat .chapo{font-size:18px!important;line-height:1.62!important}
+section.panel[class*="mgt-seq-"]>h1,
+section.panel[class*="mgt-seq-"] header h1{font-size:clamp(28px,3vw,34px)!important;line-height:1.16!important;margin-bottom:16px!important}
+section.panel[class*="mgt-seq-"] .chapo{font-size:18px!important;line-height:1.62!important;max-width:var(--mgt-premium-reading)!important}
+section.panel[class*="mgt-seq-"] .g-apport,
+section.panel[class*="mgt-seq-"] .g-consigne,
+section.panel[class*="mgt-seq-"] .g-repere{margin-top:22px!important;margin-bottom:22px!important}
+section.panel[class*="mgt-seq-"] .g-apport{padding:22px 24px!important}
+section.panel[class*="mgt-seq-"] p{line-height:1.62}
+/* MGT-02 : différencier les défis sans surcharger */
+#mgt-defis-accueil .mgt-defi-accueil-vignette{padding:14px 10px!important;min-height:92px!important;border-top-width:3px!important;transition:transform .14s ease,box-shadow .14s ease}
+#mgt-defis-accueil .mgt-defi-accueil-vignette:nth-child(odd){background:linear-gradient(180deg,rgba(238,244,247,.72),rgba(255,255,255,.96))!important}
+#mgt-defis-accueil .mgt-defi-accueil-vignette:nth-child(even){background:linear-gradient(180deg,rgba(255,248,227,.58),rgba(255,255,255,.96))!important}
+#mgt-defis-accueil .mgt-defi-accueil-vignette strong{font-size:15px!important;line-height:1.35!important}
+/* MGT-10 : sources secondaires, fermées par défaut */
+.mgt-source-discrete{margin:22px 0 8px;border-top:1px solid var(--bordure);border-bottom:1px solid var(--bordure);background:transparent}
+.mgt-source-discrete summary{cursor:pointer;list-style:none;padding:12px 2px;color:var(--gris-doux);font-size:14px;font-weight:700}
+.mgt-source-discrete summary::-webkit-details-marker{display:none}
+.mgt-source-discrete summary::before{content:'▸';display:inline-block;margin-right:8px;color:var(--bleu-ardoise);transition:transform .16s ease}
+.mgt-source-discrete[open] summary::before{transform:rotate(90deg)}
+.mgt-source-discrete-content{padding:0 2px 14px;color:var(--gris-doux);font-size:14px;line-height:1.55}
+/* MGT-57 : repères pédagogiques communs aux cinq séquences */
+.mgt-pedago-rail{margin:0 0 30px;padding:14px 16px 13px;border:1px solid var(--bordure);border-radius:14px;background:rgba(255,255,255,.96);box-shadow:0 3px 14px rgba(31,48,61,.045)}
+.mgt-pedago-rail ol{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:0;padding:0;list-style:none}
+.mgt-pedago-rail li{position:relative;min-height:50px;padding:23px 5px 5px;text-align:center;color:#81909b;font-size:12.5px;line-height:1.2;font-weight:600}
+.mgt-pedago-rail li::before{content:'';position:absolute;top:4px;left:50%;width:10px;height:10px;border-radius:50%;background:#cbd4da;transform:translateX(-50%);z-index:2}
+.mgt-pedago-rail li::after{content:'';position:absolute;top:8px;left:-50%;width:100%;height:2px;background:#e1e7eb;z-index:1}
+.mgt-pedago-rail li:first-child::after{display:none}
+.mgt-pedago-rail li.is-done{color:var(--bleu-ardoise)}
+.mgt-pedago-rail li.is-done::before{background:#6daab4;box-shadow:0 0 0 3px #e7f3f5}
+.mgt-pedago-rail li.is-active{color:var(--bleu-nuit);font-weight:800}
+.mgt-pedago-rail li.is-active::before{width:14px;height:14px;top:2px;background:var(--bleu-nuit);box-shadow:0 0 0 4px #e7edf1}
+.mgt-pedago-rail li.is-active span{display:inline-block;padding-bottom:4px;border-bottom:3px solid var(--cnc-or)}
+.mgt-pedago-rail-label{position:absolute;left:-9999px}
+.mgt-positionnement-confid{margin-top:14px;padding-top:14px;border-top:1px solid rgba(88,120,143,.22)}
+@media(max-width:900px){
+  .mgt-pedago-rail{padding:12px 12px}
+  .mgt-pedago-rail ol{grid-template-columns:repeat(3,1fr);row-gap:6px}
+  .mgt-pedago-rail li:nth-child(4)::after{display:none}
+}
+@media(max-width:560px){
+  .mgt-pedago-rail ol{grid-template-columns:repeat(2,1fr)}
+  .mgt-pedago-rail li:nth-child(3)::after,.mgt-pedago-rail li:nth-child(5)::after{display:none}
+  .mgt-pedago-rail li{font-size:12px;min-height:47px}
+  #mgt-parcours-clin-titre{font-size:25px!important}
+}
+
+</style>
 </head>
 <body>
 <header class="g-chrome" role="banner">
@@ -7588,5 +7654,98 @@ installerGuideMgt();
 <!-- UX18D · passe de couverture M6 : MNL-0821 à MNL-0902 vérifiés ; fidélisation 0840-0856 ; restitution 0857-0865 ; essentiels 0896-0901 ; transition 0902 déplacée en S6. -->
 <!-- UX18F : passe corpus M3-M4-M5, repères éditoriaux et contenus experts restaurés sans modification des moteurs -->
 <!-- UX18H_HIGH_END_APPLIED -->
+
+<script id="mgt-lot1-grammar">
+
+(function(){
+  'use strict';
+  var labels=[
+    'Je rencontre une situation',
+    'Je me positionne',
+    'Je comprends',
+    'J\u2019essaie',
+    'J\u2019ajuste',
+    'Je prends du recul'
+  ];
+  var stage={
+    /* Séquence 1 */
+    'mod-s1-00':0,'mod-s1-01':0,'mod-s1-01b':1,'mod-s1-01c':1,
+    'mod-s1-01d':2,'mod-s1-01e':2,'mod-s1-02':2,
+    'mod-s1-03':3,'mod-s1-04':3,'mod-s1-04a':3,
+    'mod-s1-04b':4,'mod-s1-05':4,'mgt-resultat-defi-1':4,'mgt-resultat-defi-2':4,
+    'mod-s1-06':5,
+    /* Séquence 2 */
+    'mod-s2-00':0,'mod-s2-01':0,'mod-s2-01b':1,'mod-s2-02':2,
+    'mod-s2-03':3,'mod-s2-03b':4,'mod-s2-04':3,'mod-s2-04a':2,
+    'mod-s2-05':4,'mgt-resultat-defi-3':4,'mgt-resultat-defi-4':4,'mod-s2-06':5,
+    /* Séquence 3 */
+    'mod-s3-00':0,'mod-s3-01':1,'mod-s3-02':3,'mod-s3-03':4,
+    'mod-s3-04':2,'mod-s3-04b':2,'mod-s3-04c':2,'mod-s3-05':5,
+    'mod-s3-06':5,'mgt-resultat-defi-5':5,
+    /* Séquence 4 */
+    'mod-s4-00':0,'mod-s4-01':1,'mod-s4-02':3,'mod-s4-03':4,
+    'mod-s4-04':2,'mod-s4-05':3,'mod-s4-05b':2,'mod-s4-05c':2,
+    'mod-s4-06':5,'mod-s4-07':5,'mgt-resultat-defi-6':5,'mgt-resultat-defi-7':5,
+    /* Séquence 5 */
+    'mod-s5-00':0,'mod-s5-01':1,'mod-s5-02':3,'mod-s5-03':4,
+    'mod-s5-04':3,'mod-s5-05':3,'mod-s5-05b':2,'mod-s5-05c':2,
+    'mod-s5-06':5,'mod-s5-07':5,'mgt-resultat-defi-8':5
+  };
+
+  function railFor(n){
+    var nav=document.createElement('nav');
+    nav.className='mgt-pedago-rail';
+    nav.setAttribute('aria-label','Repères de cette séquence');
+    var hidden=document.createElement('span');
+    hidden.className='mgt-pedago-rail-label';
+    hidden.textContent='Étape actuelle : '+labels[n];
+    nav.appendChild(hidden);
+    var ol=document.createElement('ol');
+    labels.forEach(function(label,i){
+      var li=document.createElement('li');
+      if(i<n) li.className='is-done';
+      if(i===n){li.className='is-active';li.setAttribute('aria-current','step');}
+      var span=document.createElement('span');span.textContent=label;li.appendChild(span);ol.appendChild(li);
+    });
+    nav.appendChild(ol);return nav;
+  }
+
+  Object.keys(stage).forEach(function(id){
+    var panel=document.getElementById(id);if(!panel||panel.querySelector(':scope > .mgt-pedago-rail')) return;
+    var anchor=panel.querySelector(':scope > .mgt-seq-identity');
+    var rail=railFor(stage[id]);
+    if(anchor) anchor.insertAdjacentElement('afterend',rail); else panel.insertBefore(rail,panel.firstChild);
+    panel.setAttribute('data-mgt-pedago-stage',String(stage[id]));
+  });
+
+  /* MGT-53 — retirer de l'interface les mentions de fabrication/corpus, sans supprimer la source du fichier. */
+  document.querySelectorAll('.mgt-note-discrete').forEach(function(el){
+    if(/rep[eè]res? du corpus/i.test(el.textContent||'')){el.hidden=true;el.setAttribute('aria-hidden','true');}
+  });
+
+  /* MGT-10 — transformer les références visibles en source discrète ; contenu inchangé. */
+  document.querySelectorAll('.mgt-reference-visible').forEach(function(el){
+    if(el.closest('.mgt-source-discrete')) return;
+    var details=document.createElement('details');details.className='mgt-source-discrete';
+    if(el.dataset.sourceMnl) details.dataset.sourceMnl=el.dataset.sourceMnl;
+    var summary=document.createElement('summary');summary.textContent='Source';
+    var content=document.createElement('div');content.className='mgt-source-discrete-content';
+    var clone=el.cloneNode(true);var firstStrong=clone.querySelector('strong');if(firstStrong) firstStrong.remove();
+    while(clone.firstChild) content.appendChild(clone.firstChild);
+    details.appendChild(summary);details.appendChild(content);el.replaceWith(details);
+  });
+
+  /* MGT-04 — l'explication sur le caractère déclaratif est portée une seule fois à l'accueil. */
+  var detail=document.querySelector('#g-contrat-detail .encadre-info');
+  if(detail && !detail.querySelector('.mgt-positionnement-confid')){
+    var p=document.createElement('p');p.className='mgt-positionnement-confid';
+    p.innerHTML='<strong>Auto-positionnement :</strong> il est déclaratif. Le repère de départ utile à la reprise et à la comparaison de votre propre évolution peut être conservé dans les données techniques du module ; il n\u2019est pas utilisé comme score individuel ni comme résultat pédagogique nominatif.';
+    detail.appendChild(p);
+  }
+  var pre=document.getElementById('g-pre');
+  if(pre){pre.querySelectorAll('.g-confid').forEach(function(el){if(/auto-positionnement est d[eé]claratif/i.test(el.textContent||'')) el.remove();});}
+})();
+
+</script>
 </body>
 </html>
