@@ -3959,6 +3959,273 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 .mgt-cas-leon.mgt-cas-sans-portrait>img[hidden]{display:none!important}
 </style>
 
+
+<style id="mgt-lot6-premium-responsive">
+/* ==========================================================================
+   LOT 6 — harmonisation premium globale + tablette/iPad
+   Patch visuel uniquement : aucun contenu, aucun moteur, aucun ordre modifié.
+   ========================================================================== */
+:root{
+  --mgt-l6-reading:760px;
+  --mgt-l6-content:980px;
+  --mgt-l6-radius:18px;
+  --mgt-l6-shadow:0 10px 30px rgba(31,52,68,.055);
+}
+
+/* Typographie et rythme éditorial */
+body{font-size:17px}
+.panel[id^="mod-s"]{font-size:17px}
+.panel[id^="mod-s"] > h1,
+.panel[id^="mod-s"] header h1{letter-spacing:-.018em}
+.panel[id^="mod-s"] > h2,
+.panel[id^="mod-s"] .g-apport > h2,
+.panel[id^="mod-s"] .mgt-palier > h2{margin-top:36px;margin-bottom:10px;line-height:1.18}
+.panel[id^="mod-s"] > h3,
+.panel[id^="mod-s"] .g-apport > h3{margin-top:26px;margin-bottom:9px;line-height:1.24}
+.panel[id^="mod-s"] > p:not(.chapo):not(.mgt-enjeu-action){max-width:var(--mgt-l6-reading)}
+.panel[id^="mod-s"] .chapo{max-width:var(--mgt-l6-reading)!important;color:#617481}
+.panel[id^="mod-s"] p,
+.panel[id^="mod-s"] li{line-height:1.64}
+
+/* Panneau : premium = calme, pas davantage de décoration */
+.panel[id^="mod-s"].actif{
+  padding:34px 38px 40px;
+  border-radius:24px;
+  border-color:rgba(88,120,143,.14);
+  background:linear-gradient(180deg,rgba(250,252,253,.92) 0,#fff 210px);
+  box-shadow:var(--mgt-l6-shadow);
+}
+.panel[id^="mod-s"].actif::after{
+  width:3px;
+  opacity:.46;
+}
+
+/* Grammaire des 6 repères : stable mais plus éditoriale */
+.mgt-pedago-rail{
+  margin-bottom:34px;
+  padding:16px 18px 14px;
+  border-radius:18px;
+  box-shadow:0 5px 18px rgba(31,52,68,.045);
+}
+.mgt-pedago-rail li{
+  min-height:52px;
+  padding-top:24px;
+  font-size:13px;
+}
+.mgt-pedago-rail li.is-active span{padding-bottom:6px}
+
+/* Blocs : moins de boîtes lourdes, davantage de respiration */
+.panel[id^="mod-s"] .g-apport{
+  padding:24px 26px!important;
+  border-radius:16px;
+  box-shadow:0 5px 18px rgba(31,52,68,.04);
+}
+.panel[id^="mod-s"] .g-consigne{
+  padding:20px 22px;
+  border:1px solid #ead58d;
+  border-left:4px solid var(--cnc-or);
+  border-radius:14px;
+  background:#fffdf7;
+}
+.panel[id^="mod-s"] .g-repere{
+  padding:20px 22px;
+  border-top-width:4px;
+  border-radius:14px;
+}
+.panel[id^="mod-s"] .mgt-palier{
+  padding:26px;
+  margin:28px 0;
+  border-radius:18px;
+  box-shadow:0 7px 22px rgba(31,52,68,.045);
+}
+.panel[id^="mod-s"] .mgt-modele{
+  gap:16px;
+  margin:20px 0 24px;
+}
+.panel[id^="mod-s"] .mgt-modele-card{
+  padding:20px;
+  border-radius:16px;
+  box-shadow:none;
+}
+.panel[id^="mod-s"] .mgt-modele-card h3{
+  font-size:18px;
+  line-height:1.28;
+  margin:0 0 9px;
+}
+.panel[id^="mod-s"] .mgt-modele-card p,
+.panel[id^="mod-s"] .mgt-modele-card li{
+  font-size:16px;
+  line-height:1.55;
+}
+.panel[id^="mod-s"] .mgt-six-reperes{gap:15px;margin:22px 0}
+.panel[id^="mod-s"] .mgt-six-reperes article{padding:19px;border-radius:16px}
+.panel[id^="mod-s"] .mgt-six-reperes p{font-size:15.5px;line-height:1.55}
+.panel[id^="mod-s"] .mgt-decision{
+  padding:24px 26px;
+  border-radius:17px;
+  box-shadow:0 5px 18px rgba(31,52,68,.045);
+}
+.panel[id^="mod-s"] .mgt-card{
+  padding:19px 20px;
+  border-radius:15px;
+  min-height:52px;
+  box-shadow:0 3px 12px rgba(31,52,68,.035);
+}
+
+/* Sources : discrètes et tactiles */
+.mgt-source-discrete,
+details.mgt-reference-visible{
+  margin:24px 0 10px;
+  border:0;
+  border-top:1px solid var(--bordure);
+  border-bottom:1px solid var(--bordure);
+  border-radius:0;
+  background:transparent;
+  padding:0;
+  box-shadow:none;
+}
+.mgt-source-discrete summary,
+details.mgt-reference-visible > summary{
+  display:flex;
+  align-items:center;
+  min-height:46px;
+  padding:10px 2px;
+  color:var(--gris-doux);
+  font-size:14px;
+  font-weight:750;
+  cursor:pointer;
+}
+details.mgt-reference-visible > summary::before{
+  content:'▸';
+  margin-right:8px;
+  color:var(--bleu-ardoise);
+  transition:transform .16s ease;
+}
+details.mgt-reference-visible[open] > summary::before{transform:rotate(90deg)}
+details.mgt-reference-visible .mgt-source-detail{padding:0 2px 14px;color:var(--gris-doux);font-size:14px;line-height:1.55}
+
+/* Zones interactives : confort tactile et lisibilité */
+.btn{
+  min-height:48px;
+  padding:13px 22px;
+  border-radius:10px;
+}
+button,
+select,
+input,
+textarea{font-family:var(--police)}
+.panel[id^="mod-s"] select,
+.panel[id^="mod-s"] input:not([type="range"]):not([type="radio"]):not([type="checkbox"]),
+.panel[id^="mod-s"] textarea{
+  font-size:17px;
+  line-height:1.5;
+}
+.panel[id^="mod-s"] select,
+.panel[id^="mod-s"] input:not([type="range"]):not([type="radio"]):not([type="checkbox"]){
+  min-height:46px;
+}
+.panel[id^="mod-s"] textarea{
+  min-height:118px;
+  padding:14px 15px;
+}
+.mgt-tri-classer,
+.mgt-tri-jeton{min-height:46px}
+.mgt-bulle{font-size:16px;line-height:1.52}
+.mgt-decision h3{font-size:20px}
+
+/* Ouvertures de séquence */
+.mgt-seq-opening > h1{letter-spacing:-.025em}
+.mgt-seq-opening > .chapo{max-width:760px!important}
+.mgt-seq-opening .mgt-enjeu{gap:20px}
+.mgt-seq-opening .mgt-enjeu-intro,
+.mgt-seq-opening .mgt-enjeu-apprentissages{
+  padding:22px 24px;
+  border-radius:18px;
+  box-shadow:none;
+}
+.mgt-seq-opening .mgt-enjeu-apprentissages li{line-height:1.5}
+
+/* Navigation et contenu : largeur contrôlée */
+.g-contenu{max-width:var(--mgt-l6-content)}
+.g-nav-bas-inner{max-width:var(--mgt-l6-content)}
+.g-nav-bas .btn{min-height:46px}
+
+/* Tablettes paysage, dont iPad 1024 px CSS */
+@media(max-width:1100px){
+  .g-page{
+    max-width:1020px;
+    margin:0 auto;
+    padding:24px 22px 116px;
+  }
+  .g-contenu{
+    max-width:980px;
+    margin:0 auto;
+  }
+  .panel[id^="mod-s"].actif{
+    padding:30px 30px 34px;
+  }
+  .mgt-pedago-rail{
+    margin-bottom:30px;
+  }
+  .mgt-sim-dashboard{
+    top:70px;
+  }
+}
+
+/* Tablettes portrait, dont iPad 768/820 px CSS */
+@media(max-width:840px){
+  .g-page{padding-left:18px;padding-right:18px}
+  .panel[id^="mod-s"].actif{
+    padding:26px 22px 30px;
+    border-radius:20px;
+  }
+  .panel[id^="mod-s"].actif::after{display:none}
+  .mgt-pedago-rail{
+    padding:13px 12px 12px;
+    border-radius:16px;
+  }
+  .mgt-pedago-rail ol{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    column-gap:7px;
+    row-gap:9px;
+  }
+  .mgt-pedago-rail li{
+    min-height:49px;
+    font-size:12.5px;
+  }
+  .mgt-pedago-rail li:nth-child(4)::after{display:none}
+  .mgt-modele,
+  .mgt-modele.quatre,
+  .mgt-six-reperes{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .mgt-seq-opening .mgt-enjeu{grid-template-columns:1fr}
+  .mgt-seq-visual{height:205px}
+  .mgt-sim-dashboard{position:static;top:auto}
+  .mgt-sim-dashboard .mgt-jauges-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mgt-tri-buckets{grid-template-columns:1fr 1fr}
+}
+
+/* Téléphone : une colonne, sans perdre les 6 libellés */
+@media(max-width:600px){
+  body{font-size:16.5px}
+  .g-page{padding-left:12px;padding-right:12px}
+  .panel[id^="mod-s"].actif{padding:22px 16px 26px}
+  .mgt-pedago-rail ol{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .mgt-pedago-rail li:nth-child(3)::after,
+  .mgt-pedago-rail li:nth-child(5)::after{display:none}
+  .mgt-modele,
+  .mgt-modele.quatre,
+  .mgt-six-reperes,
+  .mgt-tri-buckets{grid-template-columns:1fr}
+  .panel[id^="mod-s"] .g-apport,
+  .panel[id^="mod-s"] .g-consigne,
+  .panel[id^="mod-s"] .g-repere{padding-left:18px!important;padding-right:18px!important}
+  .mgt-seq-visual{height:180px}
+  .g-nav-bas-inner{padding:10px 12px}
+}
+</style>
+
 </head>
 <body>
 <header class="g-chrome" role="banner">
