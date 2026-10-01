@@ -3948,6 +3948,17 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 #mod-s1-04b .feedback{max-width:900px}
 </style>
 
+
+<style id="mgt-lot3b-regle-personnage-unique">
+.mgt-collab-medallion[hidden]{display:none!important}
+.mgt-cas-intro.mgt-persona-image-masquee{grid-template-columns:1fr!important}
+.mgt-cas-intro.mgt-persona-image-masquee>img[hidden]{display:none!important}
+.mgt-conv-intro.mgt-conv-sans-portrait{grid-template-columns:1fr!important}
+.mgt-conv-intro.mgt-conv-sans-portrait>.mgt-conv-intro-img[hidden]{display:none!important}
+.mgt-cas-leon.mgt-cas-sans-portrait{grid-template-columns:1fr!important}
+.mgt-cas-leon.mgt-cas-sans-portrait>img[hidden]{display:none!important}
+</style>
+
 </head>
 <body>
 <header class="g-chrome" role="banner">
@@ -4096,7 +4107,7 @@ section.panel[class*="mgt-seq-"] p{line-height:1.62}
 <!-- ═══════════ SÉQUENCE 1 — Prendre ma place de manager ═══════════ -->
 <section data-guide-stable="true" class="panel mgt-seq-1 mgt-seq-opening" data-composant="enjeu" data-titre="S1 · Pourquoi ajuster son autorité ?" id="mod-s1-00">
 <div class="mgt-seq-identity"><span class="mgt-seq-icon"><svg aria-hidden="true" viewbox="0 0 48 48"><path d="M10 12h28M16 12v24M32 12v24M10 36h28"></path><circle cx="16" cy="20" r="4"></circle><circle cx="32" cy="28" r="4"></circle></svg></span><span class="mgt-seq-identity-text"><strong>Séquence 1 · Rôle &amp; autorité</strong><span>Trouver le bon niveau de cadre</span></span></div><p class="eyebrow mgt-seq-eyebrow-source">Séquence 1 · Pourquoi cet enjeu est important</p><h1>Prendre sa place et ajuster son autorité</h1>
-<p class="chapo">L’élu donne le cap et assume la décision politique. Manager ne signifie pourtant ni contrôler chaque geste, ni laisser le collaborateur avancer sans cadre.</p><figure class="mgt-seq-visual"><img alt="Thomas examine un dossier urgent." src="img/Thomas examine un dossier urgent.jpg"/></figure>
+<p class="chapo">L’élu donne le cap et assume la décision politique. Manager ne signifie pourtant ni contrôler chaque geste, ni laisser le collaborateur avancer sans cadre.</p><figure class="mgt-seq-visual"><img alt="Thomas présente un dossier et formule une recommandation." src="img/thomas-recommandation-claire.jpg"/></figure>
 <div class="mgt-enjeu"><div class="mgt-enjeu-intro"><img alt="Le professeur-explorateur introduit l’enjeu de la séquence." src="img/Guide e-learning sur fond transparent.webp"/><div><h2>Ce qui se joue</h2><p>Un contrôle excessif ralentit les dossiers et étouffe l’initiative. Le laisser-faire crée du flou, des retards et des décisions prises au mauvais niveau. L’enjeu est de trouver le niveau d’autorité utile à chaque situation.</p></div></div><div class="mgt-enjeu-apprentissages"><h2>Dans cette séquence, vous allez apprendre à…</h2><ul><li>Repérer vos réflexes de contrôle ou de laisser-faire sous pression.</li><li>Distinguer clairement ce qui relève de l’élu, du collaborateur et du travail partagé.</li><li>Ajuster le cadre, la marge d’action et le suivi selon la situation.</li></ul></div></div>
 <p class="mgt-enjeu-action"><button class="btn btn-primaire" data-go="mod-s1-01" data-termine-ecran="">Découvrir la première situation →</button></p>
 </section>
@@ -6033,15 +6044,56 @@ var MGT_PERSONAS={
  maeva:{id:'maeva',nom:'Maëva',role:'Juriste de formation',image:'img/maeva-carnet-attentive.jpg',phrase:'Méthodique et solide dans son analyse, elle découvre encore les interlocuteurs, les codes et les habitudes de travail.',pronom:'Elle'},
  thomas:{id:'thomas',nom:'Thomas',role:'Chargé de mission expérimenté',image:'img/thomas-recommandation-claire.jpg',phrase:'Il maîtrise les dossiers et souhaite disposer d’une véritable marge d’action.',pronom:'Il'}
 };
+
+var MGT_PERSONA_ASSETS={
+ thomas:['thomas examine un dossier urgent.jpg','thomas-plan-action.jpg','thomas-consigne-floue.jpg','thomas-recommandation-claire.jpg'],
+ maeva:['maeva-trois-demandes.jpg','maeva-checklist-tablette.jpg','maeva-carnet-attentive.jpg','maeva-recommandation-strategique.jpg'],
+ leon:['leon-dialogue-apaise.jpg','leon-agenda.jpg','leon-desaccord-discret.jpg','leon-agenda-dossier-pression.jpg']
+};
+function mgtImageEstPersona(img,personaId){
+ var src=(img&&img.getAttribute('src')||'').toLowerCase();
+ return (MGT_PERSONA_ASSETS[personaId]||[]).some(function(n){return src.indexOf(n)>=0});
+}
+function mgtAppliquerRegleVisuellePersonnage(panel,p,preferred){
+ if(!panel||!p)return;
+ panel.querySelectorAll(':scope > .mgt-collab-medallion').forEach(function(m){
+  m.hidden=true;m.classList.add('mgt-persona-redondant-masque')
+ });
+ panel.querySelectorAll('img').forEach(function(img){
+  if(preferred&&preferred.contains(img))return;
+  if(mgtImageEstPersona(img,p.id)){
+   var holder=img.closest('.mgt-cas-intro,.mgt-conv-intro,.mgt-cas-leon,.mgt-seq-visual');
+   if(holder){
+    if(holder.classList.contains('mgt-cas-intro')){
+     holder.classList.add('mgt-persona-image-masquee');img.hidden=true;
+    }else if(holder.classList.contains('mgt-conv-intro')){
+     img.hidden=true;holder.classList.add('mgt-conv-sans-portrait');
+    }else if(holder.classList.contains('mgt-cas-leon')){
+     img.hidden=true;holder.classList.add('mgt-cas-sans-portrait');
+    }
+   }else img.hidden=true;
+  }
+ });
+}
+function mgtAppliquerReglePersonnageSurPanels(){
+ document.querySelectorAll('section.panel').forEach(function(panel){
+  if(panel.querySelector(':scope > .mgt-persona-rappel-ux18j'))return;
+  var contextual=panel.querySelector('.mgt-conv-intro-img,.mgt-cas-intro img,.mgt-cas-leon img,.mgt-seq-visual img');
+  var med=panel.querySelector(':scope > .mgt-collab-medallion');
+  if(contextual&&med){med.hidden=true;med.classList.add('mgt-persona-redondant-masque')}
+ });
+}
+
 function mgtProfilS2Courant(){return MGT_PERSONAS[MGT_REPONSES['s2-personnage']]||null}
 function mgtPersonaRappel(panelId,p){
  var panel=document.getElementById(panelId);if(!panel||!p)return;
  var old=panel.querySelector(':scope > .mgt-persona-rappel-ux18j');if(old)old.remove();
  var anchor=panel.querySelector(':scope > .mgt-collab-medallion')||panel.querySelector(':scope > .mgt-pedago-rail');
- var box=document.createElement('aside');box.className='mgt-persona-rappel-ux18j';
+ var box=document.createElement('aside');box.className='mgt-persona-rappel-ux18j';box.dataset.personaId=p.id||'';
  var phrasePersona=(p.phrase||p.description||'').trim();
  box.innerHTML='<img src="'+p.image+'" alt="Portrait illustré de '+p.nom+'."><div><strong>'+p.nom+'</strong><span>'+p.role+'</span>'+(phrasePersona?'<p>'+phrasePersona+'</p>':'')+'</div>';
- if(anchor)anchor.insertAdjacentElement('afterend',box);else panel.insertBefore(box,panel.firstChild)
+ if(anchor)anchor.insertAdjacentElement('afterend',box);else panel.insertBefore(box,panel.firstChild);
+ mgtAppliquerRegleVisuellePersonnage(panel,p,box);
 }
 function mgtAppliquerProfilS2(p){
  p=p||mgtProfilS2Courant();
@@ -6059,6 +6111,7 @@ function mgtAppliquerProfilS2(p){
   var img=target.querySelector('.mgt-cas-intro img');if(img&&p){img.src=p.image;img.alt='Portrait illustré de '+p.nom+'.'}
  }
  if(p){var pc=(p.id&&MGT_PERSONAS[p.id])?MGT_PERSONAS[p.id]:p;mgtPersonaRappel('mod-s2-03',pc)}
+ mgtAppliquerReglePersonnageSurPanels();
 }
 function mgtInstallerPersonasCanoniques(){
  mgtPersonaRappel('mod-s1-01',MGT_PERSONAS.thomas);
@@ -6070,6 +6123,7 @@ function mgtInstallerPersonasCanoniques(){
  if(rp&&p){var b=rp.querySelector('[data-persona-id="'+p.id+'"]');if(b){rp.querySelectorAll('.mgt-card').forEach(function(x){x.classList.remove('on')});b.classList.add('on')}
   if(rf)rf.innerHTML='<div class="feedback feedback-neutre mgt-profil-feedback-ux14"><b>'+p.nom+'</b><p>Votre choix de personnage est restauré. Vous pouvez le modifier à tout moment.</p></div>'
  }
+ mgtAppliquerReglePersonnageSurPanels();
 }
 
 /* ---------------------------------------------------------------------
@@ -7711,6 +7765,7 @@ installerGuideMgt();
 <!-- UX18H_HIGH_END_APPLIED -->
 <!-- LOT2_PERSONNAGES_CANONIQUES_APPLIED -->
 <!-- LOT3_SEQUENCE1_FEEDBACK_MNL_APPLIED -->
+<!-- LOT3B_PERSONNAGE_UNIQUE_APPLIED -->
 
 <script id="mgt-lot1-grammar">
 
