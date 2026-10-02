@@ -1,8 +1,9 @@
-# Lot 7 — clôture UX18I
+# Lot 7 — clôture UX18I corrigée
 
-Candidate finale du module « Manager ses collaborateurs en tant qu’élu ».
+Version finale corrigée du module « Manager ses collaborateurs en tant qu’élu ».
 
-- Module publié à la racine du dépôt.
-- MGT-30 : portrait canonique ouvert de Léon intégré en séquence 2.
-- Rapports de delta, non-régression, recette et registre de clôture présents dans ce dossier.
-- Matrice de couverture finale et captures de recette jointes.
+- Code du module corrigé : commit `4778676a623bae2ce89fdc2a4417f3cddee55b7e`.
+- 57 exigences MGT-01 à MGT-57 contrôlées et fermées ; MGT-48 est fermé comme **modifié/arbitré**.
+- Couverture : 791/791 blocs significatifs ; 86/86 blocs S2.
+- Recette iPad portrait/paysage et desktop conforme.
+- Les rapports de delta, non-régression, recette et clôture ont été actualisés.
