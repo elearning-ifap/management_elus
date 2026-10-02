@@ -1,58 +1,27 @@
-# Rapport de non-régression — MGT UX18I · lot 7 final
+# Rapport de non-régression — MGT UX18I lot 7 corrigé
 
-## Verdict
+Code du module : commit `4778676a623bae2ce89fdc2a4417f3cddee55b7e` · blob `index.html` `dfea37d25b0946f326a0ac688a162f6300949425`.
 
-**Conforme sur les contrôles automatisés, statiques et responsive exécutés.**
+## Invariants contrôlés
 
-Les 57 exigences du registre sont désormais traitées au niveau production : les exigences techniques/pédagogiques sont conformes ou corrigées, et MGT-29 est fermé par arbitrage explicite du chef de projet.
+- 67 panneaux `section.panel` conservés ;
+- 5 séquences et 8 défis conservés ;
+- six repères pédagogiques communs inchangés dans leur ordre et leur fonction ;
+- positionnements d’entrée et de sortie à 6 dimensions conservés ;
+- 6 fiches PDF toujours présentes ;
+- aucune réapparition de « Profil A/B/C », « Repère du corpus » ou ancien instantané S3 ;
+- MGT-29 reste clos par arbitrage.
 
-## Structure et ressources
+## Non-régression fonctionnelle ciblée
 
-- panneaux : **67** ;
-- images : **23** ;
-- PDF : **6** ;
-- défis : **8** ;
-- séquences : **5** ;
-- références locales manquantes : **0** ;
-- identifiants HTML dupliqués : **0**.
+- MGT-17 : interaction réelle testée ;
+- MGT-19 : classement erroné détecté, feedback affiché, repositionnement encore possible ;
+- MGT-38 : avec Thomas choisi, Thomas est conservé sur les résultats des défis 3 et 4 ;
+- variante du défi 4 : « Thomas arrive… » après sélection de Thomas ;
+- 0 erreur JavaScript pendant la recette ciblée.
 
-Par rapport à la candidate précédant MGT-30, **28/29 actifs binaires sont identiques**. Le seul actif modifié est le portrait de Léon explicitement rattaché à MGT-30.
+## Responsive
 
-## MGT-30 — Léon
-
-- portrait S2 remplacé par le visuel approuvé ;
-- identité graphique du personnage verrouillée ;
-- S2 utilise l’expression ouverte ;
-- S5 conserve le visuel de pression adapté au contexte narratif ;
-- aucun autre personnage ni média n’est modifié.
-
-## Nettoyage apprenant
-
-- `Repère du corpus` : **0** occurrence ;
-- ancien `instantané` : **0** occurrence ;
-- identifiants exacts `Profil A/B/C` : **0** occurrence ;
-- marqueur de production MGT-29 supprimé des livrables de fermeture.
-
-## Six repères pédagogiques — MGT-57
-
-Contrôle runtime :
-
-- S1 : **14** écrans équipés ;
-- S2 : **12** ;
-- S3 : **10** ;
-- S4 : **12** ;
-- S5 : **11**.
-
-Les six libellés ont été comparés dans les cinq séquences : ordre et formulation identiques.
-
-## Technique
-
-- empreinte `index.html` finale : `1cc9c7531e5be341d27d4db7101bf1310ddbebc3478049dd22c39580f0574804` ;
-- empreinte package final : `9c2455ad9d702aaefb65434b878965274c38a99dc366351171766604dd1c64f1` ;
-- syntaxe JavaScript : conforme ;
-- erreurs JavaScript observées en recette normale : **0** ;
-- aucun débordement horizontal détecté en iPad portrait ou paysage.
-
-## Point de gouvernance
-
-La matrice de couverture et la recette démontrent la traçabilité technique et pédagogique. Un visa éditorial expert de la séquence 2 peut encore être recueilli avant packaging SCORM si le processus de validation projet le prévoit ; il ne correspond pas à un défaut technique de la candidate.
+- iPad portrait : 67/67 écrans, 0 débordement horizontal, 0 cible contrôlée < 44 px ;
+- iPad paysage : 67/67 écrans, 0 débordement horizontal, 0 cible contrôlée < 44 px ;
+- desktop : 67/67 écrans, 0 débordement horizontal, 0 cible contrôlée < 44 px.
