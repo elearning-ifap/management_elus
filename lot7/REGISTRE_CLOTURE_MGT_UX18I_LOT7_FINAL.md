@@ -1,11 +1,10 @@
-# Registre de clôture — MGT UX18I · lot 7 final
+# Registre de clôture — MGT UX18I lot 7 corrigé
 
-| ID / jalon | Statut | Décision / preuve |
-|---|---|---|
-| MGT-29 | Clos par arbitrage | Point retiré du registre de production par décision explicite du chef de projet ; aucune occurrence correspondante dans la candidate. |
-| MGT-30 | Clos | Nouveau portrait approuvé de Léon intégré en S2 ; identité canonique verrouillée. |
-| MGT-54 | Conforme | 67 écrans testés en iPad portrait et paysage, sans débordement ni erreur JS. |
-| MGT-55 | Conforme | 791/791 blocs significatifs tracés dans la matrice recalculée ; S2 : 86/86. |
-| MGT-56 | Conforme | Deltas de la passe finale limités à `index.html` et au visuel Léon MGT-30. |
-| MGT-57 | Conforme | Six repères identiques dans S1 à S5. |
-| Visa éditorial S2 | Jalon de gouvernance | Peut être recueilli avant SCORM selon le circuit de validation retenu ; aucun défaut technique associé. |
+- MGT-01 à MGT-57 : **fermés**, MGT-48 étant **fermé comme modifié/arbitré**.
+- MGT-29 : clos par décision du chef de projet.
+- Couverture : **791/791** blocs significatifs ; **86/86** en S2.
+- Recette responsive : conforme portrait, paysage et desktop.
+- Code du module : commit `4778676a623bae2ce89fdc2a4417f3cddee55b7e`.
+- Blob `index.html` : `dfea37d25b0946f326a0ac688a162f6300949425`.
+
+Derniers écarts corrigés : MGT-04, MGT-07, MGT-08, MGT-16, MGT-17, MGT-19, MGT-34, MGT-37, MGT-38, MGT-54, MGT-55 et MGT-56.
