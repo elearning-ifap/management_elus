@@ -3931,15 +3931,16 @@ body{font-family:var(--police);font-size:var(--fs-corps)}
  .mgt-fiche-sequence .btn{width:100%;min-width:0;max-width:100%;text-align:center;white-space:normal;flex-wrap:wrap;justify-content:center}
  .mgt-fiche-sequence .mgt-pdf-meta{flex:0 0 100%;margin-left:0;text-align:center}
 }
-</style>
 
-<style id="mgt-guide-diversite-20261001">
 .mgt-collab-medallion.mgt-persona-rappel{border-radius:16px;padding:7px 12px 7px 7px;align-items:center;max-width:330px}
 .mgt-collab-medallion.mgt-persona-rappel>span{display:flex;flex-direction:column;gap:2px;line-height:1.2}
 .mgt-collab-medallion.mgt-persona-rappel small{font-size:11px;font-weight:600;color:var(--gris-doux);letter-spacing:0}
 .mgt-tri-replacer{min-height:44px;padding:10px 12px;display:inline-flex;align-items:center}
 #mgt-defis-accueil .mgt-defi-accueil-vignette,#mgt-defis-accueil .mgt-defi-accueil-vignette>div{min-width:0}
 #mgt-defis-accueil .mgt-defi-accueil-vignette strong{overflow-wrap:anywhere;word-break:normal}
+</style>
+
+<style id="mgt-guide-diversite-20261001">
 .mgt-guide-card img{object-fit:contain!important;object-position:center bottom!important}
 .mgt-guidee::after{background-image:url("img/Guide e-learning sur fond transparent.webp")!important;background-repeat:no-repeat!important;background-position:center bottom!important;background-size:contain!important}
 .mgt-guidee.mgt-guide-explique::after{background-image:url("img/Guide e-learning sur fond transparent.webp")!important}
@@ -4512,6 +4513,7 @@ body{font-family:var(--police);font-size:var(--fs-corps)}
 <div class="g-consigne"><p>Cliquez sur chaque point pour afficher un exemple appliqué.</p></div>
 <div class="mgt-cards" id="mgt-s3-04-zone"></div>
 </section>
+
 <section class="panel mgt-seq-3 mgt-screen-repere" data-composant="fiche-outil" data-titre="S3 · Fiche-outil — Mots qui ferment, mots qui ouvrent" id="mod-s3-04b">
 <div class="mgt-collab-medallion" aria-label="Personnage repère de la séquence : Maëva"><img src="img/maeva-trois-demandes.jpg" alt=""/><span>Maëva</span></div>
 <p class="eyebrow">Séquence 3 · Clarifier les attentes</p>
@@ -5509,6 +5511,7 @@ function initPleinEcran(){
  btn.addEventListener('click',function(){actif()?sortir():entrer()});
  document.addEventListener('fullscreenchange',maj);
  document.addEventListener('webkitfullscreenchange',maj)}
+
 /* ---- P4 · Appariement (clic-pour-apparier) ---- */
 function appariement(cible,opts){
  var root=(typeof cible==='string')?document.getElementById(cible):cible;
@@ -5995,7 +5998,6 @@ function curseur(rootId,items,cfg){
    choix.appendChild(b)});
   bloc.appendChild(choix);bloc.appendChild(fb);root.appendChild(bloc)});
 }
-
 /* ---------------------------------------------------------------------
    4) cartesRevelation — cartes cliquables à révélation (triptyque et
       points-clés partagent ce moteur ; seul le nombre de cartes varie)
@@ -6508,13 +6510,14 @@ quizStepper('s1-05-nav','s1-05-zone',[
   {texte:"Son ancienneté au Congrès.",classe:'ko',texte_feedback:"L'ancienneté ne fonde pas la légitimité politique."}]},
  {question:"Thomas prépare une commission et souhaite demander directement à l'administration de modifier l'instruction d'un texte. Que clarifiez-vous ?",options:[
   {texte:"Thomas peut décider de l'orientation si cela accélère le dossier.",classe:'ko',texte_feedback:"Le collaborateur prépare, coordonne et alerte, mais il ne décide pas de l'orientation politique à la place de l'élu. Accélérer en brouillant les responsabilités expose le cabinet à des contradictions et fragilise le circuit institutionnel."},
-  {texte:"L'administration instruit et sécurise la procédure ; l'élu fixe l'orientation et Thomas prépare la demande.",classe:'ok',texte_feedback:"Cette répartition respecte les trois légitimités : l'élu oriente et décide, Thomas prépare et coordonne, l'administration instruit et garantit la régularité. L'action concrète consiste à formuler la demande avec son objectif, son circuit et son niveau de validation."},
+  {texte:"L'administration instruit et sécurise la procédure ; l'élu fixe l'orientation et Léon prépare la demande.",classe:'ok',texte_feedback:"Cette répartition respecte les trois légitimités : l'élu oriente et décide, Thomas prépare et coordonne, l'administration instruit et garantit la régularité. L'action concrète consiste à formuler la demande avec son objectif, son circuit et son niveau de validation."},
   {texte:"L'administration doit reprendre la position du cabinet sans discussion.",classe:'ko',texte_feedback:"L'administration ne porte pas une orientation politique, mais elle doit pouvoir exercer son rôle d'instruction, de neutralité et d'alerte juridique. La réduire à une simple exécution empêche la sécurisation du dossier."}]},
  {question:"Face à une sollicitation de la presse sur une position non encore arrêtée, le bon réflexe du collaborateur est de :",options:[
   {texte:"Répondre dans l'esprit de ce que l'élu aurait probablement dit.",classe:'ko',texte_feedback:"Le collaborateur ne prend jamais publiquement position à la place de l'élu."},
   {texte:"Transmettre la demande à l'élu.",classe:'ok',texte_feedback:"La position politique appartient à l'élu et ne se communique qu'une fois réellement arrêtée."},
   {texte:"Ne jamais répondre à la presse.",classe:'mi',texte_feedback:"Le bon réflexe n'est pas d'ignorer la demande, mais de la transmettre à l'élu."}]}
 ],{panelId:'mod-s1-05',defis:[1,2]});
+
 reponseOuverte('mgt-s1-01b-zone',{storeKey:'s1-01',panelId:null,placeholder:"Ma première réaction…",onValide:function(){var d=document.getElementById('mgt-s1-01-decision');if(d){d.hidden=false;d.scrollIntoView({behavior:'smooth',block:'nearest'})}}});
 reponseOuverte('mgt-s1-04a-zone',{storeKey:'s1-consolidation',panelId:'mod-s1-04a',placeholder:"Le message que j'adresserais à mon collaborateur…"});
 boucleReflexive('mgt-s1-06-zone',{storeKey:'s1-01',panelId:'mod-s1-06',criteres:["Clarté de mon propre rôle","Clarté du rôle du collaborateur","Respect du rôle de l'administration","Ma parole politique reste la mienne"]});
