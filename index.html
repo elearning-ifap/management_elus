@@ -5,6 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Manager ses collaborateurs en tant qu'élu — Congrès × IFAP</title>
+<!-- CANDIDAT UX18I-W — Lot W : écrans « Approfondir » épurés. -->
 <!-- CANDIDAT UX18I-V — Lot V : écrans « Le modèle à retenir » épurés (proposition A). -->
 <!-- CANDIDAT UX18I-U — Lot U : en-tête de repérage unique. -->
 <!-- CANDIDAT UX18I-T — Lot T : défis en « carnet de mandat » (accueil et tableau de bord). -->
@@ -4397,6 +4398,34 @@ body.mgt-entete-on #g-position{visibility:hidden}
 .mgt-m-plus-corps h2{font-size:20px!important;margin:24px 0 8px!important;padding:0!important}
 @media(max-width:700px){.mgt-m-liste{grid-template-columns:1fr}.mgt-m-modele{padding:22px}}
 </style>
+
+<style id="ux18i-lot-w">
+/* ==== LOT W — écrans « Approfondir » épurés (mêmes règles, sans carte « modèle ») ==== */
+.mgt-epure .mgt-citation-mnl{background:none!important;padding:0 0 0 44px!important;margin:8px 0 32px!important;font-size:22px!important}
+.mgt-epure .mgt-citation-mnl::before{left:0!important;top:-8px!important;font-size:56px!important}
+.mgt-epure-app .mgt-modele > *{background:#fff!important;border:0!important;border-top:3px solid var(--seq-accent,#58788F)!important;border-radius:12px!important;box-shadow:none!important}
+
+.mgt-epure-app > .mgt-chapo-suite{display:none!important}
+.mgt-epure-app > h2{margin:44px 0 12px!important;padding:0!important;font-size:22px!important}
+.mgt-epure-app > h2::before{display:none!important}
+.mgt-epure-app > .g-apport,.mgt-epure-app > .g-consigne,.mgt-epure-app > .mgt-cas-mnl,.mgt-epure-app > .mgt-recherche,.mgt-epure-app > .encadre,.mgt-epure-app > .mgt-fiche-apport,.mgt-epure-app > .mgt-plat{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0 0 24px!important;color:var(--encre)!important}
+.mgt-epure-app > .mgt-plat *{color:var(--encre)!important}
+.mgt-epure-app > .g-consigne{font-weight:700}
+.mgt-epure-app > .g-consigne::before,.mgt-epure-app > .g-consigne::after,.mgt-epure-app > .mgt-plat::before{display:none!important;content:none!important}
+.mgt-epure-app [class*=kicker],.mgt-epure-app .g-consigne-titre{text-transform:none!important;letter-spacing:0!important;font-size:15px!important}
+.mgt-epure-app > .mgt-recherche .mgt-recherche-kicker{display:none!important}
+.mgt-epure-app > .mgt-recherche .mgt-recherche-detail{border-top:0}
+.mgt-epure-app > .mgt-cas-mnl > h2{font-size:20px!important;margin:0 0 8px!important;padding:0!important}
+.mgt-epure-app > .mgt-cas-mnl > h2::before{display:none!important}
+.mgt-epure-app > .mgt-m-citation{margin:8px 0 32px}
+.mgt-epure-app .mgt-m-plus{margin-top:32px}
+.mgt-epure-app .mgt-m-plus-corps h3{font-size:20px}
+.mgt-epure-app .mgt-m-plus-corps h4{font-size:17px;margin:18px 0 6px;color:var(--encre)}
+.mgt-epure-app .mgt-m-plus-corps .mgt-cas-mnl,.mgt-epure-app .mgt-m-plus-corps .g-consigne{background:none!important;border:0!important;box-shadow:none!important;padding:0!important}
+.mgt-epure-app table.tab{border-collapse:collapse;width:100%}
+.mgt-epure-app table.tab th,.mgt-epure-app table.tab td{border:0!important;border-bottom:1px solid #E3E9EE!important;background:none!important;color:var(--encre)!important;text-align:left;padding:10px 12px}
+.mgt-epure-app table.tab thead th{border-bottom:3px solid var(--or)!important;font-weight:800}
+</style>
 </head>
 <body>
 <header class="g-chrome" role="banner">
@@ -4590,10 +4619,10 @@ body.mgt-entete-on #g-position{visibility:hidden}
 
 <section hidden="" class="mgt-ecran-retire" data-retire="Lot L — fusionné dans mod-s1-01b" id="mod-s1-01c"></section>
 
-<section class="panel mgt-seq-1 mgt-screen-repere" data-composant="apport-structure" data-titre="S1 · Trois réponses à la même proposition" id="mod-s1-01d0">
+<section class="panel mgt-seq-1 mgt-screen-repere mgt-epure mgt-epure-app" data-composant="apport-structure" data-titre="S1 · Trois réponses à la même proposition" id="mod-s1-01d0">
 <p class="eyebrow">Séquence 1 · Prendre sa place et ajuster son autorité</p>
 <h1>Trois réponses à la même proposition</h1>
-<p class="chapo" data-source-mnl="MNL-0815 MNL-0816">L'autorité s'ajuste, situation après situation.</p><details class="mgt-approfondir mgt-chapo-suite"><summary>Lire la suite</summary><p>L'exercice d'un mandat peut pousser certain(e)s élu(e)s à surinvestir leur autorité — trancher vite, sans toujours laisser l'espace nécessaire à l'initiative. D'autres, à l'inverse, hésitent à l'exercer, par souci de préserver une relation agréable — au risque de laisser une équipe sans cap.</p></details>
+<p class="chapo" data-source-mnl="MNL-0815 MNL-0816">L'autorité s'ajuste, situation après situation.</p>
 <figure class="mgt-scene-visuel"><img alt="Un collaborateur présente une idée de rencontre avec les associations, dossier en main." src="img/thomas-recommandation-claire.jpg"/></figure>
 <div class="mgt-cas-mnl" data-source-mnl="MNL-0788 MNL-0789"><h2>La situation</h2><p>Un bureau, au Congrès. Un texte doit passer en commission dans trois semaines.</p><p>Le collaborateur : « J'ai une idée qui sort un peu du cadre habituel : proposer aux associations concernées un temps d'échange informel avant le passage en commission, pour préparer le terrain. Je pense que ça pourrait vraiment faire la différence. »</p></div>
 <div class="mgt-trois-versions">
@@ -4603,15 +4632,16 @@ body.mgt-entete-on #g-position{visibility:hidden}
 </div>
 <p data-source-mnl="MNL-0803 MNL-0804"><strong>Trois réponses à la même proposition.</strong> La première a fermé l'initiative. La seconde l'a laissée sans garde-fou. La troisième a fait les deux à la fois : accueillir, et cadrer. Cette séquence vous donne des questions pour trouver votre propre curseur — un curseur propre à chacun, et mobile d'une situation à l'autre.</p>
 <aside class="mgt-recherche" data-source-mnl="MNL-0817 MNL-0818"><p class="mgt-recherche-kicker">Un repère qui vient de la recherche en psychologie sociale</p><p class="mgt-en-bref"><strong>En bref —</strong> Ni trop d’autorité, ni pas assez : un cadre clair qui laisse une vraie place à la contribution donne les meilleurs résultats, dans la durée.</p><details class="mgt-recherche-detail"><summary>Lire le repère complet et sa source</summary><div class="mgt-recherche-corps"><p>L'une des études fondatrices sur le sujet a comparé trois climats de direction dans des groupes de travail : autoritaire, laissez-faire, et participatif. Les résultats, depuis largement confirmés, montrent que le climat autoritaire produit de l'obéissance en présence du responsable, mais de la tension et une baisse d'initiative en son absence. Le climat laissez-faire produit, lui, une baisse de la qualité et de la quantité du travail produit, faute de cap. C'est le climat participatif — un cadre clair, associé à une vraie place laissée à la contribution de chacun — qui a produit à la fois le meilleur niveau d'engagement et la meilleure qualité de production, de manière durable.</p><details class="mgt-source" data-source-mnl="MNL-0817 MNL-0818"><summary><span aria-hidden="true" class="mgt-reference-icon-ux15"><svg viewbox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a2 2 0 0 1 2 2v15a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 20.5z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17a2 2 0 0 1 2-2h2.5a2.5 2.5 0 0 1 2.5 2.5z"></path></svg></span><span class="mgt-reference-label-ux15">Source</span></summary><p>Lewin, K., Lippitt, R., &amp; White, R. K. (1939). <cite>Patterns of aggressive behavior in experimentally created social climates.</cite> Journal of Social Psychology, 10(2), 271–299.</p></details></div></details></aside>
-<p class="mgt-essentiel-p" data-source-mnl="MNL-0819"><strong>Ce que l'on peut en retenir —</strong> Le curseur ajusté combine deux forces à la fois : la clarté du cadre, et la place laissée à l'initiative.</p><blockquote class="mgt-citation-mnl" data-source-mnl="MNL-0820"><p>« Une autorité ajustée reste une autorité pleine et entière — elle sait, simplement, où porter son effort. »</p></blockquote>
-<details class="mgt-approfondir"><summary>S’exercer : reconnaître le curseur des autres</summary><div class="mgt-fusion" data-fusion-de="mod-s1-01d">
+<blockquote class="mgt-citation-mnl" data-source-mnl="MNL-0820"><p>« Une autorité ajustée reste une autorité pleine et entière — elle sait, simplement, où porter son effort. »</p></blockquote><section aria-label="L’essentiel" class="mgt-m-essentiel"><p class="mgt-m-ess-titre">L’essentiel</p><p>Le curseur ajusté combine deux forces à la fois : la clarté du cadre, et la place laissée à l'initiative.</p></section>
+
+
+<details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><p>L'exercice d'un mandat peut pousser certain(e)s élu(e)s à surinvestir leur autorité — trancher vite, sans toujours laisser l'espace nécessaire à l'initiative. D'autres, à l'inverse, hésitent à l'exercer, par souci de préserver une relation agréable — au risque de laisser une équipe sans cap.</p><h3>S’exercer : reconnaître le curseur des autres</h3><div class="mgt-fusion" data-fusion-de="mod-s1-01d">
 <div class="g-consigne"><p><strong>Ce que vous devez faire :</strong> trois courtes situations. Pour chacune, quel curseur est en jeu ? Choisissez entre <em>autoritarisme</em>, <em>laxisme</em> et <em>autorité ajustée</em>. Une réponse est attendue pour chaque situation ; le retour affiché vous aide à comprendre le repère.</p></div>
 <div class="mgt-scenarios-curseur">
 <article class="mgt-scenario-curseur" data-correct="autoritaire"><span aria-hidden="true" class="mgt-scenario-picto"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="16" rx="2" width="14" x="5" y="4"></rect><path d="M9 4V2h6v2M8 9h8M8 13h8M8 17h5"></path></svg></span><h2>Situation 1 sur 3</h2><p class="mgt-scenario-texte">Avant une commission, un élu du Congrès valide systématiquement chaque étape d'un dossier avant que son collaborateur ne puisse avancer à la suivante, même sur des points mineurs.</p><p class="mgt-scenario-question">Quel curseur cela illustre-t-il ?</p><div><button class="btn" data-value="autoritaire">Autoritarisme</button><button class="btn" data-value="laisser-faire">Laxisme</button><button class="btn" data-value="ajustee">Autorité ajustée</button></div><p aria-live="polite" class="mgt-feedback"></p></article>
 <article class="mgt-scenario-curseur" data-correct="laisser-faire"><span aria-hidden="true" class="mgt-scenario-picto"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 5h16v12H8l-4 4V5Z"></path><path d="M8 9h8M8 13h5"></path></svg></span><h2>Situation 2 sur 3</h2><p class="mgt-scenario-texte">Une élue confie un dossier sensible sans indiquer ni échéance, ni points de vigilance, ni moment de suivi.</p><p class="mgt-scenario-question">Quel curseur cela illustre-t-il ?</p><div><button class="btn" data-value="autoritaire">Autoritarisme</button><button class="btn" data-value="laisser-faire">Laxisme</button><button class="btn" data-value="ajustee">Autorité ajustée</button></div><p aria-live="polite" class="mgt-feedback"></p></article>
 <article class="mgt-scenario-curseur" data-correct="ajustee"><span aria-hidden="true" class="mgt-scenario-picto"><svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M4 18h16M6 18V9l6-4 6 4v9"></path><path d="m9 13 2 2 4-4"></path></svg></span><h2>Situation 3 sur 3</h2><p class="mgt-scenario-texte">Un élu fixe un cap clair et une échéance, laisse son collaborateur choisir la méthode, et prévoit un point d'étape à mi-parcours.</p><p class="mgt-scenario-question">Quel curseur cela illustre-t-il ?</p><div><button class="btn" data-value="autoritaire">Autoritarisme</button><button class="btn" data-value="laisser-faire">Laxisme</button><button class="btn" data-value="ajustee">Autorité ajustée</button></div><p aria-live="polite" class="mgt-feedback"></p></article>
-</div></div></details>
-<details class="mgt-approfondir mgt-fusion" data-fusion-de="mod-s1-01e"><summary>Le questionnement guidé, en 3 temps — pour aller plus loin</summary>
+</div></div><h3>Le questionnement guidé, en 3 temps</h3>
 <p class="mgt-fusion-chapo">Ce module repose sur des questions à vous poser sincèrement. Prenez le temps qu'il vous faut sur chacun des trois temps ci-dessous.</p>
 <p class="mgt-mini-aide">Les curseurs servent seulement de repères visuels : il n’y a ni bonne ni mauvaise réponse.</p>
 <nav aria-label="Les trois repères" class="mgt-auto-stepper-ux14"><button class="mgt-auto-step-ux14" data-auto-jump="1" type="button"><span class="mgt-auto-step-num-ux14">1</span><span>Sous pression, où va mon curseur ?</span></button><button class="mgt-auto-step-ux14" data-auto-jump="2" type="button"><span class="mgt-auto-step-num-ux14">2</span><span>Ce que mes collaborateurs vivent</span></button><button class="mgt-auto-step-ux14" data-auto-jump="3" type="button"><span class="mgt-auto-step-num-ux14">3</span><span>Ce que ça produit, au final</span></button></nav><div class="mgt-questionnement-3temps">
@@ -4665,8 +4695,7 @@ body.mgt-entete-on #g-position{visibility:hidden}
 <div class="mgt-auto-nav-ux14"><button class="btn btn-secondaire" data-auto-prev="2" type="button">← Précédent</button></div></article>
 </div>
 <div class="mgt-essentiel"><p><strong>Essentiel à retenir :</strong> ces questions ont chacune leur propre réponse — la vôtre, et c'est elle qui compte.</p></div>
-<p class="mgt-auto-final-action-ux14" hidden=""><button class="btn btn-primaire" data-mgt-complete="mod-s1-01e" type="button">Je garde ces repères et je continue</button></p></details>
-</section>
+<p class="mgt-auto-final-action-ux14" hidden=""><button class="btn btn-primaire" data-mgt-complete="mod-s1-01e" type="button">Je garde ces repères et je continue</button></p></div></details></section>
 
 <section hidden="" class="mgt-ecran-retire" data-retire="Lot L — fusionné dans mod-s1-01d0" id="mod-s1-01d"></section>
 
@@ -4697,14 +4726,13 @@ body.mgt-entete-on #g-position{visibility:hidden}
 <article class="mgt-modele-card"><h3>Ce qui doit être clarifié</h3><p>Le résultat attendu, la marge de décision, l’échéance, les interlocuteurs et le niveau de validation.</p></article>
 </div></section><h3>Objectif, utilité et mise en pratique</h3><dl class="mgt-fiche-apport" data-source-mnl="MNL-0133 MNL-0135 MNL-0141 MNL-0142"><dt>Objectif</dt><dd>Savoir, à tout moment, ce qui relève de vous et ce qui relève d'un autre acteur de l'écosystème institutionnel.</dd><dt>Principe</dt><dd>Les cartes ci-dessus résument ce que porte chaque rôle, ce qu'il fait, et ce qu'il ne fait pas.</dd><dt>Utilité</dt><dd>Cette clarté évite les décisions non instruites, les tensions de circuit, et les attentes déçues — elle protège autant vous que votre équipe et vos partenaires.</dd><dt>Mise en pratique</dt><dd>Avant d'agir ou de transmettre une demande, une seule question à se poser : "Est-ce que ceci relève de moi, ou dois-je l'orienter vers quelqu'un d'autre ?"</dd></dl></div></details></section>
 
-<section class="panel mgt-seq-1 mgt-screen-repere" data-composant="triptyque" data-titre="S1 · Qui parle, et au nom de qui ?" id="mod-s1-04">
+<section class="panel mgt-seq-1 mgt-screen-repere mgt-epure mgt-epure-app" data-composant="triptyque" data-titre="S1 · Qui parle, et au nom de qui ?" id="mod-s1-04">
 <p class="eyebrow">Séquence 1 · Prendre sa place et ajuster son autorité</p>
 <h1>Qui parle, et au nom de qui ?</h1>
-
 <div class="g-apport"><p><strong>Trois voix distinctes coexistent autour de vous sur un même dossier :</strong> la vôtre, celle de votre cabinet et celle de votre groupe politique. Chacune a sa fonction propre, et aucune ne peut parler à la place d'une autre sans risque.</p></div>
 <div class="g-consigne"><p>Explorez les trois voix pour distinguer ce qu'elles portent et leurs limites.</p></div>
-<div class="mgt-cards" id="mgt-s1-04-zone"></div><details class="mgt-approfondir"><summary>Le tableau des trois voix, son objectif et sa mise en pratique</summary><dl class="mgt-fiche-apport" data-source-mnl="MNL-0146 MNL-0148"><dt>Objectif</dt><dd>Garantir que votre parole politique reste la vôtre, et seulement la vôtre, y compris quand d'autres voix s'expriment autour de vous.</dd><dt>Principe</dt><dd>Le tableau ci-dessous résume ce que porte chaque voix, ce qu'elle fait, et ce qu'elle ne fait pas :</dd></dl><div class="mgt-table-scroll"><table class="tab mgt-table-mnl" data-source-mnl="MNL-0149 MNL-0150 MNL-0151 MNL-0152"><thead><tr><th scope="col">Rôle</th><th scope="col">Ce qu'il porte</th><th scope="col">Ce qu'il fait</th><th scope="col">Ce qu'il ne fait pas</th></tr></thead><tbody><tr><th scope="row">L'élu(e) du Congrès</th><td>Sa voix politique individuelle, son vote</td><td>Prend position, vote, s'exprime publiquement en son nom</td><td>N'est jamais présumé(e) avoir une position avant de l'avoir lui/elle-même arrêtée</td></tr><tr><th scope="row">Le collaborateur / la collaboratrice de cabinet</th><td>La préparation du dossier, l'appui</td><td>Prépare les argumentaires, relaie les demandes, alerte</td><td>Ne prend jamais position publique à la place de l'élu(e)</td></tr><tr><th scope="row">Le groupe politique (et son président / porte-parole)</th><td>La ligne collective, la cohérence du groupe</td><td>Peut porter une position commune sur certains textes</td><td>Ne remplace pas la liberté de vote propre de chaque élu(e) sur les textes hors discipline de groupe</td></tr></tbody></table></div><dl class="mgt-fiche-apport" data-source-mnl="MNL-0153 MNL-0154 MNL-0155"><dt>Utilité</dt><dd>Cette distinction évite les prises de position prématurées, les contradictions publiques, et les tensions internes à votre groupe politique.</dd><dt>Mise en pratique</dt><dd>Avant toute prise de parole publique sur un texte, une seule question à se poser : "Ai-je moi-même arrêté cette position, à ce stade précis du dossier ?" Si la réponse n'est pas un "oui" clair, la réponse à donner est : "pas encore, je reviens vers vous."</dd><dt>Essentiel à retenir</dt><dd>Deux questions suffisent la plupart du temps : 1- Qui exécute ? l’administration, jamais le cabinet 2- Qui parle ? : l'élu(e), une fois sa position réellement arrêtée)</dd></dl></details>
-</section>
+<div class="mgt-cards" id="mgt-s1-04-zone"></div>
+<details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>Le tableau des trois voix, son objectif et sa mise en pratique</h3><dl class="mgt-fiche-apport" data-source-mnl="MNL-0146 MNL-0148"><dt>Objectif</dt><dd>Garantir que votre parole politique reste la vôtre, et seulement la vôtre, y compris quand d'autres voix s'expriment autour de vous.</dd><dt>Principe</dt><dd>Le tableau ci-dessous résume ce que porte chaque voix, ce qu'elle fait, et ce qu'elle ne fait pas :</dd></dl><div class="mgt-table-scroll"><table class="tab mgt-table-mnl" data-source-mnl="MNL-0149 MNL-0150 MNL-0151 MNL-0152"><thead><tr><th scope="col">Rôle</th><th scope="col">Ce qu'il porte</th><th scope="col">Ce qu'il fait</th><th scope="col">Ce qu'il ne fait pas</th></tr></thead><tbody><tr><th scope="row">L'élu(e) du Congrès</th><td>Sa voix politique individuelle, son vote</td><td>Prend position, vote, s'exprime publiquement en son nom</td><td>N'est jamais présumé(e) avoir une position avant de l'avoir lui/elle-même arrêtée</td></tr><tr><th scope="row">Le collaborateur / la collaboratrice de cabinet</th><td>La préparation du dossier, l'appui</td><td>Prépare les argumentaires, relaie les demandes, alerte</td><td>Ne prend jamais position publique à la place de l'élu(e)</td></tr><tr><th scope="row">Le groupe politique (et son président / porte-parole)</th><td>La ligne collective, la cohérence du groupe</td><td>Peut porter une position commune sur certains textes</td><td>Ne remplace pas la liberté de vote propre de chaque élu(e) sur les textes hors discipline de groupe</td></tr></tbody></table></div><dl class="mgt-fiche-apport" data-source-mnl="MNL-0153 MNL-0154 MNL-0155"><dt>Utilité</dt><dd>Cette distinction évite les prises de position prématurées, les contradictions publiques, et les tensions internes à votre groupe politique.</dd><dt>Mise en pratique</dt><dd>Avant toute prise de parole publique sur un texte, une seule question à se poser : "Ai-je moi-même arrêté cette position, à ce stade précis du dossier ?" Si la réponse n'est pas un "oui" clair, la réponse à donner est : "pas encore, je reviens vers vous."</dd><dt>Essentiel à retenir</dt><dd>Deux questions suffisent la plupart du temps : 1- Qui exécute ? l’administration, jamais le cabinet 2- Qui parle ? : l'élu(e), une fois sa position réellement arrêtée)</dd></dl></div></details></section>
 
 <section class="panel mgt-seq-1" data-composant="tri-cartes" data-titre="S1 · Qui fait quoi ?" id="mod-s1-03">
 <div aria-label="Personnage repère de la séquence : Thomas" class="mgt-collab-medallion"><img alt="" src="img/thomas-pose-dossiers.jpg"/><span>Thomas</span></div>
@@ -4849,25 +4877,24 @@ body.mgt-entete-on #g-position{visibility:hidden}
 </dl>
 </div></details></section>
 
-<section class="panel mgt-seq-2 mgt-screen-repere" data-composant="apport-structure" data-titre="S2 · Bien intégrer, dès les premiers jours" id="mod-s2-04a2">
+<section class="panel mgt-seq-2 mgt-screen-repere mgt-epure mgt-epure-app" data-composant="apport-structure" data-titre="S2 · Bien intégrer, dès les premiers jours" id="mod-s2-04a2">
 <p class="eyebrow">Séquence 2 · Construire et intégrer la bonne équipe</p>
 <h1>Bien intégrer, dès les premiers jours</h1>
 
-<div class="mgt-palier">
-<details class="mgt-approfondir"><summary>Objectif et concept</summary><dl class="mgt-fiche-apport" data-source-mnl="MNL-0265 MNL-0266">
+
+<div class="mgt-modele quatre"><article class="mgt-modele-card"><h3>Être en règle</h3><p>Être en règle administrativement.</p></article><article class="mgt-modele-card"><h3>Comprendre son rôle</h3><p>Comprendre précisément son rôle.</p></article><article class="mgt-modele-card"><h3>Saisir les codes</h3><p>Saisir les codes non écrits de l'équipe.</p></article><article class="mgt-modele-card"><h3>Être relié</h3><p>Se sentir relié aux personnes avec qui il va travailler.</p></article></div>
+
+<section aria-label="L’essentiel" class="mgt-m-essentiel"><p class="mgt-m-ess-titre">L’essentiel</p><p>Un collaborateur qui comprend vite son rôle, les codes de l'équipe et sa place dans le collectif devient autonome bien plus vite qu'un collaborateur seulement compétent, mais livré à lui-même.</p></section>
+<aside class="mgt-recherche" data-source-mnl="MNL-0249"><p class="mgt-recherche-kicker">Un repère qui vient des sciences du management — l’intégration</p><p class="mgt-en-bref"><strong>En bref —</strong> Quatre besoins conditionnent une intégration réussie : être en règle, comprendre son rôle, saisir les codes, se sentir relié.</p><details class="mgt-recherche-detail"><summary>Lire le repère complet et sa source</summary><div class="mgt-recherche-corps"><p>Une deuxième piste de recherche, portée notamment par Talya Bauer (2010) pour la Society for Human Resource Management, s'est penchée sur ce qui fait qu'un nouveau collaborateur s'intègre bien — ou pas. Quatre besoins reviennent systématiquement dans les premières semaines : être en règle sur le plan administratif, comprendre précisément ce qu'on attend de lui, saisir les codes non écrits de l'équipe, et se sentir relié aux personnes avec qui il va travailler. Négliger l'un de ces quatre besoins ralentit l'intégration, même quand le recrutement lui-même était le bon choix.</p><details class="mgt-source" data-source-mnl="MNL-0249"><summary><span aria-hidden="true" class="mgt-reference-icon-ux15"><svg viewbox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a2 2 0 0 1 2 2v15a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 20.5z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17a2 2 0 0 1 2-2h2.5a2.5 2.5 0 0 1 2.5 2.5z"></path></svg></span><span class="mgt-reference-label-ux15">Source</span></summary><p>Bauer, T. N. (2010). <cite>Onboarding New Employees: Maximizing Success.</cite> SHRM Foundation.</p></details></div></details></aside>
+
+<details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>Objectif et concept</h3><dl class="mgt-fiche-apport" data-source-mnl="MNL-0265 MNL-0266">
 <dt>Objectif</dt><dd>Structurer les premières semaines d'un nouveau collaborateur, plutôt que de laisser l'intégration se faire au fil de l'eau.</dd>
 <dt>Concept</dt><dd>Quatre besoins reviennent systématiquement chez un nouveau collaborateur : être en règle administrativement, comprendre précisément son rôle, saisir les codes non écrits de l'équipe, et se sentir relié aux personnes avec qui il va travailler.</dd>
-</dl></details>
-<div class="mgt-modele quatre"><article class="mgt-modele-card"><h3>Être en règle</h3><p>Être en règle administrativement.</p></article><article class="mgt-modele-card"><h3>Comprendre son rôle</h3><p>Comprendre précisément son rôle.</p></article><article class="mgt-modele-card"><h3>Saisir les codes</h3><p>Saisir les codes non écrits de l'équipe.</p></article><article class="mgt-modele-card"><h3>Être relié</h3><p>Se sentir relié aux personnes avec qui il va travailler.</p></article></div>
-<details class="mgt-approfondir"><summary>Principe, utilité et mise en pratique</summary><dl class="mgt-fiche-apport" data-source-mnl="MNL-0267–MNL-0269">
+</dl><h3>Principe, utilité et mise en pratique</h3><dl class="mgt-fiche-apport" data-source-mnl="MNL-0267–MNL-0269">
 <dt>Principe</dt><dd>Ces quatre besoins ne se couvrent pas dans le même temps ni de la même manière : le premier (être en règle) se traite en un jour, les trois autres se construisent sur plusieurs semaines et se laissent rarement au hasard sans en pâtir.</dd>
 <dt>Utilité</dt><dd>Une intégration bien structurée réduit le temps avant qu'un collaborateur soit pleinement autonome, et limite le risque de départ précoce, faute de repères.</dd>
 <dt>Mise en pratique</dt><dd>Construire, avant l'arrivée du collaborateur, une check-list couvrant les quatre besoins — c'est l'objet de la check-list « 30 premiers jours » de cette séquence.</dd>
-</dl></details>
-<div class="mgt-essentiel" data-source-mnl="MNL-0270"><p><strong>Essentiel à retenir —</strong> Un collaborateur qui comprend vite son rôle, les codes de l'équipe et sa place dans le collectif devient autonome bien plus vite qu'un collaborateur seulement compétent, mais livré à lui-même.</p></div>
-<aside class="mgt-recherche" data-source-mnl="MNL-0249"><p class="mgt-recherche-kicker">Un repère qui vient des sciences du management — l’intégration</p><p class="mgt-en-bref"><strong>En bref —</strong> Quatre besoins conditionnent une intégration réussie : être en règle, comprendre son rôle, saisir les codes, se sentir relié.</p><details class="mgt-recherche-detail"><summary>Lire le repère complet et sa source</summary><div class="mgt-recherche-corps"><p>Une deuxième piste de recherche, portée notamment par Talya Bauer (2010) pour la Society for Human Resource Management, s'est penchée sur ce qui fait qu'un nouveau collaborateur s'intègre bien — ou pas. Quatre besoins reviennent systématiquement dans les premières semaines : être en règle sur le plan administratif, comprendre précisément ce qu'on attend de lui, saisir les codes non écrits de l'équipe, et se sentir relié aux personnes avec qui il va travailler. Négliger l'un de ces quatre besoins ralentit l'intégration, même quand le recrutement lui-même était le bon choix.</p><details class="mgt-source" data-source-mnl="MNL-0249"><summary><span aria-hidden="true" class="mgt-reference-icon-ux15"><svg viewbox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a2 2 0 0 1 2 2v15a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 20.5z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17a2 2 0 0 1 2-2h2.5a2.5 2.5 0 0 1 2.5 2.5z"></path></svg></span><span class="mgt-reference-label-ux15">Source</span></summary><p>Bauer, T. N. (2010). <cite>Onboarding New Employees: Maximizing Success.</cite> SHRM Foundation.</p></details></div></details></aside>
-</div>
-</section>
+</dl></div></details></section>
 
 
 <section class="panel mgt-seq-2" data-composant="tri-cartes" data-titre="S2 · Les premiers jours dans l’équipe" id="mod-s2-03">
@@ -4970,14 +4997,16 @@ body.mgt-entete-on #g-position{visibility:hidden}
 <div id="mgt-s3-01-zone"></div>
 </section>
 
-<section class="panel mgt-seq-3 mgt-screen-repere" data-composant="points-cles" data-titre="S3 · Les six points d'une attente claire" id="mod-s3-04">
+<section class="panel mgt-seq-3 mgt-screen-repere mgt-epure mgt-epure-app" data-composant="points-cles" data-titre="S3 · Les six points d'une attente claire" id="mod-s3-04">
 <div aria-label="Personnage repère de la séquence : Maëva" class="mgt-collab-medallion"><img alt="" src="img/maeva-trois-demandes.jpg"/><span>Maëva</span></div>
 <p class="eyebrow">Séquence 3 · Clarifier les attentes</p>
 <h1>Les six points d'une attente claire</h1>
-<div class="g-repere"><p>« Une demande claire dit où aller et laisse une place adaptée à la manière d'y parvenir. »</p></div>
+<blockquote class="mgt-m-citation">« Une demande claire dit où aller et laisse une place adaptée à la manière d'y parvenir. »</blockquote>
 <div class="g-consigne"><p>Cliquez sur chaque point pour afficher un exemple appliqué.</p></div>
 <div class="mgt-cards" id="mgt-s3-04-zone"></div>
-<details class="mgt-approfondir"><summary>Mots qui ferment, mots qui ouvrent — donner une consigne</summary><div class="mgt-fusion" data-fusion-de="mod-s3-04b">
+
+
+<details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>Mots qui ferment, mots qui ouvrent — donner une consigne</h3><div class="mgt-fusion" data-fusion-de="mod-s3-04b">
 <p class="mgt-fusion-chapo">Avant un échange sensible, un coup d'œil suffit : repérer si la formulation prévue appartient à la colonne de gauche, et si oui, piocher l'équivalent à droite. Cette fiche reste accessible à tout moment depuis le menu « Accès direct ».</p>
 <table class="tab">
 <thead><tr><th>Ça ferme</th><th>Ça ouvre</th></tr></thead>
@@ -4998,12 +5027,11 @@ body.mgt-entete-on #g-position{visibility:hidden}
 <tr><td>« On verra »</td><td>Flou, laisse l'autre dans l'incertitude</td><td>Donner une échéance, même approximative</td></tr>
 </tbody>
 </table>
-<div class="mgt-fiche-reference"><p><strong>À garder sous la main :</strong> la fiche complète réunit les formulations pour donner une consigne, faire un retour, reconnaître un travail, recadrer et surveiller les tournures qui ferment le dialogue.</p><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_06_Mots_qui_piquent_mots_qui_soutiennent.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Les mots qui piquent / les mots qui soutiennent »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div></div></details>
-<details class="mgt-approfondir"><summary>Se faire vraiment entendre</summary><div class="mgt-fusion" data-fusion-de="mod-s3-03"><div class="g-apport" data-source-mnl="MNL-0551–MNL-0562" id="mgt-s3-se-faire-entendre-source" style="margin-top:18px">
+<div class="mgt-fiche-reference"><p><strong>À garder sous la main :</strong> la fiche complète réunit les formulations pour donner une consigne, faire un retour, reconnaître un travail, recadrer et surveiller les tournures qui ferment le dialogue.</p><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_06_Mots_qui_piquent_mots_qui_soutiennent.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Les mots qui piquent / les mots qui soutiennent »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div></div><h3>Se faire vraiment entendre</h3><div class="mgt-fusion" data-fusion-de="mod-s3-03"><div class="g-apport" data-source-mnl="MNL-0551–MNL-0562" id="mgt-s3-se-faire-entendre-source" style="margin-top:18px">
 <h2>Se faire vraiment entendre</h2>
 <p><strong>Objectif :</strong> être réellement entendu(e) par l'autre, pas seulement écouté(e) poliment.</p>
 <h3>Trois repères utiles avant tout échange</h3><p data-source-mnl="MNL-0551">Dans une relation, un échange, nous sommes au minimum deux. Trois repères simples aident à garder ça en tête :</p>
-<details class="mgt-approfondir"><summary>Les quatre réflexes en détail</summary><ul>
+<h4>Les quatre réflexes en détail</h4><ul>
 <li>Personne n'a tort ou raison dans l'absolu — chacun voit midi à sa porte, à partir de ce qu'il vit.</li>
 <li>Ce que je perçois d'une situation n'est jamais toute la situation.</li>
 <li>Si mon message n'est pas reçu comme je le voulais, c'est le message qu'il faut ajuster — pas l'autre qu'il faut blâmer.</li>
@@ -5013,15 +5041,14 @@ body.mgt-entete-on #g-position{visibility:hidden}
 <li><strong>Écouter pour de vrai.</strong> Sans préparer sa réponse pendant que l'autre parle.</li>
 <li><strong>Savoir ce qu'on veut obtenir avant d'ouvrir la bouche.</strong> Cette clarté-là évite bien des malentendus.</li>
 <li><strong>Si ça n'est pas entendu comme prévu, se demander comment reformuler — pas qui blâmer.</strong></li>
-</ol></details>
+</ol>
 <p><strong>Notre rôle, en tant que manager, c'est de construire le lien entre des points de vue différents — pas de l'imposer.</strong></p>
 <h3>Cinq réflexes qui font la différence</h3>
 <p><strong>À retenir :</strong> ces réflexes ne changent pas le fond du message ; ils changent sa réception, et donc son efficacité. Le respect du point de vue de l'autre précède l'influence.</p>
 <div class="g-consigne"><p><strong>Application courte :</strong> reformulez « Arrêtez de me demander une validation pour chaque détail » en mobilisant au moins deux de ces cinq réflexes.</p></div>
 <label class="mgt-reflexion-card"><strong>Ma reformulation</strong><textarea data-mgt-store="s3-se-faire-entendre-reformulation" rows="3"></textarea></label><details class="mgt-proposition" data-source-mnl="MNL-0565"><summary>Voir une proposition</summary><p>« Je vois que vous voulez bien faire, et c’est précieux. J’aimerais que vous puissiez avancer seul(e) sur les décisions du quotidien, et me solliciter surtout sur ce qui engage le service. »</p></details><p class="mgt-essentiel-p" data-source-mnl="MNL-0566"><strong>Essentiel à retenir —</strong> On dirige mieux une personne qui se sent d'abord comprise. Et si un message tombe à plat, c'est toujours à moi de le reformuler en premier.</p>
 </div>
-</div></details>
-</section>
+</div></div></details></section>
 
 <section hidden="" class="mgt-ecran-retire" data-retire="Lot L — fusionné dans mod-s3-04" id="mod-s3-04b"></section>
 
@@ -5119,14 +5146,15 @@ body.mgt-entete-on #g-position{visibility:hidden}
 <div id="mgt-s4-01-zone"></div>
 </section>
 
-<section class="panel mgt-seq-4 mgt-screen-repere" data-composant="triptyque" data-titre="S4 · Déléguer, ce n'est pas disparaître" id="mod-s4-04">
+<section class="panel mgt-seq-4 mgt-screen-repere mgt-epure mgt-epure-app" data-composant="triptyque" data-titre="S4 · Déléguer, ce n'est pas disparaître" id="mod-s4-04">
 <div aria-label="Personnage repère de la séquence : Thomas" class="mgt-collab-medallion"><img alt="" src="img/thomas-plan-action.jpg"/><span>Thomas</span></div>
 <p class="eyebrow">Séquence 4 · Faire grandir l’autonomie</p>
 <h1>Déléguer, ce n'est pas disparaître</h1>
-<div class="g-apport"><p>« Déléguer consiste à <strong>confier un résultat et une marge d'action</strong>, tout en restant disponible pour un suivi convenu. »</p></div>
+<blockquote class="mgt-m-citation">« Déléguer consiste à confier un résultat et une marge d'action , tout en restant disponible pour un suivi convenu. »</blockquote>
 <div class="g-consigne"><p>Cliquez sur chacune des trois composantes pour construire votre accord de délégation.</p></div>
 <div class="mgt-cards" id="mgt-s4-04-zone"></div>
-<div class="mgt-fusion" data-fusion-de="mod-s4-05b"><h2 class="mgt-fusion-titre">Mots qui ferment, mots qui ouvrent — feedback et reconnaissance</h2>
+
+<details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3 class="mgt-fusion-titre">Mots qui ferment, mots qui ouvrent — feedback et reconnaissance</h3>
 <p class="mgt-fusion-chapo">Un repère à portée de main avant un retour ou un mot de reconnaissance. Cette fiche reste accessible à tout moment depuis le menu « Accès direct ».</p>
 <h2>Pour faire un retour (feedback)</h2>
 <table class="tab">
@@ -5147,8 +5175,7 @@ body.mgt-entete-on #g-position{visibility:hidden}
 <tr><td>« Vous êtes doué. »</td><td>« Vous avez tenu ce délai grâce à votre organisation. »</td></tr>
 <tr><td>(silence, aucune remarque)</td><td>Un mot bref mais spécifique, même en passant.</td></tr>
 </tbody>
-</table></div>
-</section>
+</table></div></details></section>
 
 <section hidden="" class="mgt-ecran-retire" data-retire="Lot L — fusionné dans mod-s4-04" id="mod-s4-05b"></section>
 
@@ -5273,7 +5300,7 @@ body.mgt-entete-on #g-position{visibility:hidden}
 <div id="mgt-s5-01-zone"></div>
 </section>
 
-<section class="panel mgt-seq-5 mgt-screen-repere" data-composant="fiche-outil" data-titre="S5 · Fiche-outil — Recadrer et réguler les tensions" id="mod-s5-05b">
+<section class="panel mgt-seq-5 mgt-screen-repere mgt-epure mgt-epure-app" data-composant="fiche-outil" data-titre="S5 · Fiche-outil — Recadrer et réguler les tensions" id="mod-s5-05b">
 <div aria-label="Personnage repère de la séquence : Léon" class="mgt-collab-medallion"><img alt="" src="img/leon-dialogue-apaise.jpg"/><span>Léon</span></div>
 <p class="eyebrow">Séquence 5 · Réguler tôt</p>
 <h1>Recadrer et réguler les tensions</h1>
@@ -5290,10 +5317,9 @@ body.mgt-entete-on #g-position{visibility:hidden}
 </table>
 <h2 data-source-mnl="MNL-1014">Grille 1 — Pour intervenir au sein de l'équipe</h2>
 <div class="mgt-grid-steps-ux14 mgt-grid-desaccord-ux14" data-source-mnl="MNL-1015 MNL-1016 MNL-1017 MNL-1018 MNL-1019 MNL-1020 MNL-1021 MNL-1022 MNL-1023 MNL-1024 MNL-1025 MNL-1026 MNL-1027 MNL-1028 MNL-1029"><article class="mgt-grid-step-ux14"><div class="mgt-grid-step-head-ux14"><span class="mgt-grid-step-num-ux14">1</span><div><strong>Avant d'intervenir</strong><span>Un temps pour vous seul(e)</span></div></div><ul><li>Qu'est-ce que j'ai observé précisément, sans interprétation ?</li><li>Ai-je déjà une idée de qui "a raison" ? Si oui, est-ce que je peux la mettre de côté pour l'instant ?</li></ul></article><article class="mgt-grid-step-ux14"><div class="mgt-grid-step-head-ux14"><span class="mgt-grid-step-num-ux14">2</span><div><strong>En entretien individuel</strong><span>Avec chaque personne séparément</span></div></div><ul><li>Qu'est-ce qui se passe, de votre point de vue ?</li><li>Qu'est-ce qui, pour vous, est le plus difficile dans cette situation ?</li><li>Qu'est-ce que vous imaginez que l'autre personne vit, de son côté ?</li><li>Qu'est-ce que vous avez déjà essayé pour améliorer les choses ?</li><li>De quoi auriez-vous besoin pour que ça avance différemment ?</li><li>Qu'est-ce que vous seriez prêt(e) à faire, vous, pour que ça change ?</li></ul></article><article class="mgt-grid-step-ux14"><div class="mgt-grid-step-head-ux14"><span class="mgt-grid-step-num-ux14">3</span><div><strong>Quand vous réunissez les deux personnes</strong><span>Repartir sur de bonnes bases</span></div></div><ul><li>Qu'est-ce que vous avez en commun sur ce dossier, malgré le désaccord ?</li><li>Qu'est-ce que chacun de vous pourrait faire différemment, dès cette semaine ?</li><li>De quoi avez-vous besoin, l'un de l'autre, pour repartir sur de bonnes bases ?</li><li>Comment saurez-vous, dans un mois, que la situation s'est améliorée ?</li></ul></article></div>
-<details class="mgt-approfondir"><summary>Grille 2 — Auto-questionnement pour réguler sa propre montée en tension</summary><div class="mgt-grid-steps-ux14 mgt-grid-tension-ux14" data-source-mnl="MNL-1031 MNL-1032 MNL-1033 MNL-1034 MNL-1035 MNL-1036 MNL-1037 MNL-1038 MNL-1039 MNL-1040 MNL-1041"><article class="mgt-grid-step-ux14"><div class="mgt-grid-step-head-ux14"><span class="mgt-grid-step-num-ux14">1</span><div><strong>Dès les premiers signes</strong><span>Avant de réagir</span></div></div><ul><li>Qu'est-ce que je ressens, précisément, là maintenant ?</li><li>Qu'est-ce qui, dans ce qui vient de se passer, a déclenché cette réaction chez moi ?</li><li>Est-ce que je réagis à ce qui vient de se dire, ou à quelque chose de plus ancien que ça réveille ?</li></ul></article><article class="mgt-grid-step-ux14"><div class="mgt-grid-step-head-ux14"><span class="mgt-grid-step-num-ux14">2</span><div><strong>Avant de répondre</strong><span>Éviter de répondre sous tension</span></div></div><ul><li>Si je réponds maintenant, sous cette tension, qu'est-ce que ça va produire ?</li><li>Qu'est-ce que je veux vraiment obtenir de cet échange, une fois la tension retombée ?</li><li>De quoi ai-je besoin, moi, pour pouvoir répondre calmement — un temps, une reformulation, une pause ?</li></ul></article><article class="mgt-grid-step-ux14"><div class="mgt-grid-step-head-ux14"><span class="mgt-grid-step-num-ux14">3</span><div><strong>Pour reprendre la main sur soi</strong><span>Choisir ce que je fais avant de répondre</span></div></div><ul><li>Qu'est-ce que je dirais à un collègue que je verrais dans le même état que moi, là maintenant ?</li><li>Dans une semaine, qu'est-ce qui me semblera avoir vraiment compté dans cette situation ?</li><li data-source-mnl="MNL-1042">Qu'est-ce que je peux faire, tout de suite, pour redescendre avant de répondre ?</li></ul></article></div></details>
-<div class="g-repere"><p>Une question posée à soi-même, avant de répondre, fait souvent plus pour désamorcer une tension que la meilleure des répliques.</p></div>
 
-</section>
+<section aria-label="L’essentiel" class="mgt-m-essentiel"><p class="mgt-m-ess-titre">L’essentiel</p><p>Une question posée à soi-même, avant de répondre, fait souvent plus pour désamorcer une tension que la meilleure des répliques.</p></section>
+<details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>Grille 2 — Auto-questionnement pour réguler sa propre montée en tension</h3><div class="mgt-grid-steps-ux14 mgt-grid-tension-ux14" data-source-mnl="MNL-1031 MNL-1032 MNL-1033 MNL-1034 MNL-1035 MNL-1036 MNL-1037 MNL-1038 MNL-1039 MNL-1040 MNL-1041"><article class="mgt-grid-step-ux14"><div class="mgt-grid-step-head-ux14"><span class="mgt-grid-step-num-ux14">1</span><div><strong>Dès les premiers signes</strong><span>Avant de réagir</span></div></div><ul><li>Qu'est-ce que je ressens, précisément, là maintenant ?</li><li>Qu'est-ce qui, dans ce qui vient de se passer, a déclenché cette réaction chez moi ?</li><li>Est-ce que je réagis à ce qui vient de se dire, ou à quelque chose de plus ancien que ça réveille ?</li></ul></article><article class="mgt-grid-step-ux14"><div class="mgt-grid-step-head-ux14"><span class="mgt-grid-step-num-ux14">2</span><div><strong>Avant de répondre</strong><span>Éviter de répondre sous tension</span></div></div><ul><li>Si je réponds maintenant, sous cette tension, qu'est-ce que ça va produire ?</li><li>Qu'est-ce que je veux vraiment obtenir de cet échange, une fois la tension retombée ?</li><li>De quoi ai-je besoin, moi, pour pouvoir répondre calmement — un temps, une reformulation, une pause ?</li></ul></article><article class="mgt-grid-step-ux14"><div class="mgt-grid-step-head-ux14"><span class="mgt-grid-step-num-ux14">3</span><div><strong>Pour reprendre la main sur soi</strong><span>Choisir ce que je fais avant de répondre</span></div></div><ul><li>Qu'est-ce que je dirais à un collègue que je verrais dans le même état que moi, là maintenant ?</li><li>Dans une semaine, qu'est-ce qui me semblera avoir vraiment compté dans cette situation ?</li><li data-source-mnl="MNL-1042">Qu'est-ce que je peux faire, tout de suite, pour redescendre avant de répondre ?</li></ul></article></div></div></details></section>
 
 <section class="panel mgt-seq-5 mgt-screen-repere mgt-epure" data-composant="apport-structure" data-titre="S5 · Le modèle — qualité des relations" id="mod-s5-05c">
 <div aria-label="Personnage repère de la séquence : Léon" class="mgt-collab-medallion"><img alt="" src="img/leon-dialogue-apaise.jpg"/><span>Léon</span></div>
