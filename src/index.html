@@ -5,6 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Manager ses collaborateurs en tant qu'élu — Congrès × IFAP</title>
+<!-- CANDIDAT UX18I-AH — Lot AH : une seule largeur de page (760 px) pour tout le module. -->
 <!-- CANDIDAT UX18I-AG — Lot AG : trois réponses en cartes à retourner (S1). -->
 <!-- CANDIDAT UX18I-AF — Lot AF : corrections de la réunion du 29/09 (déclaratif, tri S1, choix S2, étiquettes). -->
 <!-- CANDIDAT UX18I-AE — Lot AE : profil des personnages rappelé quand il sert l’exercice. -->
@@ -4686,6 +4687,30 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 .mgt-tv-btn-retour{background:#fff;color:var(--bleu-nuit);border:1px solid #C9D4DC}
 .mgt-tv-btn:focus-visible{outline:3px solid var(--or);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){.mgt-tv-inner{transition:none}}
+</style>
+
+<style id="ux18i-lot-ah">
+/* ==== LOT AH — une seule largeur de page (760 px) pour tout le module ==== */
+.g-contenu .panel > *{max-width:760px!important;box-sizing:border-box}
+.g-contenu .panel > div,.g-contenu .panel > section,.g-contenu .panel > header,.g-contenu .panel > details,.g-contenu .panel > nav{width:100%}
+.mgt-accueil-v2,.mgt-parcours-v2{max-width:none!important}
+#g-fin > *,#g-fin .hero,#g-fin .mgt-plan-stepper{max-width:760px!important;width:100%!important;margin-left:0!important;margin-right:0!important}
+/* Accueil : promesse, puis personnages, puis acquis et accroche */
+.mgt-acc-hero{grid-template-columns:1fr!important;gap:26px!important}
+.mgt-accueil-v2 h1{font-size:44px!important}
+.mgt-acc-personnages img{aspect-ratio:4/5!important}
+.mgt-acc-bas{grid-template-columns:1fr!important;gap:26px!important}
+.mgt-acc-action{justify-content:flex-start!important}
+/* Parcours : frise sur deux lignes */
+.mgt-par-frise{grid-template-columns:1fr!important;gap:12px!important}
+.mgt-par-borne{flex-direction:row!important;justify-content:flex-start!important;text-align:left!important;gap:14px!important;padding:10px 14px!important}
+.mgt-par-borne svg{width:72px!important;height:72px!important;flex:none}
+.mgt-par-seqs{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.mgt-par-etapes{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.mgt-par-defis{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+/* Carnet de mandat : 2 cartes par ligne */
+.carnet-grille{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+@media(max-width:560px){.mgt-par-seqs,.mgt-par-defis,.mgt-par-etapes,.carnet-grille,.mgt-acc-personnages{grid-template-columns:1fr!important}}
 </style>
 </head>
 <body>
