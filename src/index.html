@@ -5,6 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Manager ses collaborateurs en tant qu'élu — Congrès × IFAP</title>
+<!-- CANDIDAT UX18I-AD — Lot AD : carnet de mandat allégé (bandeau et liseré doré retirés). -->
+<!-- CANDIDAT UX18I-AC — Lot AC : une seule largeur (760 px) pour tous les éléments des écrans de séquence. -->
 <!-- CANDIDAT UX18I-AB — Lot AB : accueil en deux écrans (Bienvenue ; Comment se déroule le parcours). -->
 <!-- CANDIDAT UX18I-AA — Lot AA : positionnement sur un écran, accueil court, libellés harmonisés. -->
 <!-- CANDIDAT UX18I-Z — Lot Z : correctif des cartes à retourner (texte hors cadre). -->
@@ -4622,6 +4624,25 @@ body.mgt-entete-on #g-position{visibility:hidden}
 .mgt-par-borne svg{max-width:100%;height:auto}
 @media(max-width:1000px){.mgt-acc-hero,.mgt-acc-bas{grid-template-columns:1fr}.mgt-par-frise{grid-template-columns:1fr}.mgt-par-seqs{grid-template-columns:repeat(2,minmax(0,1fr))}.mgt-par-defis{grid-template-columns:repeat(2,minmax(0,1fr))}.mgt-par-defis-bloc{grid-template-columns:1fr}.mgt-par-etapes{grid-template-columns:1fr}.mgt-par-regles{grid-template-columns:1fr}}
 @media(max-width:560px){.mgt-par-seqs,.mgt-par-defis{grid-template-columns:1fr}}
+</style>
+
+<style id="ux18i-lot-ac">
+/* LOT AC — une seule largeur par écran de séquence : en-tête, texte et activités alignés sur 760 px */
+.g-contenu .panel[id^="mod-s"] > *,.g-contenu .panel.mgt-page-resultat > *{max-width:760px!important;box-sizing:border-box}
+.g-contenu .panel[id^="mod-s"] > .mgt-entete,.g-contenu .panel.mgt-page-resultat > .mgt-entete{width:100%}
+.g-contenu .panel[id^="mod-s"] > [id$="-zone"],.g-contenu .panel[id^="mod-s"] > [id$="-sim"],.g-contenu .panel[id^="mod-s"] > div:not(.mgt-entete){width:100%}
+/* simulateurs dans la colonne de 760 px */
+.sim2{grid-template-columns:210px minmax(0,1fr)!important;gap:20px!important}
+.sim2-scene{padding:14px!important}
+.sim2-identite strong{font-size:18px}
+.sim2-zone{font-size:11px}
+@media(max-width:900px){.sim2{grid-template-columns:1fr!important}}
+</style>
+
+<style id="ux18i-lot-ad">
+/* LOT AD — carnet de mandat : bandeau de progression retiré (les cartes suffisent), plus de liseré doré sur les cartes relevées */
+#mgt-tableau-defis .carnet-bandeau{display:none!important}
+.carnet-carte.carnet-r{border-color:var(--bordure)!important}
 </style>
 </head>
 <body>
