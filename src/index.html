@@ -5,6 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Manager ses collaborateurs en tant qu'élu — Congrès × IFAP</title>
+<!-- CANDIDAT UX18I-AE — Lot AE : profil des personnages rappelé quand il sert l’exercice. -->
 <!-- CANDIDAT UX18I-AD — Lot AD : carnet de mandat allégé (bandeau et liseré doré retirés). -->
 <!-- CANDIDAT UX18I-AC — Lot AC : une seule largeur (760 px) pour tous les éléments des écrans de séquence. -->
 <!-- CANDIDAT UX18I-AB — Lot AB : accueil en deux écrans (Bienvenue ; Comment se déroule le parcours). -->
@@ -4644,6 +4645,16 @@ body.mgt-entete-on #g-position{visibility:hidden}
 #mgt-tableau-defis .carnet-bandeau{display:none!important}
 .carnet-carte.carnet-r{border-color:var(--bordure)!important}
 </style>
+
+<style id="ux18i-lot-ae">
+/* LOT AE — fiche « Qui est … ? » : une seule forme, uniquement quand elle sert l'exercice */
+.g-contenu .panel .mgt-minicarte{display:none!important}
+.mgt-fiche-perso{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;margin:4px 0 24px;padding:14px 0;border-top:1px solid #E3E9EE;border-bottom:1px solid #E3E9EE;max-width:760px}
+.mgt-fiche-perso img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center 15%;background:#E6EDF2}
+.mgt-fiche-perso p{margin:0 0 4px;font-size:15px;line-height:1.5;color:var(--texte-2)}
+.mgt-fiche-perso p b{color:var(--encre)}
+.mgt-fiche-perso .mgt-fiche-nom{font-size:16px;font-weight:700;color:var(--bleu-nuit)}
+</style>
 </head>
 <body>
 <header class="g-chrome" role="banner">
@@ -8365,6 +8376,34 @@ installerGuideMgt();
 /* Lot AB — boutons d'appel des deux écrans d'accueil : même effet que « Suivant » (l'écran est validé). */
 (function(){function init(){document.querySelectorAll('[data-acc-suivant]').forEach(function(b){b.addEventListener('click',function(){var n=document.getElementById('g-btn-suiv');if(n)n.click()})})}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init()})();
+</script>
+
+<script id="ux18i-lot-ae-js">
+/* Lot AE — « Qui est … ? » : le profil du personnage est rappelé seulement quand il sert à l'exercice
+   (situation, première réaction, mise en pratique, simulateur, relecture). Règle convenue avec l'experte. */
+(function(){
+ var B={
+  maeva:{nom:'Maëva',img:'img/maeva-accueil-souriante.jpg',il:'elle',parcours:'Juriste de formation, elle vient d’intégrer l’équipe et découvre encore le fonctionnement concret du Congrès.',traits:'Méthodique, rigoureuse, curieuse, volontaire.',besoin:'des repères clairs, des priorités explicites et un accompagnement qui diminue progressivement.'},
+  thomas:{nom:'Thomas',img:'img/thomas-plan-action.jpg',il:'il',parcours:'Chargé de mission expérimenté, il maîtrise ses dossiers et dispose déjà d’un réseau de travail.',traits:'Compétent, autonome, force de proposition.',besoin:'un cap clair, des limites explicites et une véritable marge d’action.'},
+  leon:{nom:'Léon',img:'img/leon-dialogue-apaise.jpg',il:'il',parcours:'Collaborateur expérimenté, il a déjà travaillé auprès d’un autre élu et connaît l’environnement institutionnel.',traits:'Loyal, fiable, engagé ; la pression commence à peser sur sa charge et ses délais.',besoin:'des arbitrages, une clarification des priorités et une régulation de la charge.'}};
+ var CIBLES={'mod-s1-01':'thomas','mod-s1-01b':'thomas','mod-s1-06':'thomas','mod-s2-03':'S2','mod-s2-03b':'S2','mod-s2-06':'S2',
+  'mod-s3-01':'maeva','mod-s3-02':'maeva','mod-s3-05':'maeva','mod-s4-01':'thomas','mod-s4-02':'thomas','mod-s4-06':'thomas',
+  'mod-s5-01':'leon','mod-s5-04':'leon','mod-s5-02':'leon','mod-s5-06':'leon'};
+ function choixS2(){var h=document.querySelector('#mod-s2-03 h1');var t=h?h.textContent:'';return /Thomas/.test(t)?'thomas':(/Léon/.test(t)?'leon':'maeva')}
+ function rendre(p){
+  var k=CIBLES[p.id];if(!k)return;if(k==='S2')k=choixS2();var b=B[k];
+  var old=p.querySelector('.mgt-fiche-perso');if(old)old.remove();
+  var a=document.createElement('aside');a.className='mgt-fiche-perso';a.setAttribute('aria-label','Qui est '+b.nom+' ?');
+  a.innerHTML='<img src="'+b.img+'" alt=""><div><p class="mgt-fiche-nom">Qui est '+b.nom+' ?</p><p>'+b.parcours+' '+b.traits+'</p><p><b>Ce dont '+b.il+' a besoin :</b> '+b.besoin+'</p></div>';
+  var ref=p.querySelector(':scope > .mgt-cas-intro')||p.querySelector(':scope > .mgt-rappel-situation')||p.querySelector(':scope > .chapo')||p.querySelector(':scope > h1');
+  if(ref)ref.insertAdjacentElement('afterend',a)}
+ function init(){setTimeout(function(){
+   Object.keys(CIBLES).forEach(function(id){var p=document.getElementById(id);if(p)rendre(p)});
+   var obs=new MutationObserver(function(ms){ms.forEach(function(x){if(x.target.classList.contains('actif')&&CIBLES[x.target.id]==='S2')rendre(x.target)})});
+   ['mod-s2-03','mod-s2-03b','mod-s2-06'].forEach(function(id){var p=document.getElementById(id);if(p)obs.observe(p,{attributes:true,attributeFilter:['class']})});
+  },200)}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
 </script>
 </body>
 </html>
