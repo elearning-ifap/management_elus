@@ -5,6 +5,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Manager ses collaborateurs en tant qu'élu — Congrès × IFAP</title>
+<!-- CANDIDAT UX18I-AJ — Lot AJ : fiche personnage (C en situation, B en relecture) ; « À retenir » sans aplat. -->
+<!-- CANDIDAT UX18I-AI — Lot AI : largeur 880 px, écrans de fin « À retenir », dépliants harmonisés, cartes sans lettres. -->
 <!-- CANDIDAT UX18I-AH — Lot AH : une seule largeur de page (760 px) pour tout le module. -->
 <!-- CANDIDAT UX18I-AG — Lot AG : trois réponses en cartes à retourner (S1). -->
 <!-- CANDIDAT UX18I-AF — Lot AF : corrections de la réunion du 29/09 (déclaratif, tri S1, choix S2, étiquettes). -->
@@ -4360,7 +4362,7 @@ body.mgt-entete-on #g-position{visibility:hidden}
 .mgt-epure .mgt-m-situation .mgt-cas-leon > img,.mgt-epure .mgt-m-situation .mgt-cas-leon .eyebrow,.mgt-epure .mgt-m-situation .mgt-cas-leon h3{display:none!important}
 .mgt-epure .mgt-m-situation .mgt-cas-leon p strong{font-weight:400}
 
-.mgt-epure{--m-largeur:760px}
+.mgt-epure{--m-largeur:880px}
 .mgt-epure > *:not(.mgt-entete){max-width:var(--m-largeur)}
 .mgt-epure > .mgt-sommaire-ecran,.mgt-epure > .mgt-chapo-suite{display:none!important}
 .mgt-epure > h1{font-size:36px;line-height:1.15;margin:4px 0 12px}
@@ -4478,8 +4480,8 @@ body.mgt-entete-on #g-position{visibility:hidden}
 /* ==== LOT Y — système de gabarits : règles communes ==== */
 /* une colonne de lecture de 760 px */
 .g-contenu .panel[id^="mod-s"] > :is(h1,h2,h3,p,.chapo,.g-consigne,.g-guidance,.g-apport,aside,blockquote,details,figure,.mgt-rappel-situation,.mgt-minicarte,.mgt-cas-intro,.mgt-cas-mnl,.mgt-fiche-sequence,.mgt-m-essentiel,.mgt-curseur,.mgt-curseur-wrap,.mgt-table-scroll),
-.g-contenu .panel[id^="mod-s"] > [id$="-zone"]:not(#mgt-s1-03-zone):not(#mgt-s2-03-zone):not(#mgt-s2-01-profils):not(#mgt-s3-04-zone):not(#mgt-s1-04-zone):not(#mgt-s4-04-zone){max-width:760px}
-.g-contenu .panel.mgt-page-resultat > *:not(.mgt-entete){max-width:760px}
+.g-contenu .panel[id^="mod-s"] > [id$="-zone"]:not(#mgt-s1-03-zone):not(#mgt-s2-03-zone):not(#mgt-s2-01-profils):not(#mgt-s3-04-zone):not(#mgt-s1-04-zone):not(#mgt-s4-04-zone){max-width:880px}
+.g-contenu .panel.mgt-page-resultat > *:not(.mgt-entete){max-width:880px}
 /* plus d'étiquettes en majuscules dans le contenu */
 .g-contenu .panel[id^="mod-s"] *:not(.mgt-entete):not(.mgt-entete *),.g-contenu .panel.mgt-page-resultat *:not(.mgt-entete):not(.mgt-entete *){text-transform:none!important;letter-spacing:normal!important}
 /* une seule forme de consigne : icône + phrase, sans cadre ni étiquette */
@@ -4582,7 +4584,7 @@ body.mgt-entete-on #g-position{visibility:hidden}
 .mgt-acc-accroche .mgt-acc-accroche-suite{font-size:16px;font-style:normal;color:var(--texte-2)}
 .mgt-acc-action{display:flex;justify-content:flex-end;margin:28px 0 0}
 .mgt-parcours-v2 > h1{margin:0 0 10px}
-.mgt-parcours-v2 > .chapo{max-width:760px;margin:0 0 36px}
+.mgt-parcours-v2 > .chapo{max-width:880px;margin:0 0 36px}
 .mgt-par-bloc{margin:0 0 40px}
 .mgt-par-bloc h2{margin:0 0 14px!important;padding:0!important;font-size:22px!important;color:var(--bleu-nuit)}
 .mgt-par-bloc h2::before{display:none!important}
@@ -4617,11 +4619,11 @@ body.mgt-entete-on #g-position{visibility:hidden}
 .mgt-par-regles-bloc{padding-top:26px;border-top:1px solid #D5DEE4}
 .mgt-par-regles{list-style:none;margin:0 0 14px;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 40px}
 .mgt-par-regles li{display:grid;grid-template-columns:26px 1fr;gap:10px;font-size:16px;line-height:1.5}
-.mgt-par-regles-bloc details{max-width:760px}
+.mgt-par-regles-bloc details{max-width:880px}
 .mgt-par-regles-bloc details > summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:center;color:var(--bleu-nuit)}
 .mgt-acc-donnees p,.mgt-acc-donnees h4{font-size:15px;line-height:1.55}
 .mgt-par-defis-bloc{grid-template-columns:1fr!important;gap:16px!important}
-.mgt-par-defis-bloc p{max-width:760px}
+.mgt-par-defis-bloc p{max-width:880px}
 .mgt-par-frise{grid-template-columns:130px minmax(0,1fr) 130px!important}
 .mgt-par-seqs li,.mgt-par-defis li{min-width:0}
 .mgt-par-txt{min-width:0;overflow-wrap:break-word;hyphens:auto}
@@ -4632,7 +4634,7 @@ body.mgt-entete-on #g-position{visibility:hidden}
 
 <style id="ux18i-lot-ac">
 /* LOT AC — une seule largeur par écran de séquence : en-tête, texte et activités alignés sur 760 px */
-.g-contenu .panel[id^="mod-s"] > *,.g-contenu .panel.mgt-page-resultat > *{max-width:760px!important;box-sizing:border-box}
+.g-contenu .panel[id^="mod-s"] > *,.g-contenu .panel.mgt-page-resultat > *{max-width:880px!important;box-sizing:border-box}
 .g-contenu .panel[id^="mod-s"] > .mgt-entete,.g-contenu .panel.mgt-page-resultat > .mgt-entete{width:100%}
 .g-contenu .panel[id^="mod-s"] > [id$="-zone"],.g-contenu .panel[id^="mod-s"] > [id$="-sim"],.g-contenu .panel[id^="mod-s"] > div:not(.mgt-entete){width:100%}
 /* simulateurs dans la colonne de 760 px */
@@ -4652,7 +4654,7 @@ body.mgt-entete-on #g-position{visibility:hidden}
 <style id="ux18i-lot-ae">
 /* LOT AE — fiche « Qui est … ? » : une seule forme, uniquement quand elle sert l'exercice */
 .g-contenu .panel .mgt-minicarte{display:none!important}
-.mgt-fiche-perso{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;margin:4px 0 24px;padding:14px 0;border-top:1px solid #E3E9EE;border-bottom:1px solid #E3E9EE;max-width:760px}
+.mgt-fiche-perso{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:start;margin:4px 0 24px;padding:14px 0;border-top:1px solid #E3E9EE;border-bottom:1px solid #E3E9EE;max-width:880px}
 .mgt-fiche-perso img{width:56px;height:56px;border-radius:50%;object-fit:cover;object-position:center 15%;background:#E6EDF2}
 .mgt-fiche-perso p{margin:0 0 4px;font-size:15px;line-height:1.5;color:var(--texte-2)}
 .mgt-fiche-perso p b{color:var(--encre)}
@@ -4691,10 +4693,10 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 
 <style id="ux18i-lot-ah">
 /* ==== LOT AH — une seule largeur de page (760 px) pour tout le module ==== */
-.g-contenu .panel > *{max-width:760px!important;box-sizing:border-box}
+.g-contenu .panel > *{max-width:880px!important;box-sizing:border-box}
 .g-contenu .panel > div,.g-contenu .panel > section,.g-contenu .panel > header,.g-contenu .panel > details,.g-contenu .panel > nav{width:100%}
 .mgt-accueil-v2,.mgt-parcours-v2{max-width:none!important}
-#g-fin > *,#g-fin .hero,#g-fin .mgt-plan-stepper{max-width:760px!important;width:100%!important;margin-left:0!important;margin-right:0!important}
+#g-fin > *,#g-fin .hero,#g-fin .mgt-plan-stepper{max-width:880px!important;width:100%!important;margin-left:0!important;margin-right:0!important}
 /* Accueil : promesse, puis personnages, puis acquis et accroche */
 .mgt-acc-hero{grid-template-columns:1fr!important;gap:26px!important}
 .mgt-accueil-v2 h1{font-size:44px!important}
@@ -4711,6 +4713,39 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 /* Carnet de mandat : 2 cartes par ligne */
 .carnet-grille{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 @media(max-width:560px){.mgt-par-seqs,.mgt-par-defis,.mgt-par-etapes,.carnet-grille,.mgt-acc-personnages{grid-template-columns:1fr!important}}
+</style>
+
+<style id="ux18i-lot-ai">
+/* LOT AI — même grammaire pour tous les dépliants ; fiche personnage alignée ; écran de fin */
+.mgt-recherche-detail > summary,.mgt-m-plus > summary,.mgt-approfondir > summary,.g-contenu .panel details > summary{font-size:16px!important;font-weight:700!important;color:var(--bleu-nuit)!important;min-height:44px;gap:10px}
+.mgt-recherche-detail > summary::before,.mgt-m-plus > summary::before,.mgt-approfondir > summary::before{width:24px!important;height:24px!important;font-size:16px!important}
+.mgt-fiche-perso{grid-template-columns:66px 1fr!important;gap:13px!important}
+.mgt-fiche-perso img{width:66px!important;height:66px!important}
+.mgt-fin-seq .mgt-r-retenir{margin-top:8px!important}
+.mgt-fin-seq .mgt-r-retenir .mgt-m-ess-titre{display:none}
+.mgt-fin-seq .mgt-r-retenir p:first-of-type{font-size:20px!important;line-height:1.5}
+</style>
+
+<style id="ux18i-lot-aj">
+/* LOT AJ — fiche personnage C / B ; écran « À retenir » sans bloc foncé */
+.mgt-fiche-c .mgt-fiche-nom{margin:0 0 8px!important;font-size:17px!important}
+.mgt-fiche-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.mgt-fiche-cols p{margin:0;font-size:15px;line-height:1.5;color:var(--encre)}
+.mgt-fiche-cols .mgt-fiche-lib{margin:0 0 4px;font-size:13px;font-weight:700;color:var(--seq-ink,var(--bleu-nuit))}
+.mgt-fiche-cols > div:last-child{padding-left:20px;border-left:3px solid var(--seq-accent,#58788F)}
+.mgt-fiche-cols > div:last-child p:not(.mgt-fiche-lib){font-weight:700}
+.mgt-fiche-b{margin:8px 0 0!important;font-size:15px;line-height:1.5;color:var(--texte-2)}
+.mgt-fiche-b b{color:var(--encre)}
+@media(max-width:700px){.mgt-fiche-cols{grid-template-columns:1fr}.mgt-fiche-cols > div:last-child{padding-left:14px}}
+/* À retenir : message clé en grand, réflexes numérotés, sans aplat */
+.mgt-fin-seq .mgt-r-retenir{background:none!important;color:var(--encre)!important;padding:0!important;border-radius:0!important;margin:12px 0 36px!important}
+.mgt-fin-seq .mgt-r-retenir p,.mgt-fin-seq .mgt-r-retenir li{color:var(--encre)!important}
+.mgt-fin-seq .mgt-r-retenir > .mgt-m-ess-titre + p{font-size:22px!important;line-height:1.5;font-weight:700;color:var(--bleu-nuit)!important;padding-left:20px;border-left:4px solid var(--or);margin:0 0 26px!important}
+.mgt-fin-seq .mgt-r-retenir > p:not(.mgt-m-ess-titre):not(.mgt-m-ess-titre + p){font-size:15px!important;font-weight:700;color:var(--texte-2)!important;margin:0 0 10px!important}
+.mgt-fin-seq .mgt-r-retenir ul{list-style:none!important;margin:0!important;padding:0!important;counter-reset:ret}
+.mgt-fin-seq .mgt-r-retenir li{counter-increment:ret;position:relative;padding:14px 0 14px 52px!important;margin:0!important;border-top:1px solid #E3E9EE;font-size:17px!important;line-height:1.5}
+.mgt-fin-seq .mgt-r-retenir li:last-child{border-bottom:1px solid #E3E9EE}
+.mgt-fin-seq .mgt-r-retenir li::before{content:counter(ret);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--seq-soft,#F2F6F8);color:var(--seq-ink,var(--bleu-nuit));font-weight:800;font-size:16px}
 </style>
 </head>
 <body>
@@ -5063,9 +5098,16 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 <p class="chapo">Retrouvez la situation et votre première réaction, puis décidez ce que vous en retenez.</p>
 <div class="mgt-rappel-situation"><h2>La situation</h2><p><strong>Thomas</strong> · La veille d'une commission, un dossier attendu n'est pas finalisé. Il explique qu'il n'avait pas compris qu'une note argumentée et chiffrée était attendue. Vous ressentez l'urgence et la pression.</p></div>
 <div id="mgt-s1-06-zone"></div>
-<section aria-label="À retenir" class="mgt-m-essentiel mgt-r-retenir"><p class="mgt-m-ess-titre">À retenir</p><p class="mgt-recap-intro">Autour de vous, plusieurs voix et plusieurs rôles coexistent : les vôtres, ceux de votre cabinet, ceux de votre groupe, ceux de l'administration. Aucun ne remplace les autres.</p><p class="mgt-recap-intro"><strong>Quatre réflexes simples :</strong></p><ul><li>Votre position vous appartient : elle ne se communique qu'une fois réellement arrêtée par vous.</li><li>Le cabinet prépare, il ne tranche pas — et il ne se substitue pas non plus à l'administration.</li><li>L'administration exécute et garantit la régularité — elle ne porte pas votre orientation politique à votre place.</li><li>Une divergence avec votre groupe se règle en interne, avant la séance — jamais découverte en public.</li></ul></section>
-<div class="mgt-fiche-sequence"><div><strong>À conserver après la formation</strong><span>Les repères pour ajuster votre autorité et clarifier les responsabilités.</span></div><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_01_Place_manager.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Prendre ma place de manager »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div><details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>Les repères de la séquence, en détail</h3><div class="g-apport" data-source-mnl="MNL-0896–MNL-0901" id="mgt-autorite-essentiels-source" style="margin-top:16px"><h3>Les essentiels à retenir</h3><p><strong>L'autorité ajustée n'est pas un point fixe.</strong> C'est une attention renouvelée, situation après situation, entre donner un cap et laisser de la place.</p><p><strong>Trois réflexes simples :</strong></p><ul><li>Sous pression, remarquez de quel côté vous penchez — trancher trop vite, ou éviter de trancher.</li><li>Regardez ce que vivent vos collaborateurs : des initiatives prises, ou seulement des problèmes remontés ?</li><li>Ajustez d'un cran à la fois — il suffit de savoir, à chaque situation, où porter l'effort.</li></ul></div></div></details>
-<p class="mgt-transition" data-source-mnl="MNL-0201"><strong>Et ensuite —</strong> une fois le rôle de chacun posé, la question devient : avec qui l’exercer ?</p>
+
+
+
+</section>
+<section class="panel mgt-seq-1 mgt-epure mgt-fin-seq" data-titre="S1 · À retenir" id="mod-s1-fin">
+<div class="mgt-ecran-type mgt-ecran-repere" hidden=""><strong>À retenir</strong></div>
+<p class="eyebrow">Séquence 1 · Prendre sa place et ajuster son autorité</p>
+<h1>À retenir</h1>
+<p class="chapo">Ce que vous emportez de la séquence « Prendre sa place et ajuster son autorité ».</p>
+<section aria-label="À retenir" class="mgt-m-essentiel mgt-r-retenir"><p class="mgt-m-ess-titre">À retenir</p><p class="mgt-recap-intro">Autour de vous, plusieurs voix et plusieurs rôles coexistent : les vôtres, ceux de votre cabinet, ceux de votre groupe, ceux de l'administration. Aucun ne remplace les autres.</p><p class="mgt-recap-intro"><strong>Quatre réflexes simples :</strong></p><ul><li>Votre position vous appartient : elle ne se communique qu'une fois réellement arrêtée par vous.</li><li>Le cabinet prépare, il ne tranche pas — et il ne se substitue pas non plus à l'administration.</li><li>L'administration exécute et garantit la régularité — elle ne porte pas votre orientation politique à votre place.</li><li>Une divergence avec votre groupe se règle en interne, avant la séance — jamais découverte en public.</li></ul></section><div class="mgt-fiche-sequence"><div><strong>À conserver après la formation</strong><span>Les repères pour ajuster votre autorité et clarifier les responsabilités.</span></div><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_01_Place_manager.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Prendre ma place de manager »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div><details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>Les repères de la séquence, en détail</h3><div class="g-apport" data-source-mnl="MNL-0896–MNL-0901" id="mgt-autorite-essentiels-source" style="margin-top:16px"><h3>Les essentiels à retenir</h3><p><strong>L'autorité ajustée n'est pas un point fixe.</strong> C'est une attention renouvelée, situation après situation, entre donner un cap et laisser de la place.</p><p><strong>Trois réflexes simples :</strong></p><ul><li>Sous pression, remarquez de quel côté vous penchez — trancher trop vite, ou éviter de trancher.</li><li>Regardez ce que vivent vos collaborateurs : des initiatives prises, ou seulement des problèmes remontés ?</li><li>Ajustez d'un cran à la fois — il suffit de savoir, à chaque situation, où porter l'effort.</li></ul></div></div></details><p class="mgt-transition" data-source-mnl="MNL-0201"><strong>Et ensuite —</strong> une fois le rôle de chacun posé, la question devient : avec qui l’exercer ?</p>
 </section>
 <!-- ═══════════ SÉQUENCE 2 — Construire une équipe sur laquelle je peux m'appuyer ═══════════ -->
 <section class="panel mgt-seq-2 mgt-seq-opening mgt-epure mgt-ouverture" data-composant="enjeu" data-titre="S2 · Pourquoi construire et intégrer la bonne équipe ?" id="mod-s2-00">
@@ -5217,9 +5259,16 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 <p class="chapo">Retrouvez la situation et votre première réaction, puis décidez ce que vous en retenez.</p>
 <div class="mgt-rappel-situation"><h2>La situation</h2><p>Vous devez renforcer votre équipe pour suivre plusieurs commissions et préparer vos prises de position. Trois profils fictifs sont envisageables.</p></div>
 <div id="mgt-s2-06-zone"></div>
-<section aria-label="À retenir" class="mgt-m-essentiel mgt-r-retenir"><p class="mgt-m-ess-titre">À retenir</p><p class="mgt-recap-intro">Une équipe qui se ressemble trop a souvent les mêmes angles morts. Un bon recrutement se choisit sur trois critères — loyauté, compétence, complémentarité — et se réussit vraiment dans les semaines qui suivent l'arrivée, pas seulement le jour de la signature.</p><p class="mgt-recap-intro"><strong>Trois réflexes simples :</strong></p><ul><li>Avant de recruter, demandez-vous ce qui manque à votre équipe — pas seulement qui vous inspire confiance.</li><li>Préparez l'intégration avant l'arrivée, pas après : administratif, rôle, codes d'équipe, appartenance.</li><li>Réutilisez votre check-list à chaque nouveau recrutement — elle s'améliore à chaque usage.</li></ul></section>
-<div class="mgt-fiche-sequence"><div><strong>À conserver après la formation</strong><span>Une fiche-outil pour construire et intégrer votre équipe.</span></div><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_02_Construire_equipe_pilote.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Construire une équipe pilote »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div>
-<p class="mgt-transition" data-source-mnl="MNL-0322"><strong>Et ensuite —</strong> une fois la bonne équipe constituée, reste à savoir comment lui laisser la juste place.</p>
+
+
+
+</section>
+<section class="panel mgt-seq-2 mgt-epure mgt-fin-seq" data-titre="S2 · À retenir" id="mod-s2-fin">
+<div class="mgt-ecran-type mgt-ecran-repere" hidden=""><strong>À retenir</strong></div>
+<p class="eyebrow">Séquence 2 · Construire et intégrer la bonne équipe</p>
+<h1>À retenir</h1>
+<p class="chapo">Ce que vous emportez de la séquence « Construire et intégrer la bonne équipe ».</p>
+<section aria-label="À retenir" class="mgt-m-essentiel mgt-r-retenir"><p class="mgt-m-ess-titre">À retenir</p><p class="mgt-recap-intro">Une équipe qui se ressemble trop a souvent les mêmes angles morts. Un bon recrutement se choisit sur trois critères — loyauté, compétence, complémentarité — et se réussit vraiment dans les semaines qui suivent l'arrivée, pas seulement le jour de la signature.</p><p class="mgt-recap-intro"><strong>Trois réflexes simples :</strong></p><ul><li>Avant de recruter, demandez-vous ce qui manque à votre équipe — pas seulement qui vous inspire confiance.</li><li>Préparez l'intégration avant l'arrivée, pas après : administratif, rôle, codes d'équipe, appartenance.</li><li>Réutilisez votre check-list à chaque nouveau recrutement — elle s'améliore à chaque usage.</li></ul></section><div class="mgt-fiche-sequence"><div><strong>À conserver après la formation</strong><span>Une fiche-outil pour construire et intégrer votre équipe.</span></div><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_02_Construire_equipe_pilote.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Construire une équipe pilote »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div><p class="mgt-transition" data-source-mnl="MNL-0322"><strong>Et ensuite —</strong> une fois la bonne équipe constituée, reste à savoir comment lui laisser la juste place.</p>
 </section>
 <!-- ═══════════ SÉQUENCE 3 — Faire comprendre ce que j'attends ═══════════ -->
 <section class="panel mgt-seq-3 mgt-seq-opening mgt-epure mgt-ouverture" data-composant="enjeu" data-titre="S3 · Pourquoi clarifier les attentes ?" id="mod-s3-00">
@@ -5366,8 +5415,15 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 <p class="chapo">Retrouvez la situation et votre première réaction, puis décidez ce que vous en retenez.</p>
 <div class="mgt-rappel-situation"><h2>La situation</h2><p><strong>Maëva</strong> · Avant une commission, vous lui demandez : « Prépare-moi quelque chose rapidement sur ce dossier. » Le lendemain, le document remis ne correspond pas à vos attentes.</p></div>
 <div id="mgt-s3-05-zone"></div>
-<section aria-label="À retenir" class="mgt-m-essentiel mgt-r-retenir"><p class="mgt-m-ess-titre">À retenir</p><p class="mgt-recap-intro"><strong>Ce qui pique ou qui soutient dans le choix de vos mots :</strong> c’est ce qu’ils supposent sur l’autre — sa compétence, ou son incapacité ; c’est ce qu’ils peuvent réveiller auprès de votre interlocuteur et que vous ignorez (et parfois lui aussi).</p><ul><li>Clarifiez votre intention : dites ce que vous voulez au lieu de ce que vous ne voulez pas</li><li>Énoncez un fait positif et réel avant de nommer le comportement à rectifier</li><li>Privilégiez l’exposition des faits à celui du jugement.</li><li>Reformulez votre message pour valider la compréhension afin d’orienter l’action dans la direction souhaitée</li></ul></section>
-<div class="mgt-fiche-sequence"><div><strong>À conserver après la formation</strong><span>Les six points pour formuler une attente claire.</span></div><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_03_Attente_claire.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Faire comprendre ce que j’attends »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div><details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>Les repères de la séquence, en détail</h3><p class="mgt-recap-intro">Ce n'est presque jamais le fond du message qui coince en premier, c’est sa verbalisation et sa formulation ; comment vous le dites : intonation, volume, voix et posture corporelle ; l’ordre dans lequel vous le dites, et si vous avez pris le temps d’être compris avant de vouloir être suivi.</p><p class="mgt-recap-intro"><strong>Voici en résumé 4 réflexes simples, qui changent durablement la manière dont vos mots sont reçus :</strong></p></div></details>
+
+
+</section>
+<section class="panel mgt-seq-3 mgt-epure mgt-fin-seq" data-titre="S3 · À retenir" id="mod-s3-fin">
+<div class="mgt-ecran-type mgt-ecran-repere" hidden=""><strong>À retenir</strong></div>
+<p class="eyebrow">Séquence 3 · Clarifier les attentes</p>
+<h1>À retenir</h1>
+<p class="chapo">Ce que vous emportez de la séquence « Clarifier les attentes ».</p>
+<section aria-label="À retenir" class="mgt-m-essentiel mgt-r-retenir"><p class="mgt-m-ess-titre">À retenir</p><p class="mgt-recap-intro"><strong>Ce qui pique ou qui soutient dans le choix de vos mots :</strong> c’est ce qu’ils supposent sur l’autre — sa compétence, ou son incapacité ; c’est ce qu’ils peuvent réveiller auprès de votre interlocuteur et que vous ignorez (et parfois lui aussi).</p><ul><li>Clarifiez votre intention : dites ce que vous voulez au lieu de ce que vous ne voulez pas</li><li>Énoncez un fait positif et réel avant de nommer le comportement à rectifier</li><li>Privilégiez l’exposition des faits à celui du jugement.</li><li>Reformulez votre message pour valider la compréhension afin d’orienter l’action dans la direction souhaitée</li></ul></section><div class="mgt-fiche-sequence"><div><strong>À conserver après la formation</strong><span>Les six points pour formuler une attente claire.</span></div><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_03_Attente_claire.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Faire comprendre ce que j’attends »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div><details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>Les repères de la séquence, en détail</h3><p class="mgt-recap-intro">Ce n'est presque jamais le fond du message qui coince en premier, c’est sa verbalisation et sa formulation ; comment vous le dites : intonation, volume, voix et posture corporelle ; l’ordre dans lequel vous le dites, et si vous avez pris le temps d’être compris avant de vouloir être suivi.</p><p class="mgt-recap-intro"><strong>Voici en résumé 4 réflexes simples, qui changent durablement la manière dont vos mots sont reçus :</strong></p></div></details>
 </section>
 <!-- ═══════════ SÉQUENCE 4 — Faire grandir l'autonomie et l'engagement de mes collaborateurs ═══════════ -->
 <section class="panel mgt-seq-4 mgt-seq-opening mgt-epure mgt-ouverture" data-composant="enjeu" data-titre="S4 · Pourquoi faire grandir l’autonomie ?" id="mod-s4-00">
@@ -5509,8 +5565,14 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 <div class="mgt-rappel-situation"><h2>La situation</h2><p><strong>Thomas</strong> · Il maîtrise le sujet. Vous lui confiez l'analyse d'une demande de subvention, mais le dossier est sensible et l'échéance proche.</p></div>
 <div id="mgt-s4-06-zone"></div>
 
-<section aria-label="À retenir" class="mgt-m-essentiel mgt-r-retenir"><p class="mgt-m-ess-titre">À retenir</p><p class="mgt-recap-intro">Un problème apporté par un collaborateur ne devient pas automatiquement le vôtre — sauf si vous le reprenez sans le décider.</p><p class="mgt-recap-intro"><strong>Trois réflexes simples :</strong></p><ul><li>Avant de reprendre un problème, posez une question plutôt que de proposer directement la solution.</li><li>Choisissez le niveau d'autonomie qui correspond à l'enjeu et à l'expérience — jamais un seul niveau pour tout le monde, tout le temps.</li><li>Déléguer, c'est accompagner à distance : un cap clair et un point de suivi valent mieux qu'un contrôle permanent ou qu'un silence total</li></ul></section>
-<div class="mgt-fiche-sequence"><div><strong>À conserver après la formation</strong><span>Déléguer, suivre et reconnaître sans reprendre la main.</span></div><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_04_Autonomie_engagement.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Faire grandir l’autonomie et l’engagement »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div><details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>On vérifie dans la vraie vie</h3><div class="g-apport" data-source-mnl="MNL-0418–MNL-0424" id="mgt-s4-vraie-vie-source" style="margin-top:18px">
+
+</section>
+<section class="panel mgt-seq-4 mgt-epure mgt-fin-seq" data-titre="S4 · À retenir" id="mod-s4-fin">
+<div class="mgt-ecran-type mgt-ecran-repere" hidden=""><strong>À retenir</strong></div>
+<p class="eyebrow">Séquence 4 · Faire grandir l’autonomie</p>
+<h1>À retenir</h1>
+<p class="chapo">Ce que vous emportez de la séquence « Faire grandir l’autonomie ».</p>
+<section aria-label="À retenir" class="mgt-m-essentiel mgt-r-retenir"><p class="mgt-m-ess-titre">À retenir</p><p class="mgt-recap-intro">Un problème apporté par un collaborateur ne devient pas automatiquement le vôtre — sauf si vous le reprenez sans le décider.</p><p class="mgt-recap-intro"><strong>Trois réflexes simples :</strong></p><ul><li>Avant de reprendre un problème, posez une question plutôt que de proposer directement la solution.</li><li>Choisissez le niveau d'autonomie qui correspond à l'enjeu et à l'expérience — jamais un seul niveau pour tout le monde, tout le temps.</li><li>Déléguer, c'est accompagner à distance : un cap clair et un point de suivi valent mieux qu'un contrôle permanent ou qu'un silence total</li></ul></section><div class="mgt-fiche-sequence"><div><strong>À conserver après la formation</strong><span>Déléguer, suivre et reconnaître sans reprendre la main.</span></div><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_04_Autonomie_engagement.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Faire grandir l’autonomie et l’engagement »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div><details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>On vérifie dans la vraie vie</h3><div class="g-apport" data-source-mnl="MNL-0418–MNL-0424" id="mgt-s4-vraie-vie-source" style="margin-top:18px">
 <h2>On vérifie dans la vraie vie</h2>
 <p><strong>Situation.</strong> Vous devez confier à votre collaborateur(trice) la préparation complète d'un dossier avant une commission dans dix jours — un exercice qu'il/elle a déjà mené une fois, avec un résultat correct mais perfectible.</p>
 <div class="g-consigne"><p><strong>Votre mission, si vous l'acceptez.</strong> Rédigez le message par lequel vous confiez ce dossier : précisez le niveau d'autonomie choisi, le cap à tenir, et le point de suivi prévu.</p></div>
@@ -5635,8 +5697,14 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 <div class="mgt-rappel-situation"><h2>La situation</h2><p><strong>Léon</strong> · Il remet une seconde fois un dossier en retard avant une intervention face à la presse. Vous êtes contrarié et inquiet pour la crédibilité de votre action.</p></div>
 <div id="mgt-s5-06-zone"></div>
 
-<section aria-label="À retenir" class="mgt-m-essentiel mgt-r-retenir"><p class="mgt-m-ess-titre">À retenir</p><p class="mgt-recap-intro">Un conflit ouvert ne surgit presque jamais sans prévenir. Trois signaux précoces — le raidissement de la posture, le ton qui change, le retrait de la parole — annoncent presque toujours ce qui vient.</p><p class="mgt-recap-intro"><strong>Trois réflexes simples :</strong></p><ul><li>Intervenez au premier signal, pas à l'explosion — ça reste simple si c'est fait tôt.</li><li>Restez du même côté du problème que les deux parties, pas au-dessus en juge.</li><li>Visez la coopération restaurée, pas seulement le calme immédiat — sinon, le même signal reviendra.</li></ul></section>
-<div class="mgt-fiche-sequence"><div><strong>À conserver après la formation</strong><span>Une trame pour réguler tôt et préserver la relation.</span></div><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_05_Reguler_tensions.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Réguler les tensions »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div><details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>On vérifie dans la vraie vie</h3><div class="g-apport" data-source-mnl="MNL-0735–MNL-0742" id="mgt-s5-vraie-vie-source" style="margin-top:18px">
+
+</section>
+<section class="panel mgt-seq-5 mgt-epure mgt-fin-seq" data-titre="S5 · À retenir" id="mod-s5-fin">
+<div class="mgt-ecran-type mgt-ecran-repere" hidden=""><strong>À retenir</strong></div>
+<p class="eyebrow">Séquence 5 · Réguler tôt</p>
+<h1>À retenir</h1>
+<p class="chapo">Ce que vous emportez de la séquence « Réguler tôt ».</p>
+<section aria-label="À retenir" class="mgt-m-essentiel mgt-r-retenir"><p class="mgt-m-ess-titre">À retenir</p><p class="mgt-recap-intro">Un conflit ouvert ne surgit presque jamais sans prévenir. Trois signaux précoces — le raidissement de la posture, le ton qui change, le retrait de la parole — annoncent presque toujours ce qui vient.</p><p class="mgt-recap-intro"><strong>Trois réflexes simples :</strong></p><ul><li>Intervenez au premier signal, pas à l'explosion — ça reste simple si c'est fait tôt.</li><li>Restez du même côté du problème que les deux parties, pas au-dessus en juge.</li><li>Visez la coopération restaurée, pas seulement le calme immédiat — sinon, le même signal reviendra.</li></ul></section><div class="mgt-fiche-sequence"><div><strong>À conserver après la formation</strong><span>Une trame pour réguler tôt et préserver la relation.</span></div><a class="btn btn-secondaire mgt-pdf-link" href="pdf/MGT_FICHE_05_Reguler_tensions.pdf" rel="noopener" target="_blank">Ouvrir la fiche « Réguler les tensions »<span class="mgt-pdf-meta">PDF · 2 pages</span></a></div><details class="mgt-m-plus"><summary>Pour aller plus loin</summary><div class="mgt-m-plus-corps"><h3>On vérifie dans la vraie vie</h3><div class="g-apport" data-source-mnl="MNL-0735–MNL-0742" id="mgt-s5-vraie-vie-source" style="margin-top:18px">
 <h2>On vérifie dans la vraie vie</h2>
 <p><strong>Situation.</strong> Vous constatez, depuis une dizaine de jours, un raidissement entre deux collaborateurs de votre équipe autour d'un dossier partagé — réponses plus courtes en réunion, échanges qui passent de plus en plus par écrit alors qu'ils se parlaient facilement avant.</p>
 <p>Je vous invite à prendre 2 mn pour vous projeter dans la situation avec le maximum de détails. Comme si vous y étiez.</p>
@@ -8453,8 +8521,16 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   var k=CIBLES[p.id];if(!k)return;if(k==='S2')k=choixS2();var b=B[k];
   var old=p.querySelector('.mgt-fiche-perso');if(old)old.remove();
   var a=document.createElement('aside');a.className='mgt-fiche-perso';a.setAttribute('aria-label','Qui est '+b.nom+' ?');
-  a.innerHTML='<img src="'+b.img+'" alt=""><div><p class="mgt-fiche-nom">Qui est '+b.nom+' ?</p><p>'+b.parcours+' '+b.traits+'</p><p><b>Ce dont '+b.il+' a besoin :</b> '+b.besoin+'</p></div>';
-  var ref=p.querySelector(':scope > .mgt-cas-intro')||p.querySelector(':scope > .mgt-rappel-situation')||p.querySelector(':scope > .chapo')||p.querySelector(':scope > h1');
+  var recul=!!p.querySelector(':scope > .mgt-rappel-situation');
+  var B1=b.besoin.charAt(0).toUpperCase()+b.besoin.slice(1);
+  if(recul){
+   /* Lot AJ — variante B : simple rappel du profil, intégré à la situation */
+   var r=p.querySelector(':scope > .mgt-rappel-situation'),q=r.querySelector('.mgt-fiche-b');if(q)q.remove();
+   q=document.createElement('p');q.className='mgt-fiche-b';q.innerHTML='<b>Son profil :</b> '+b.parcours+' <b>Ce dont '+b.il+' a besoin :</b> '+b.besoin;r.appendChild(q);return}
+  /* Lot AJ — variante C : « ce qu'il est / ce qu'il attend de vous » */
+  a.className='mgt-fiche-perso mgt-fiche-c';
+  a.innerHTML='<img src="'+b.img+'" alt=""><div><p class="mgt-fiche-nom">'+b.nom+'</p><div class="mgt-fiche-cols"><div><p class="mgt-fiche-lib">Ce qu’'+b.il+' est</p><p>'+b.parcours+' '+b.traits+'</p></div><div><p class="mgt-fiche-lib">Ce qu’'+b.il+' attend de vous</p><p>'+B1+'</p></div></div></div>';
+  var ref=p.querySelector(':scope > .mgt-cas-intro')||p.querySelector(':scope > .chapo')||p.querySelector(':scope > h1');
   if(ref)ref.insertAdjacentElement('afterend',a)}
  function init(){setTimeout(function(){
    Object.keys(CIBLES).forEach(function(id){var p=document.getElementById(id);if(p)rendre(p)});
@@ -8490,6 +8566,21 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
   })})}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
+</script>
+
+<script id="ux18i-lot-ai-js">
+/* Lot AI — les écrans « À retenir » reprennent la frise de l'étape « Je prends du recul ». */
+(function(){function init(){setTimeout(function(){
+ document.querySelectorAll('section.mgt-fin-seq').forEach(function(p){if(p.querySelector(':scope > .mgt-6r'))return;
+  var n=p.id.match(/mod-s(\d)-fin/)[1],src=document.querySelector('section.panel.mgt-seq-'+n+' > .mgt-6r');
+  if(src){var c=src.cloneNode(true);p.insertBefore(c,p.firstElementChild);c.querySelectorAll('li').forEach(function(li,i){li.classList.toggle('actif',i===5);li.classList.toggle('fait',i<5)})}})
+},60)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init()})();
+/* Lot AI — cartes « trois réponses » : sans les mentions « Réponse A » / « Version A — ». */
+(function(){function init(){setTimeout(function(){
+ document.querySelectorAll('.mgt-tv-lettre').forEach(function(e){e.remove()});
+ document.querySelectorAll('.mgt-tv-verso h3').forEach(function(h){h.textContent=h.textContent.replace(/^\s*Version\s+[ABC]\s*[—-]\s*/,'')})},80)}
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init()})();
 </script>
 </body>
 </html>
