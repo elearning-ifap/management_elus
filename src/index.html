@@ -5,6 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Manager ses collaborateurs en tant qu'élu — Congrès × IFAP</title>
+<!-- CANDIDAT UX18I-AK — Lot AK : « Que feriez-vous ? » en composant unique, une situation à la fois. -->
 <!-- CANDIDAT UX18I-AJ — Lot AJ : fiche personnage (C en situation, B en relecture) ; « À retenir » sans aplat. -->
 <!-- CANDIDAT UX18I-AI — Lot AI : largeur 880 px, écrans de fin « À retenir », dépliants harmonisés, cartes sans lettres. -->
 <!-- CANDIDAT UX18I-AH — Lot AH : une seule largeur de page (760 px) pour tout le module. -->
@@ -4747,6 +4748,27 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 .mgt-fin-seq .mgt-r-retenir li:last-child{border-bottom:1px solid #E3E9EE}
 .mgt-fin-seq .mgt-r-retenir li::before{content:counter(ret);position:absolute;left:0;top:12px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--seq-soft,#F2F6F8);color:var(--seq-ink,var(--bleu-nuit));font-weight:800;font-size:16px}
 </style>
+
+<style id="ux18i-lot-ak">
+/* LOT AK — composant « situations » */
+.mgt-sit{margin:8px 0 32px}
+.mgt-sit-tete{display:flex;align-items:center;gap:14px;margin:0 0 14px}
+.mgt-sit-points{list-style:none;margin:0;padding:0;display:flex;gap:6px}
+.mgt-sit-points li{width:12px;height:12px;border-radius:50%;border:2px solid #A9B8C3;background:#fff}
+.mgt-sit-points li.fait{background:var(--seq-accent,#58788F);border-color:var(--seq-accent,#58788F)}
+.mgt-sit-points li.actif{border-color:var(--bleu-nuit);box-shadow:0 0 0 3px rgba(248,187,0,.45)}
+.mgt-sit-compteur{margin:0!important;font-size:15px;font-weight:700;color:var(--texte-2)}
+.g-contenu .panel .mgt-sit .mgt-sit-item{padding:0!important;margin:0!important;border:0!important;background:none!important}
+.mgt-sit .mgt-sit-item + .mgt-sit-item{border-top:0!important;padding-top:0!important}
+.mgt-sit .mgt-sit-titre{display:block!important;margin:0 0 12px!important;font-size:22px!important;color:var(--bleu-nuit)}
+.mgt-sit .mgt-sit-titre::before{display:none!important;content:none!important}
+.mgt-sit-recit{margin:0 0 16px!important;padding:18px 20px!important;border-left:5px solid var(--seq-accent,#58788F);border-radius:0 14px 14px 0;background:var(--seq-soft,#F2F6F8);font-size:18px!important;line-height:1.55;color:var(--encre)}
+.mgt-sit-nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px;padding-top:16px;border-top:1px solid #E3E9EE}
+.mgt-sit-nav button{min-height:44px;padding:8px 16px;border-radius:10px;font:inherit;font-size:15px;font-weight:700;cursor:pointer;border:1px solid #C9D4DC;background:#fff;color:var(--bleu-nuit)}
+.mgt-sit-nav .mgt-sit-suiv{margin-left:auto;background:var(--bleu-nuit);color:#fff;border-color:var(--bleu-nuit)}
+.mgt-sit-nav button:disabled{opacity:.45;cursor:default}
+.mgt-sit-nav button:focus-visible{outline:3px solid var(--or);outline-offset:2px}
+</style>
 </head>
 <body>
 <header class="g-chrome" role="banner">
@@ -5050,7 +5072,7 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 <section class="panel mgt-seq-1 mgt-screen-action mgt-cas-ecran" data-composant="cas" data-titre="S1 · Que feriez-vous dans cette situation ?" id="mod-s1-04c">
 <p class="eyebrow">Séquence 1 · Prendre sa place et ajuster son autorité</p>
 <h1>Que feriez-vous dans cette situation ?</h1>
-<p class="chapo" data-source-mnl="MNL-0157">Trois situations courtes, pour couvrir les deux dimensions vues juste avant.</p><div class="mgt-cas-mnl" data-source-mnl="MNL-0143 MNL-0144"><h2>À vous de jouer</h2><p>Un collaborateur de cabinet, pressé, demande directement au secrétariat général du Congrès de modifier la rédaction d'un projet de délibération, sans en informer l'élu(e).</p><p><strong>Quel est le risque ?</strong></p><div id="mgt-s1-cas-z0"></div></div><div class="mgt-cas-mnl" data-source-mnl="MNL-0158 MNL-0159 MNL-0160 MNL-0161 MNL-0162"><h2>Situation 1</h2><p>Le groupe politique adopte une position commune sur un texte, mais vous avez, à titre personnel, des réserves sur un article précis.</p><p><strong>Quel est le bon réflexe ?</strong></p><div id="mgt-s1-cas-z1"></div></div><details class="mgt-m-plus"><summary>Pour aller plus loin : d’autres situations pour s’entraîner</summary><div class="mgt-cas-mnl" data-source-mnl="MNL-0163 MNL-0164 MNL-0165 MNL-0166 MNL-0167"><h2>Situation 2</h2><p>Une association attend une réponse rapide sur votre soutien à un projet de délibération encore en commission.</p><p><strong>Quelle est la bonne réponse à ce stade ?</strong></p><div id="mgt-s1-cas-z2"></div></div><div class="mgt-cas-mnl" data-source-mnl="MNL-0168 MNL-0169 MNL-0170 MNL-0171 MNL-0172"><h2>Situation 3</h2><p>Votre collaborateur(trice) reçoit, en votre absence, une sollicitation de la presse pour un commentaire à chaud sur un vote qui vient d'avoir lieu.</p><p><strong>Quel est le bon réflexe du collaborateur ?</strong></p><div id="mgt-s1-cas-z3"></div></div></details>
+<p class="chapo" data-source-mnl="MNL-0157">Quatre situations courtes, pour couvrir les deux dimensions vues juste avant.</p><div class="mgt-cas-mnl" data-source-mnl="MNL-0143 MNL-0144"><h2>À vous de jouer</h2><p>Un collaborateur de cabinet, pressé, demande directement au secrétariat général du Congrès de modifier la rédaction d'un projet de délibération, sans en informer l'élu(e).</p><p><strong>Quel est le risque ?</strong></p><div id="mgt-s1-cas-z0"></div></div><div class="mgt-cas-mnl" data-source-mnl="MNL-0158 MNL-0159 MNL-0160 MNL-0161 MNL-0162"><h2>Situation 1</h2><p>Le groupe politique adopte une position commune sur un texte, mais vous avez, à titre personnel, des réserves sur un article précis.</p><p><strong>Quel est le bon réflexe ?</strong></p><div id="mgt-s1-cas-z1"></div></div><details class="mgt-m-plus"><summary>Pour aller plus loin : d’autres situations pour s’entraîner</summary><div class="mgt-cas-mnl" data-source-mnl="MNL-0163 MNL-0164 MNL-0165 MNL-0166 MNL-0167"><h2>Situation 2</h2><p>Une association attend une réponse rapide sur votre soutien à un projet de délibération encore en commission.</p><p><strong>Quelle est la bonne réponse à ce stade ?</strong></p><div id="mgt-s1-cas-z2"></div></div><div class="mgt-cas-mnl" data-source-mnl="MNL-0168 MNL-0169 MNL-0170 MNL-0171 MNL-0172"><h2>Situation 3</h2><p>Votre collaborateur(trice) reçoit, en votre absence, une sollicitation de la presse pour un commentaire à chaud sur un vote qui vient d'avoir lieu.</p><p><strong>Quel est le bon réflexe du collaborateur ?</strong></p><div id="mgt-s1-cas-z3"></div></div></details>
 </section>
 
 
@@ -5369,7 +5391,7 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 <section class="panel mgt-seq-3 mgt-screen-action mgt-cas-ecran" data-composant="cas" data-titre="S3 · À vous de jouer : choisir ses mots" id="mod-s3-02b">
 <p class="eyebrow">Séquence 3 · Clarifier les attentes</p>
 <h1>Que feriez-vous dans cette situation ?</h1>
-<p class="chapo">Choisir ses mots : un cas, puis deux exercices de réécriture.</p>
+<p class="chapo">Choisir ses mots : quatre situations, dont deux exercices de réécriture.</p>
 <div class="mgt-cas-mnl" data-source-mnl="MNL-0520 MNL-0521"><h2>À vous de jouer</h2><p>Un collaborateur rend un dossier en retard. Vous lui dites : « C'est bon là, il faut vraiment que vous vous organisiez. »</p><p><strong>Quel est le risque principal de cette formulation ?</strong></p><div id="mgt-s3-ex-z0"></div></div><div class="mgt-cas-mnl" data-source-mnl="MNL-0538 MNL-0539"><h2>Exercice de réécriture</h2><p>Message initial : « Votre rapport est mal fait, vous devez revoir ça. » Reformulez-le en 3 phrases : (1) un fait positif précis, (2) le point à ajuster, sans jugement, (3) une direction claire pour la suite.</p><label class="mgt-reflexion-card"><strong>Ma reformulation</strong><textarea data-mgt-store="s3-ex-reecriture" rows="4"></textarea></label><details class="mgt-proposition"><summary>Voir un exemple</summary><p>« La partie chiffrée de votre rapport est parfaitement renseignée et organisée. Je vous invite à reprendre l’ensemble du document avec cette même structuration. Nous aurons ainsi un modèle de présentation pour nos prochains rapports. »</p></details></div>
 <details class="mgt-m-plus"><summary>Pour aller plus loin : d’autres situations pour s’entraîner</summary><div class="mgt-cas-mnl" data-source-mnl="MNL-0546 MNL-0547"><h2>Exercice guidé — quand la situation est plus tendue</h2><p><strong>Situation :</strong> un collaborateur a pris une décision engageante sans vous en informer : il a validé sans votre accord l’attribution d’une subvention à une association face aux médias. Vous devez mettre les choses au clair. Complétez les 4 champs pour rédiger votre réponse.</p>
 <label class="mgt-reflexion-card"><strong>Ce qui s’est passé, sans jugement</strong><textarea data-mgt-store="s3-ex-guide-faits" rows="2"></textarea></label><label class="mgt-reflexion-card"><strong>Ce que ça m’a fait</strong><textarea data-mgt-store="s3-ex-guide-ressenti" rows="2"></textarea></label><label class="mgt-reflexion-card"><strong>Ce que j’attends maintenant</strong><textarea data-mgt-store="s3-ex-guide-attente" rows="2"></textarea></label><label class="mgt-reflexion-card"><strong>Ce que ça va changer si c’est ajusté</strong><textarea data-mgt-store="s3-ex-guide-effet" rows="2"></textarea></label>
@@ -8581,6 +8603,53 @@ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',
  document.querySelectorAll('.mgt-tv-lettre').forEach(function(e){e.remove()});
  document.querySelectorAll('.mgt-tv-verso h3').forEach(function(h){h.textContent=h.textContent.replace(/^\s*Version\s+[ABC]\s*[—-]\s*/,'')})},80)}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init()})();
+</script>
+
+<script id="ux18i-lot-ak-js">
+/* Lot AK — « Que feriez-vous ? » : toutes les situations dans un composant unique, une à la fois,
+   numérotées « Situation n sur N », situation mise en avant. Aucune situation cachée dans un accordéon. */
+(function(){
+ var ECRANS=['mod-s1-04c','mod-s2-04b','mod-s3-02b','mod-s4-05d','mod-s5-02b'];
+ function sousTitre(t){t=(t||'').replace(/\s+/g,' ').trim();
+  if(/^À vous de jouer\s*[—-]\s*/i.test(t))return t.replace(/^À vous de jouer\s*[—-]\s*/i,'');
+  if(/^(À vous de jouer|Situation \d+|Étude de cas \d+|La situation)$/i.test(t))return '';
+  return t}
+ function construire(p){
+  if(p.querySelector('.mgt-sit'))return;
+  var items=[].slice.call(p.querySelectorAll('.mgt-cas-mnl, .mgt-fusion')).filter(function(c){return !c.parentElement.closest('.mgt-cas-mnl,.mgt-fusion')});
+  if(!items.length)return;
+  var first=items[0],N=items.length;
+  var box=document.createElement('section');box.className='mgt-sit';box.setAttribute('aria-label','Situations pour s’entraîner');
+  box.innerHTML='<div class="mgt-sit-tete"><ol class="mgt-sit-points" aria-hidden="true"></ol><p class="mgt-sit-compteur" aria-live="polite"></p></div><div class="mgt-sit-scene-zone"></div><div class="mgt-sit-nav"><button type="button" class="mgt-sit-prec">← Situation précédente</button><button type="button" class="mgt-sit-suiv">Situation suivante →</button></div>';
+  first.parentNode.insertBefore(box,first);
+  var zone=box.querySelector('.mgt-sit-scene-zone'),pts=box.querySelector('.mgt-sit-points'),cpt=box.querySelector('.mgt-sit-compteur');
+  items.forEach(function(c,i){
+   var h=c.querySelector('h2,h3'),st=sousTitre(h?h.textContent:'');
+   if(st){st=st.charAt(0).toUpperCase()+st.slice(1);st=st.replace(/\s+—\s+/,' : ')}
+   if(h){h.textContent='Situation '+(i+1)+(st?' — '+st:'');h.classList.add('mgt-sit-titre')}
+   c.classList.add('mgt-sit-item');
+   var sc=[].slice.call(c.children).find(function(x){return x.tagName==='P'&&!x.querySelector('strong:only-child')&&x.textContent.trim().length>40});
+   if(sc)sc.classList.add('mgt-sit-recit');
+   zone.appendChild(c);var li=document.createElement('li');pts.appendChild(li);
+   c.addEventListener('click',function(e){if(e.target.closest('.opt,button:not(.mgt-sit-prec):not(.mgt-sit-suiv)'))marquer(i)});
+   c.addEventListener('input',function(){marquer(i)})});
+  p.querySelectorAll('details.mgt-m-plus').forEach(function(d){var corps=d.querySelector('.mgt-m-plus-corps')||d;
+   var reste=[].slice.call(corps.children).filter(function(x){return x.tagName!=='SUMMARY'&&x.textContent.trim()});
+   if(!reste.length)d.remove();else{var sm=d.querySelector('summary');if(sm)sm.textContent=(reste[0].tagName==='H3'&&/grille/i.test(reste[0].textContent))?'Pour aller plus loin : la grille à 3 niveaux pour évaluer une réponse':'Pour aller plus loin';if(reste[0].tagName==='H3')reste[0].remove()}});
+  var cur=0,faits={};
+  function marquer(i){faits[i]=1;maj()}
+  function maj(){items.forEach(function(c,i){c.hidden=i!==cur});
+   [].forEach.call(pts.children,function(li,i){li.className=(i===cur?'actif ':'')+(faits[i]?'fait':'')});
+   cpt.textContent='Situation '+(cur+1)+' sur '+N;
+   box.querySelector('.mgt-sit-prec').disabled=cur===0;
+   var sv=box.querySelector('.mgt-sit-suiv');sv.hidden=cur===N-1}
+  box.querySelector('.mgt-sit-prec').addEventListener('click',function(){if(cur>0){cur--;maj();aller()}});
+  box.querySelector('.mgt-sit-suiv').addEventListener('click',function(){if(cur<N-1){cur++;maj();aller()}});
+  function aller(){var rm=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;box.scrollIntoView({behavior:rm?'auto':'smooth',block:'start'});var t=items[cur].querySelector('.mgt-sit-titre');if(t){t.setAttribute('tabindex','-1');t.focus({preventScroll:true})}}
+  maj()}
+ function init(){setTimeout(function(){ECRANS.forEach(function(id){var p=document.getElementById(id);if(p)construire(p)})},90)}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})();
 </script>
 </body>
 </html>
