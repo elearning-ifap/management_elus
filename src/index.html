@@ -5,6 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Manager ses collaborateurs en tant qu'élu — Congrès × IFAP</title>
+<!-- CANDIDAT UX18I-AL — Lot AL : plan d’action final épuré ; écran de lecture validé à l’affichage (IFAP-04 révisée). -->
 <!-- CANDIDAT UX18I-AK — Lot AK : « Que feriez-vous ? » en composant unique, une situation à la fois. -->
 <!-- CANDIDAT UX18I-AJ — Lot AJ : fiche personnage (C en situation, B en relecture) ; « À retenir » sans aplat. -->
 <!-- CANDIDAT UX18I-AI — Lot AI : largeur 880 px, écrans de fin « À retenir », dépliants harmonisés, cartes sans lettres. -->
@@ -4769,6 +4770,119 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 .mgt-sit-nav button:disabled{opacity:.45;cursor:default}
 .mgt-sit-nav button:focus-visible{outline:3px solid var(--or);outline-offset:2px}
 </style>
+
+<style id="ux18i-lot-al">
+/* ==== LOT AL — plan d'action final épuré : pas d'aplat foncé, un seul accent doré ==== */
+#g-fin .mgt-reste,#g-fin .hero{display:none!important}
+#g-fin .mgt-pf-tete{display:flex;flex-direction:column;gap:12px;margin:0 0 32px}
+#g-fin .mgt-pf-kicker{margin:0;font-size:14px;font-weight:700;color:#6B5100}
+#g-fin .mgt-pf-tete h1{margin:0;font-size:40px;line-height:1.1;color:var(--bleu-nuit)}
+#g-fin .mgt-pf-intro{margin:0;font-size:19px;line-height:1.55;max-width:760px}
+#g-fin .mgt-pf-bilan{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:0 0 36px;padding:20px 0;border-top:1px solid #D5DEE4;border-bottom:1px solid #D5DEE4}
+#g-fin .mgt-pf-bilan-item{display:flex;flex-direction:column;justify-content:center;gap:4px;padding:0 20px;border-left:1px solid #D5DEE4;font-size:15px;color:var(--texte-2)}
+#g-fin .mgt-pf-bilan-item:first-child{padding-left:0;border-left:0}
+#g-fin .mgt-pf-bilan-radar{flex-direction:row;align-items:center;justify-content:flex-start;gap:16px}
+#g-fin .mgt-pf-bilan-radar svg{flex:none}
+#g-fin .mgt-pf-bilan-radar div{display:flex;flex-direction:column;align-items:flex-start;gap:3px}
+#g-fin .mgt-pf-bilan-radar b{font-size:16px;color:var(--bleu-nuit)}
+#g-fin .mgt-pf-chiffre{margin:0;font-size:34px;line-height:1;font-weight:800;color:var(--bleu-nuit)}
+#g-fin .mgt-pf-chiffre span{font-size:18px;color:var(--texte-2)}
+#g-fin .mgt-pf-lien{padding:0;min-height:32px;border:0;background:none;font:inherit;font-size:15px;font-weight:700;color:var(--bleu-nuit);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+#g-fin .mgt-pf-lien:focus-visible,#g-fin .mgt-pf-telecharger:focus-visible{outline:3px solid var(--or);outline-offset:2px}
+/* frise des étapes : un trait au-dessus, pas de boîte */
+#g-fin .mgt-plan-stepper{position:static!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important;margin:0 0 30px!important;padding:0!important;background:none!important;border:0!important;box-shadow:none!important}
+#g-fin .mgt-plan-step{display:flex!important;align-items:center;gap:10px;min-height:44px;padding:10px 0 0!important;border:0!important;border-top:3px solid #D5DEE4!important;border-radius:0!important;background:none!important;box-shadow:none!important;color:var(--texte-2)!important;font:inherit;font-size:15px!important;text-align:left;cursor:pointer}
+#g-fin .mgt-plan-step:disabled{cursor:default;opacity:1}
+#g-fin .mgt-plan-step .mgt-plan-step-num{display:grid!important;place-items:center;width:26px!important;height:26px!important;border-radius:50%!important;border:2px solid #A9B8C3!important;background:#fff!important;color:var(--texte-2)!important;font-size:13px!important;font-weight:800}
+#g-fin .mgt-plan-step.terminee{border-top-color:#58788F!important;color:var(--bleu-nuit)!important}
+#g-fin .mgt-plan-step.terminee .mgt-plan-step-num{background:#58788F!important;border-color:#58788F!important;color:#fff!important}
+#g-fin .mgt-plan-step.en-cours{border-top-color:var(--bleu-nuit)!important;color:var(--bleu-nuit)!important;font-weight:700}
+#g-fin .mgt-plan-step.en-cours .mgt-plan-step-num{background:var(--bleu-nuit)!important;border-color:var(--bleu-nuit)!important;color:#fff!important}
+/* étapes */
+#g-fin [data-plan-ecran] > h2{margin:0 0 14px!important;padding:0!important;font-size:28px!important;color:var(--bleu-nuit)}
+#g-fin [data-plan-ecran] > h2::before{display:none!important}
+#g-fin [data-plan-ecran] > .chapo{font-size:18px;margin:0 0 26px;max-width:760px}
+#g-fin .mgt-fin-simple,#g-fin .mgt-fin-retention,#g-fin .mgt-fin-intention-discrete{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important}
+#g-fin .mgt-fin-intention-discrete{margin:0 0 26px!important;display:flex;flex-direction:column;gap:6px}
+#g-fin .mgt-fin-intention-discrete[hidden]{display:none!important}
+#g-fin .mgt-fin-intention-discrete strong{font-size:14px;color:var(--texte-2)}
+#g-fin #mgt-fin-intention-rappel{font-size:20px;line-height:1.5;color:var(--bleu-nuit)}
+#g-fin .mgt-pf-question-intention{margin:0;font-size:16px;color:var(--texte-2)}
+#g-fin .mgt-fin-retention label{display:block;font-size:18px;line-height:1.5;font-weight:700;color:var(--encre);margin-bottom:6px}
+#g-fin .mgt-fin-retention .mgt-mini-aide{margin:0 0 10px;font-size:15px;color:var(--texte-2)}
+#g-fin textarea,#g-fin input[type=text]{box-sizing:border-box;width:100%;padding:14px 16px;border:1px solid #C9D4DC;border-radius:12px;background:#fff;font:inherit;font-size:16px;line-height:1.5;color:var(--encre)}
+#g-fin .mgt-pf-nav{position:static!important;display:flex!important;align-items:center;justify-content:space-between;gap:16px;margin:30px 0 0!important;padding:16px 0 0!important;border:0!important;border-top:1px solid #E3E9EE!important;background:none!important;box-shadow:none!important}
+#g-fin .mgt-pf-nav .btn{margin-left:auto}
+#g-fin .mgt-plan-etat{margin:0!important;padding:0!important;border:0!important;background:none!important;font-size:14px!important;color:var(--texte-2)!important;text-align:left!important}
+/* étape 2 : trois lignes empilées, étoile de priorité */
+#g-fin .mgt-pf-lignes{display:flex;flex-direction:column;margin:0}
+#g-fin .mgt-pf-ligne{display:flex;flex-direction:column;gap:10px;padding:22px 0;border-top:1px solid #D5DEE4;background:none!important;box-shadow:none!important;border-radius:0!important}
+#g-fin .mgt-pf-ligne-tete{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+#g-fin .mgt-pf-ligne-txt h3{margin:0 0 4px;font-size:21px;color:var(--bleu-nuit)}
+#g-fin .mgt-pf-ligne-txt p{margin:0;font-size:15px;line-height:1.5;color:var(--texte-2)}
+#g-fin .mgt-plan-priority{flex:none;display:inline-flex!important;align-items:center;gap:8px;min-height:44px;width:auto!important;margin:0!important;padding:0 14px!important;border-radius:999px!important;border:1px solid #C9D4DC!important;background:#fff!important;color:var(--bleu-nuit)!important;font:inherit;font-size:14px!important;font-weight:700;box-shadow:none!important;cursor:pointer}
+#g-fin .mgt-plan-priority::before{display:none!important;content:none!important}
+#g-fin .mgt-plan-priority svg{fill:none;stroke:#58788F}
+#g-fin .mgt-plan-priority:disabled{opacity:.5;cursor:default}
+#g-fin .mgt-plan-priority.on{border-color:#B98900!important;background:#FFF6D9!important;color:#5A4400!important}
+#g-fin .mgt-plan-priority.on svg{fill:var(--or);stroke:#B98900}
+#g-fin .mgt-pf-prio textarea{border-color:#B98900}
+#g-fin .mgt-pf-aide{font-size:15px;line-height:1.55;color:var(--texte-2)}
+#g-fin .mgt-pf-aide p{margin:0}
+#g-fin .mgt-pf-aide details.mgt-source{margin-top:4px}
+#g-fin .mgt-pf-plus{margin-top:6px}
+#g-fin .mgt-pf-plus .mgt-fiche-apport,#g-fin .mgt-pf-plus .mgt-autocheck,#g-fin .mgt-pf-plus .mgt-essentiel-p,#g-fin .mgt-pf-plus .mgt-recherche{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:12px 0!important}
+#g-fin .mgt-pf-plus .mgt-recherche .mgt-recherche-kicker{display:none}
+#g-fin .mgt-pf-plus .mgt-essentiel-p::before{display:none!important}
+/* étape 3 */
+#g-fin .mgt-plan-priorite-rappel{margin:0 0 20px!important;padding:16px 0 0!important;border:0!important;border-top:3px solid var(--or)!important;border-radius:0!important;background:none!important;box-shadow:none!important}
+#g-fin #mgt-plan-priorite-texte{margin:0;display:flex;flex-direction:column;gap:8px}
+#g-fin .mgt-pf-prio-lib{font-size:14px;font-weight:700;color:#6B5100}
+#g-fin .mgt-pf-prio-txt{font-size:22px;line-height:1.45;font-weight:700;color:var(--bleu-nuit)}
+#g-fin .mgt-plan-priorite-details{display:flex!important;flex-direction:column!important;gap:0!important;margin:0 0 36px!important}
+#g-fin .mgt-plan-priorite-detail{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);grid-template-rows:auto auto;column-gap:20px;align-items:center;padding:16px 0!important;border:0!important;border-top:1px solid #D5DEE4!important;border-radius:0!important;background:none!important}
+#g-fin .mgt-plan-priorite-detail label{grid-column:1;grid-row:1;font-size:17px;font-weight:700;color:var(--encre)}
+#g-fin .mgt-plan-priorite-detail .mgt-plan-mini-aide{grid-column:1;grid-row:2;margin:0;font-size:14px;color:var(--texte-2)}
+#g-fin .mgt-plan-priorite-detail input{grid-column:2;grid-row:1/3;min-height:48px;padding:0 14px}
+#g-fin .mgt-plan-preview-ux7{background:none!important;border:0!important;box-shadow:none!important;padding:0!important}
+#g-fin .mgt-plan-preview-ux7 > h3{margin:0 0 16px;font-size:22px;color:var(--bleu-nuit)}
+#g-fin .mgt-plan-page-9f{max-width:680px;padding:40px 44px!important;background:#fff!important;border:1px solid #DCE5EB!important;border-radius:6px!important;box-shadow:0 1px 2px rgba(31,52,68,.06),0 12px 32px rgba(31,52,68,.08)!important}
+#g-fin .mgt-plan-intro-hero{display:block!important;margin:0 0 6px!important;padding:0 0 14px!important;background:none!important;border:0!important;border-bottom:2px solid var(--or)!important;border-radius:0!important;box-shadow:none!important}
+#g-fin .mgt-plan-intro-hero::before,#g-fin .mgt-plan-intro-hero::after{display:none!important}
+#g-fin .mgt-plan-intro-hero h1{margin:0 0 4px!important;font-size:28px!important;color:var(--bleu-nuit)!important}
+#g-fin .mgt-plan-intro-hero p{margin:0!important;color:var(--texte-2)!important}
+#g-fin .mgt-plan-intro-marque{text-transform:none!important;letter-spacing:0!important;font-size:12px!important;font-weight:700;color:var(--texte-2)!important}
+#g-fin .mgt-plan-print-priorite{padding:4px 0 4px 16px!important;border:0!important;border-left:3px solid var(--or)!important;background:none!important;border-radius:0!important}
+#g-fin .mgt-plan-repere{padding:12px 0 0!important;background:none!important;border-radius:0!important;border-top:1px solid #E3E9EE}
+#g-fin .mgt-plan-preview-actions{display:flex!important;flex-wrap:wrap;align-items:center;gap:20px;margin:22px 0 0!important;padding:0!important;background:none!important;border:0!important}
+#g-fin .mgt-pf-telecharger{display:inline-flex;align-items:center;gap:10px;min-height:50px;padding:0 24px;border-radius:12px;border:0;background:var(--or);color:var(--bleu-nuit);font:inherit;font-size:16px;font-weight:800;cursor:pointer}
+#g-fin .mgt-print-help{flex-basis:100%;margin:0;font-size:14px;color:var(--texte-2)}
+#g-fin .mgt-pf-citation{margin:44px 0 14px;padding-top:30px;border-top:1px solid #D5DEE4;font-size:28px;line-height:1.35;font-style:italic;color:var(--bleu-nuit)}
+#g-fin .mgt-pf-conclusion{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important;max-width:760px}
+#g-fin .mgt-pf-conclusion p{font-size:16px;line-height:1.6;color:var(--texte-2);margin:0 0 10px}
+#g-fin .mgt-pf-pied{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:26px;padding-top:16px;border-top:1px solid #E3E9EE}
+#g-fin .mgt-pf-statut{margin:0;display:inline-flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:15px;color:var(--encre)}
+#g-fin .mgt-pf-statut.mgt-pf-ok{font-weight:700;color:#1F5A43}
+#g-fin .mgt-pf-credits{font-weight:400;color:var(--texte-2)}
+#g-fin .mgt-plan-step.terminee .mgt-plan-step-num{font-size:0!important}
+#g-fin .mgt-plan-step.terminee .mgt-plan-step-num::before{content:"✓";font-size:14px!important;color:#fff}
+#g-fin .mgt-pf-aide details.mgt-source,#g-fin .mgt-pf-aide details.mgt-source > summary{border:0!important;background:none!important;box-shadow:none!important;padding:0!important;margin:0!important;min-height:0!important}
+#g-fin .mgt-pf-aide details.mgt-source{margin-top:4px!important}
+#g-fin .mgt-pf-aide details.mgt-source > summary{display:inline-flex!important;align-items:center;gap:6px;min-height:36px!important;font-size:14px!important;font-weight:700;color:var(--bleu-nuit)!important;text-decoration:underline;text-underline-offset:3px}
+#g-fin .mgt-pf-aide details.mgt-source > summary::after,#g-fin .mgt-pf-aide details.mgt-source > summary::before{display:none!important;content:none!important}
+#g-fin .mgt-pf-aide .mgt-reference-icon-ux15{display:none!important}
+#g-fin .mgt-pf-aide details.mgt-source > p{margin:4px 0 0!important;font-size:14px}
+#g-fin #mgt-feuille-route #mgt-feuille-contenu{background:none!important;padding:0!important;border:0!important;box-shadow:none!important}
+#g-fin #mgt-feuille-route #mgt-feuille-contenu .mgt-plan-print-priorite{margin:18px 0!important;padding:4px 0 4px 16px!important;border:0!important;border-left:3px solid var(--or)!important;background:none!important;border-radius:0!important}
+#g-fin #mgt-feuille-route #mgt-feuille-contenu .mgt-plan-print-priorite h2{font-size:16px!important;color:#6B5100!important;margin:0 0 6px!important}
+#g-fin .mgt-pf-telecharger::before,#g-fin .mgt-pf-telecharger::after,#g-fin .mgt-print-help::before{display:none!important;content:none!important}
+#g-fin .mgt-print-help{padding-left:0!important}
+#g-fin .mgt-plan-priorite-detail{grid-template-columns:minmax(0,1fr) minmax(0,1.6fr)!important}
+body.mgt-pf-avant-fin #g-btn-suiv{visibility:hidden}
+/* correctif hors plan : numéros de la grille S5 « Recadrer et réguler » illisibles (gris sur gris-bleu) */
+.g-contenu .panel .mgt-grid-step-num-ux14{color:#fff!important}
+@media(max-width:760px){#g-fin .mgt-pf-bilan{grid-template-columns:1fr;gap:16px}#g-fin .mgt-pf-bilan-item{padding:0;border-left:0}#g-fin .mgt-plan-priorite-detail{grid-template-columns:1fr}#g-fin .mgt-plan-priorite-detail input{grid-column:1;grid-row:3;margin-top:8px}#g-fin .mgt-pf-ligne-tete{flex-direction:column}}
+</style>
 </head>
 <body>
 <header class="g-chrome" role="banner">
@@ -5782,13 +5896,8 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
        clôture et déclenche elle-même le bilan et la complétion. -->
 <div aria-hidden="true" hidden="" id="g-satisf"><div id="g-satisf-items"></div><button aria-label="Valider la satisfaction" disabled="" id="g-satisf-suivant" type="button"></button></div>
 <!-- ============ NOYAU · CLÔTURE (S6-02 à S6-06 repliés dans le slot "fin" — adaptation n°3) ============ -->
-<section class="panel" data-obligatoire="" data-titre="Votre plan d’action" id="g-fin">
-<div class="hero">
-<p class="eyebrow">Clôture</p>
-<h1>Votre plan d’action</h1>
-<p data-source-mnl="MNL-0946">Le parcours vous a donné des repères. Cette dernière étape a un objectif différent : transformer ces repères en gestes réellement tenus, une fois le parcours terminé.</p>
-<p class="mgt-mini-aide" data-source-mnl="MNL-0902" id="mgt-transition-plan-m6">Les ajustements identifiés dans ce parcours — communication, délégation, tensions, autorité — se rassemblent maintenant dans un engagement concret.</p>
-</div>
+<section class="panel mgt-plan-v2" data-obligatoire="" data-titre="Votre plan d’action" id="g-fin">
+<header class="mgt-pf-tete"><p class="mgt-pf-kicker">Clôture du parcours</p><h1>Votre plan d’action</h1><p class="mgt-pf-intro" data-source-mnl="MNL-0946">Le parcours vous a donné des repères. Cette dernière étape a un objectif différent : transformer ces repères en gestes réellement tenus, une fois le parcours terminé.</p></header><section aria-label="Votre parcours en un coup d’œil" class="mgt-pf-bilan" id="mgt-pf-bilan"></section>
 <nav aria-label="Étapes du plan d’action" class="mgt-plan-stepper">
 <button class="mgt-plan-step en-cours" data-plan-step="1" type="button"><span class="mgt-plan-step-num">1</span><span>Ce que je retiens</span></button>
 <button class="mgt-plan-step" data-plan-step="2" type="button"><span class="mgt-plan-step-num">2</span><span>Mon plan d’action</span></button>
@@ -5799,55 +5908,55 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 <div hidden="" id="g-delta-zone"></div>
 <div data-plan-ecran="1">
 <h2>Ce que je retiens</h2>
-<p class="chapo" data-source-mnl="MNL-0936 MNL-0938 MNL-0939">Avant de construire votre plan d’action, un rappel de ce que vous avez posé au fil du parcours : votre photographie de départ, sur les 6 dimensions, et l’intention que vous aviez formulée dès l’entrée dans le parcours.</p>
+
 <div class="mgt-fin-simple">
-<div class="mgt-accueil-mnl" data-source-mnl="MNL-0972"><p>À l’entrée du parcours, vous aviez formulé une intention. La voici, rappelée ci-dessous. A-t-elle été suivie, ajustée en cours de route, ou dépassée par d’autres priorités apparues pendant le parcours ?</p></div><div class="mgt-fin-intention-discrete" hidden="" id="mgt-fin-intention-discrete">
-<strong>Votre intention de départ</strong>
+<div class="mgt-fin-intention-discrete" hidden="" id="mgt-fin-intention-discrete">
+<strong>Votre intention au départ du parcours</strong>
 <div id="mgt-fin-intention-rappel"></div>
-</div>
+<p class="mgt-pf-question-intention" data-source-mnl="MNL-0972">A-t-elle été suivie, ajustée en cours de route, ou dépassée par d’autres priorités apparues pendant le parcours ?</p></div>
 <div class="mgt-fin-retention">
 <label data-source-mnl="MNL-0942" for="mgt-fin-surprise">En relisant l’ensemble de ce que vous avez écrit depuis le début du parcours, qu’est-ce qui vous surprend le plus — une évolution nette, une constance, ou une prise de conscience inattendue ?</label>
-<p class="mgt-mini-aide">Quelques mots suffisent. Cette réponse est facultative.</p>
-<textarea data-plan-store="plan-chemin-surprise" id="mgt-fin-surprise" placeholder="Ex. Je veux davantage expliciter le résultat attendu avant de déléguer." rows="4"></textarea>
+<p class="mgt-mini-aide">Quelques mots suffisent. Facultatif.</p>
+<textarea data-plan-store="plan-chemin-surprise" id="mgt-fin-surprise" placeholder="Ex. Je veux davantage expliciter le résultat attendu avant de déléguer." rows="3"></textarea>
 </div>
-<aside class="mgt-recherche" data-source-mnl="MNL-0947 MNL-0948"><p class="mgt-recherche-kicker">Un repère qui vient de la recherche sur l’engagement</p><p class="mgt-en-bref"><strong>En bref —</strong> Un plan précis du type « si… alors… » multiplie les chances de passer réellement à l’action.</p><details class="mgt-recherche-detail"><summary>Lire le repère complet et sa source</summary><div class="mgt-recherche-corps"><p>Les travaux de Peter Gollwitzer, menés depuis la fin des années 1990 et largement confirmés depuis, comparent deux façons de se fixer un objectif : une intention générale ("je vais mieux déléguer") et un plan précis, formulé à l'avance ("si telle situation se présente, je ferai précisément cela"). Ses recherches montrent que le second type de formulation multiplie très nettement les chances que l'action soit réellement mise en œuvre — parce que la décision est déjà prise avant que la situation n'arrive, et qu'il ne reste plus qu'à l'appliquer.</p><details class="mgt-source" data-source-mnl="MNL-0947 MNL-0948"><summary><span aria-hidden="true" class="mgt-reference-icon-ux15"><svg viewbox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a2 2 0 0 1 2 2v15a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 20.5z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17a2 2 0 0 1 2-2h2.5a2.5 2.5 0 0 1 2.5 2.5z"></path></svg></span><span class="mgt-reference-label-ux15">Source</span></summary><p>Gollwitzer, P. M. (1999). <cite>Implementation intentions: Strong effects of simple plans.</cite> American Psychologist, 54(7), 493–503.</p></details></div></details></aside><p class="mgt-essentiel-p" data-source-mnl="MNL-0949"><strong>Ce que l'on peut en retenir —</strong> Un plan d'action utile ne décrit pas une bonne intention : il décrit une action précise, à un moment précis, dans une situation précise.</p>
+
 </div>
-<div class="mgt-plan-navigation mgt-plan-navigation-bar-ux15"><button class="btn btn-primaire" data-plan-aller="2" type="button">Étape suivante →</button></div>
+<div class="mgt-pf-nav"><button class="btn btn-primaire" data-plan-aller="2" type="button">Continuer : mon plan d’action →</button></div>
 </div>
 <div data-plan-ecran="2" hidden="">
 <h2>Mon plan d’action</h2>
-<p class="chapo">Écrivez ce qui vous est utile, puis choisissez l’engagement que vous voulez traiter en priorité.</p>
-<dl class="mgt-fiche-apport" data-source-mnl="MNL-0952 MNL-0953 MNL-0954 MNL-0955 MNL-0956"><dt>Objectif</dt><dd>Passer en revue votre pratique actuelle selon trois catégories simples, pour identifier des actions concrètes dans chacune.</dd><dt>Concept</dt><dd>Trois familles de décisions suffisent à couvrir la plupart des ajustements possibles : ce que vous maintenez parce que ça fonctionne déjà, ce que vous arrêtez parce que ça ne sert plus votre pratique, et ce que vous expérimentez parce que ce parcours vous a donné une piste à tester.</dd><dt>Principe</dt><dd>Ces trois catégories se distinguent nettement : maintenir ne demande pas de description détaillée (un rappel suffit), arrêter demande de nommer précisément ce qui s'arrête, et expérimenter demande une action testable, avec une échéance.</dd><dt>Utilité</dt><dd>Cette structure évite deux pièges fréquents des plans d'action : vouloir tout changer d'un coup (au risque de ne rien tenir), ou rester si général que rien de concret n'en ressort.</dd><dt>Mise en pratique</dt><dd>Pour chaque catégorie, une seule règle : une phrase courte, avec un verbe d'action, et si possible une échéance.</dd></dl><p data-source-mnl="MNL-0958"><strong>Votre mission, si vous l’acceptez.</strong> Complétez les trois catégories ci-dessous. Un seul engagement précis vaut mieux que cinq engagements vagues.</p><div class="mgt-plan-mode-emploi"><span>1</span><p><strong>Écrivez</strong> une, deux ou trois idées.</p><span>2</span><p><strong>Choisissez</strong> votre priorité.</p></div>
-<div class="mgt-plan-categories-ux7">
-<article class="mgt-plan-card-ux7">
-<h3>Je maintiens</h3>
-<p data-source-mnl="MNL-0959">Ce qui fonctionne déjà dans ma pratique — au moins 1 élément.</p>
-<textarea aria-label="Je maintiens" data-plan-store="plan-maintenir" placeholder="Ex. Je maintiens un point de suivi convenu à l’avance."></textarea>
-<button class="mgt-plan-priority" data-plan-priority="maintenir" disabled="" type="button">En faire ma priorité</button>
+<p class="chapo" data-source-mnl="MNL-0956 MNL-0958">Une phrase courte, avec un verbe d’action, dans chaque catégorie : un seul engagement précis vaut mieux que cinq engagements vagues. Puis marquez d’une étoile celui que vous voulez traiter en premier.</p>
+
+<div class="mgt-pf-lignes">
+<article class="mgt-pf-ligne"><div class="mgt-pf-ligne-tete"><div class="mgt-pf-ligne-txt"><h3>Je maintiens</h3><p data-source-mnl="MNL-0959">Ce qui fonctionne déjà dans ma pratique — au moins 1 élément.</p></div><button class="mgt-plan-priority" data-plan-priority="maintenir" disabled="" type="button">En faire ma priorité</button></div>
+
+
+<textarea aria-label="Je maintiens" data-plan-store="plan-maintenir" placeholder="Ex. Je maintiens un point de suivi convenu à l’avance." rows="2"></textarea>
+
 </article>
-<article class="mgt-plan-card-ux7">
-<h3>J’arrête</h3>
-<p data-source-mnl="MNL-0960">Ce qui ne sert plus ma pratique de manager — au moins 1 élément, formulé précisément : quoi, à partir de quand.</p>
-<textarea aria-label="J’arrête" data-plan-store="plan-arreter" placeholder="Ex. J’arrête de reprendre un dossier au premier imprévu."></textarea>
-<button class="mgt-plan-priority" data-plan-priority="arreter" disabled="" type="button">En faire ma priorité</button>
+<article class="mgt-pf-ligne"><div class="mgt-pf-ligne-tete"><div class="mgt-pf-ligne-txt"><h3>J’arrête</h3><p data-source-mnl="MNL-0960">Ce qui ne sert plus ma pratique de manager — au moins 1 élément, formulé précisément : quoi, à partir de quand.</p></div><button class="mgt-plan-priority" data-plan-priority="arreter" disabled="" type="button">En faire ma priorité</button></div>
+
+
+<textarea aria-label="J’arrête" data-plan-store="plan-arreter" placeholder="Ex. J’arrête de reprendre un dossier au premier imprévu." rows="2"></textarea>
+
 </article>
-<article class="mgt-plan-card-ux7">
-<h3>J’expérimente</h3>
-<p data-source-mnl="MNL-0961">Ce que ce parcours m’a donné envie de tester — au moins 1 élément, selon la structure : « Si [situation précise] se présente, alors je [action précise], d’ici [échéance]. »</p>
-<textarea aria-label="J’expérimente" data-plan-store="plan-experimenter" placeholder="Ex. Je teste une question de reformulation avant de donner ma solution."></textarea>
-<button class="mgt-plan-priority" data-plan-priority="experimenter" disabled="" type="button">En faire ma priorité</button>
-</article>
+<article class="mgt-pf-ligne"><div class="mgt-pf-ligne-tete"><div class="mgt-pf-ligne-txt"><h3>J’expérimente</h3><p data-source-mnl="MNL-0961">Ce que ce parcours m’a donné envie de tester — au moins 1 élément, selon la structure : « Si [situation précise] se présente, alors je [action précise], d’ici [échéance]. »</p></div><button class="mgt-plan-priority" data-plan-priority="experimenter" disabled="" type="button">En faire ma priorité</button></div>
+
+
+<textarea aria-label="J’expérimente" data-plan-store="plan-experimenter" placeholder="Ex. Je teste une question de reformulation avant de donner ma solution." rows="2"></textarea>
+
+<div class="mgt-pf-aide" data-source-mnl="MNL-0947 MNL-0948"><p><strong>En bref —</strong> Un plan précis du type « si… alors… » multiplie les chances de passer réellement à l’action.</p><details class="mgt-source" data-source-mnl="MNL-0947 MNL-0948"><summary><span aria-hidden="true" class="mgt-reference-icon-ux15"><svg viewbox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a2 2 0 0 1 2 2v15a2 2 0 0 0-2-2H6.5A2.5 2.5 0 0 0 4 20.5z"></path><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H13v17a2 2 0 0 1 2-2h2.5a2.5 2.5 0 0 1 2.5 2.5z"></path></svg></span><span class="mgt-reference-label-ux15">Source</span></summary><p>Gollwitzer, P. M. (1999). <cite>Implementation intentions: Strong effects of simple plans.</cite> American Psychologist, 54(7), 493–503.</p></details></div></article>
 </div>
-<div class="mgt-autocheck" data-source-mnl="MNL-0963 MNL-0964 MNL-0965 MNL-0966"><p><strong>Avant de passer à la suite, vérifiez :</strong></p><ul><li>Chaque engagement est spécifique (une action précise, pas une intention générale).</li><li>Chaque engagement est mesurable ou observable (vous saurez dire si c’est fait).</li><li>Chaque engagement est réaliste et daté (une échéance concrète).</li></ul></div><div aria-live="polite" class="mgt-plan-etat" id="mgt-plan-categories-etat">Écrivez au moins une idée, puis choisissez votre priorité.</div>
-<div class="mgt-plan-navigation mgt-plan-navigation-bar-ux15">
-<button class="btn btn-primaire" data-plan-aller="3" disabled="" id="mgt-plan-vers-3" type="button">Étape suivante →</button>
+
+<details class="mgt-m-plus mgt-pf-plus"><summary>Pour aller plus loin : pourquoi ces trois catégories</summary><div class="mgt-m-plus-corps"><dl class="mgt-fiche-apport" data-source-mnl="MNL-0952 MNL-0953 MNL-0954 MNL-0955 MNL-0956"><dt>Objectif</dt><dd>Passer en revue votre pratique actuelle selon trois catégories simples, pour identifier des actions concrètes dans chacune.</dd><dt>Concept</dt><dd>Trois familles de décisions suffisent à couvrir la plupart des ajustements possibles : ce que vous maintenez parce que ça fonctionne déjà, ce que vous arrêtez parce que ça ne sert plus votre pratique, et ce que vous expérimentez parce que ce parcours vous a donné une piste à tester.</dd><dt>Principe</dt><dd>Ces trois catégories se distinguent nettement : maintenir ne demande pas de description détaillée (un rappel suffit), arrêter demande de nommer précisément ce qui s'arrête, et expérimenter demande une action testable, avec une échéance.</dd><dt>Utilité</dt><dd>Cette structure évite deux pièges fréquents des plans d'action : vouloir tout changer d'un coup (au risque de ne rien tenir), ou rester si général que rien de concret n'en ressort.</dd><dt>Mise en pratique</dt><dd>Pour chaque catégorie, une seule règle : une phrase courte, avec un verbe d'action, et si possible une échéance.</dd></dl><div class="mgt-autocheck" data-source-mnl="MNL-0963 MNL-0964 MNL-0965 MNL-0966"><p><strong>Avant de passer à la suite, vérifiez :</strong></p><ul><li>Chaque engagement est spécifique (une action précise, pas une intention générale).</li><li>Chaque engagement est mesurable ou observable (vous saurez dire si c’est fait).</li><li>Chaque engagement est réaliste et daté (une échéance concrète).</li></ul></div><p class="mgt-essentiel-p" data-source-mnl="MNL-0949"><strong>Ce que l'on peut en retenir —</strong> Un plan d'action utile ne décrit pas une bonne intention : il décrit une action précise, à un moment précis, dans une situation précise.</p><div class="mgt-pf-recherche-complete"><aside class="mgt-recherche" data-source-mnl="MNL-0947 MNL-0948"><p class="mgt-recherche-kicker">Un repère qui vient de la recherche sur l’engagement</p><p class="mgt-en-bref"><strong>En bref —</strong> Un plan précis du type « si… alors… » multiplie les chances de passer réellement à l’action.</p><details class="mgt-recherche-detail"><summary>Lire le repère complet et sa source</summary><div class="mgt-recherche-corps"><p>Les travaux de Peter Gollwitzer, menés depuis la fin des années 1990 et largement confirmés depuis, comparent deux façons de se fixer un objectif : une intention générale ("je vais mieux déléguer") et un plan précis, formulé à l'avance ("si telle situation se présente, je ferai précisément cela"). Ses recherches montrent que le second type de formulation multiplie très nettement les chances que l'action soit réellement mise en œuvre — parce que la décision est déjà prise avant que la situation n'arrive, et qu'il ne reste plus qu'à l'appliquer.</p></div></details></aside></div></div></details><div class="mgt-pf-nav"><div aria-live="polite" class="mgt-plan-etat" id="mgt-plan-categories-etat">Écrivez au moins une idée, puis choisissez votre priorité.</div>
+<button class="btn btn-primaire" data-plan-aller="3" disabled="" id="mgt-plan-vers-3" type="button">Continuer : j’emporte mon plan →</button>
 </div>
 </div>
 <div data-plan-ecran="3" hidden="">
 <h2>J’emporte mon plan</h2>
-<p class="chapo">Votre priorité est choisie. Trois précisions facultatives peuvent maintenant faciliter le passage à l’action.</p>
+<p class="chapo">Trois précisions facultatives pour passer plus facilement à l’action, puis votre plan est prêt.</p>
 <div class="mgt-plan-priorite-rappel" id="mgt-plan-priorite-rappel">
-<strong>Votre engagement prioritaire</strong>
+
 <p id="mgt-plan-priorite-texte"></p>
 </div>
 <div class="mgt-plan-priorite-details">
@@ -5868,19 +5977,19 @@ li[data-jeton] .mgt-tri-replacer{align-self:flex-start;margin:0!important}
 </div>
 </div>
 <div class="mgt-plan-preview-ux7" id="mgt-feuille-route">
-<h3>Mon plan d’action managérial</h3>
-<p class="mgt-mini-aide">L’aperçu n’affiche que ce que vous avez réellement renseigné.</p>
+<h3>Votre plan, prêt à emporter</h3>
+
 <div id="mgt-feuille-contenu"></div>
 <div class="mgt-plan-preview-actions">
-<button class="btn btn-primaire" id="mgt-btn-imprimer" type="button">Imprimer / enregistrer mon plan en PDF</button><p class="mgt-print-help">Sur tablette ou ordinateur, le bouton ouvre une version propre du plan puis la fenêtre d’impression. Vous pouvez choisir « Enregistrer au format PDF » si votre appareil le propose.</p>
-<button class="btn btn-secondaire" data-plan-aller="2" type="button">← Modifier mon plan</button>
+<button class="mgt-pf-telecharger" id="mgt-btn-imprimer" type="button"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" viewbox="0 0 24 24" width="18"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></svg>Télécharger mon plan (PDF)</button>
+<button class="mgt-pf-lien" data-plan-aller="2" type="button">Modifier mon plan</button>
+<p class="mgt-print-help">Le bouton ouvre une version propre du plan ; choisissez « Enregistrer au format PDF » pour le garder.</p></div>
 </div>
-</div>
-<div class="mgt-plan-final-phrase">« Le parcours se termine ici. Votre plan, lui, commence maintenant. »</div>
-<p style="text-align:center"><button class="btn btn-tertiaire" data-go="g-credits" id="mgt-btn-credits" type="button">Voir les crédits</button></p>
-</div>
+<p class="mgt-pf-citation">« Le parcours se termine ici. Votre plan, lui, commence maintenant. »</p>
+
+<div class="mgt-pf-conclusion" data-source-mnl="MNL-0975 MNL-0976"><p>Ce parcours ne s'arrête pas à un score ou à un quiz réussi. Il se prolonge dans les prochaines semaines de votre mandat, à travers les trois engagements que vous venez d'écrire.</p><p><strong>Un dernier repère —</strong> Votre plan d’action, votre check-list « 30 premiers jours », vos grilles d’auto-évaluation et vos deux grilles de questions puissantes restent accessibles et réutilisables à tout moment depuis le parcours, bien après sa clôture.</p></div><div class="mgt-pf-pied"><p aria-live="polite" class="mgt-pf-statut" id="mgt-pf-statut"></p><button class="mgt-pf-lien mgt-pf-credits" data-go="g-credits" id="mgt-btn-credits" type="button">Crédits</button></div></div>
 <button aria-hidden="true" hidden="" id="g-btn-reprendre" tabindex="-1" type="button"></button>
-<div class="mgt-conclusion-mnl" data-source-mnl="MNL-0975 MNL-0976"><h2>Pour conclure ce parcours</h2><p>Ce parcours ne s'arrête pas à un score ou à un quiz réussi. Il se prolonge dans les prochaines semaines de votre mandat, à travers les trois engagements que vous venez d'écrire.</p><p><strong>Un dernier repère —</strong> Votre plan d’action, votre check-list « 30 premiers jours », vos grilles d’auto-évaluation et vos deux grilles de questions puissantes restent accessibles et réutilisables à tout moment depuis le parcours, bien après sa clôture.</p></div>
+
 </section>
 <!-- ============ NOYAU · CRÉDITS (R65-R67 — CORPUS v2, partie IV) ============
        Dernier écran, sobre. L'id contient « credit » : le noyau v1.6 gelé
@@ -6062,7 +6171,10 @@ function dansProgression(id){var p=document.getElementById(id);return !!p&&!p.ha
 function terminer(id){id=id||etat.page;if(!dansProgression(id))return;etat.terminees[id]=1;majJauge();sauver();verifierCompletion()}
 function aller(id){var c=document.getElementById(id);if(!c)return;
  $$('.panel').forEach(function(p){p.classList.remove('actif')});c.classList.add('actif');
- etat.page=id;etat.vues[id]=1;majJauge();sauver();window.scrollTo({top:0,behavior:'smooth'});
+ etat.page=id;etat.vues[id]=1;
+ /* Lot AL (IFAP-04 révisée) : un écran de lecture est validé dès qu'il est affiché ; seules les activités requises restent à faire. */
+ try{if(["g-pre","g-post","g-fin","mod-s1-05","mod-s2-05","mod-s3-06","mod-s4-07","mod-s5-07"].indexOf(id)<0&&dansProgression(id))etat.terminees[id]=1}catch(e){}
+ majJauge();sauver();try{verifierCompletion()}catch(e){}window.scrollTo({top:0,behavior:'smooth'});
  var titre=c.querySelector('h1,h2,[data-titre-focus]');
  if(titre){if(!titre.hasAttribute('tabindex'))titre.setAttribute('tabindex','-1');titre.focus({preventScroll:true})}
  if(window.matchMedia('(max-width:900px)').matches){
@@ -7626,10 +7738,10 @@ function mgtActualiserPriorite(){
   var choisi=p===k&&!!v,card=bt.closest('.mgt-plan-card-ux7');
   bt.classList.toggle('on',choisi);if(card)card.classList.toggle('mgt-plan-card-prioritaire-ux14',choisi);
   bt.setAttribute('aria-pressed',choisi?'true':'false');
-  bt.textContent=choisi?'Priorité choisie ✓':(v?'Choisir comme priorité':'Écrivez d’abord une idée')
+  bt.innerHTML='<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" stroke-width="2" stroke-linejoin="round"><path d="M12 3l2.8 5.8 6.2.8-4.5 4.4 1.1 6.2L12 17.3l-5.6 2.9 1.1-6.2L3 9.6l6.2-.8z"/></svg>'+(choisi?'Ma priorité':'En faire ma priorité');bt.title=v?'':'Écrivez d’abord une idée';if(card)card.classList.toggle('mgt-pf-prio',choisi)
  });
  if(p&&!mgtPlanValeur('plan-'+p)){delete MGT_REPONSES['plan-priorite'];p=null}
- var texte=document.getElementById('mgt-plan-priorite-texte');if(texte)texte.innerHTML=p?'<strong>'+mgtLibellePriorite(p)+'</strong><br>'+mgtPlanEchapper(mgtPlanValeur('plan-'+p)):'Choisissez d’abord votre priorité à l’étape précédente.';
+ var texte=document.getElementById('mgt-plan-priorite-texte');if(texte)texte.innerHTML=p?'<span class="mgt-pf-prio-lib">Votre priorité · '+mgtLibellePriorite(p)+'</span><span class="mgt-pf-prio-txt">'+mgtPlanEchapper(mgtPlanValeur('plan-'+p))+'</span>':'Choisissez d’abord votre priorité à l’étape précédente.';
  var valide=mgtPlanPrioriteValide(),vers3=document.getElementById('mgt-plan-vers-3');if(vers3)vers3.disabled=!valide;
  var step3=document.querySelector('[data-plan-step="3"]');if(step3)step3.disabled=!valide
 }
@@ -7645,13 +7757,13 @@ function mgtMajStepper(){
  if(etat){
   if(!mgtPlanAuMoinsUnEngagement()){
    etat.classList.remove('ok');
-   etat.textContent='Écrivez au moins une idée, puis choisissez votre priorité.'
+   etat.textContent='Une idée et une étoile suffisent pour continuer.'
   }else if(!mgtPlanPrioriteValide()){
    etat.classList.remove('ok');
-   etat.textContent='Vos idées sont enregistrées. Cliquez maintenant sur « Choisir comme priorité » sous l’engagement que vous voulez approfondir.'
+   etat.textContent='Marquez d’une étoile l’engagement que vous voulez traiter en premier.'
   }else{
    etat.classList.add('ok');
-   etat.textContent='Priorité choisie : '+mgtLibellePriorite(MGT_REPONSES['plan-priorite'])+'. Vous pouvez maintenant la préciser.'
+   etat.textContent='Priorité choisie : '+mgtLibellePriorite(MGT_REPONSES['plan-priorite'])+'.'
   }
  }
  mgtActualiserPriorite()
@@ -7744,9 +7856,9 @@ function mgtPlanDocumentImprimable(){
   '<title>'+titre+'</title><style>'+ 
   '@page{size:A4;margin:14mm}*{box-sizing:border-box}body{margin:0;font-family:Lato,Arial,sans-serif;color:#243746;background:#f4f7f8}'+
   '.mgt-plan-page-9f{width:100%;max-width:800px;min-height:calc(297mm - 28mm);margin:18px auto;padding:18mm 16mm 14mm;background:#fff;border-radius:0;box-shadow:0 5px 20px rgba(31,52,68,.08)}'+
-  '.mgt-plan-intro-marque{margin:0 0 12px;color:#5f7280;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.mgt-plan-intro-hero{display:grid;grid-template-columns:1fr 100px;gap:18px;align-items:center;padding-bottom:16px;border-bottom:4px solid #d7b35a}.mgt-plan-intro-hero h1{margin:0 0 5px;font-size:29px;line-height:1.05;color:#1f3444}.mgt-plan-intro-hero p{margin:0;color:#596d7a}.mgt-plan-intro-hero img{width:94px;height:108px;object-fit:contain}'+
-  '.mgt-plan-print-section{margin:0;padding:17px 0;border:0;border-bottom:1px solid #dce5e9;background:transparent;break-inside:avoid}.mgt-plan-print-section h3{margin:0 0 7px;color:#1f3444;font-size:15px}.mgt-plan-print-section p{margin:0;white-space:pre-wrap;line-height:1.55}.mgt-plan-print-priorite{margin:18px 0;padding:17px 18px;border:0;border-left:4px solid #d7b35a;background:#fff8e6}.mgt-plan-print-priorite h2{margin:0 0 8px;color:#1f3444;font-size:19px}'+
-  '.mgt-plan-repere{margin-top:18px;padding:13px 15px;border-radius:12px;background:#eaf3f4}.mgt-plan-repere strong{color:#244d59}.mgt-plan-repere p{margin:4px 0 0}.mgt-plan-pied{display:flex;justify-content:space-between;gap:14px;margin-top:22px;padding-top:10px;border-top:1px solid #dce5e9;color:#6e7f8a;font-size:10px}'+
+  '.mgt-plan-intro-marque{margin:0 0 12px;color:#5f7280;font-size:11px;text-transform:uppercase;letter-spacing:.08em}.mgt-plan-intro-hero{display:grid;grid-template-columns:1fr 100px;gap:18px;align-items:center;padding-bottom:16px;border-bottom:2px solid #F8BB00}.mgt-plan-intro-hero h1{margin:0 0 5px;font-size:29px;line-height:1.05;color:#2F4354}.mgt-plan-intro-hero p{margin:0;color:#596d7a}.mgt-plan-intro-hero img{width:94px;height:108px;object-fit:contain}'+
+  '.mgt-plan-print-section{margin:0;padding:17px 0;border:0;border-bottom:1px solid #dce5e9;background:transparent;break-inside:avoid}.mgt-plan-print-section h3{margin:0 0 7px;color:#1f3444;font-size:15px}.mgt-plan-print-section p{margin:0;white-space:pre-wrap;line-height:1.55}.mgt-plan-print-priorite{margin:18px 0;padding:4px 0 4px 16px;border:0;border-left:4px solid #F8BB00;background:transparent}.mgt-plan-print-priorite h2{margin:0 0 8px;color:#1f3444;font-size:19px}'+
+  '.mgt-plan-repere{margin-top:18px;padding:12px 0 0;border-radius:0;background:transparent;border-top:1px solid #dce5e9}.mgt-plan-repere strong{color:#244d59}.mgt-plan-repere p{margin:4px 0 0}.mgt-plan-pied{display:flex;justify-content:space-between;gap:14px;margin-top:22px;padding-top:10px;border-top:1px solid #dce5e9;color:#6e7f8a;font-size:10px}'+
   '.mgt-print-actions{max-width:800px;margin:0 auto 24px;display:flex;gap:10px;justify-content:flex-end}.mgt-print-actions button{border:0;border-radius:10px;padding:11px 15px;font:700 14px Lato,Arial,sans-serif;cursor:pointer}.mgt-print-actions .primary{background:#1f3444;color:#fff}.mgt-print-actions .secondary{background:#fff;color:#1f3444;border:1px solid #cfdade}'+
   '@media(max-width:700px){body{background:#fff}.mgt-plan-page-9f{margin:0;padding:22px 18px;min-height:0;border-radius:0;box-shadow:none}.mgt-plan-intro-hero{grid-template-columns:1fr 76px}.mgt-plan-intro-hero img{width:72px;height:88px}.mgt-print-actions{padding:10px 14px;position:sticky;bottom:0;background:rgba(255,255,255,.96)}}'+
   '@media print{body{background:#fff}.mgt-plan-page-9f{margin:0;max-width:none;min-height:auto;padding:0;border-radius:0;box-shadow:none}.mgt-print-actions{display:none!important}}'+
@@ -7766,6 +7878,7 @@ if(btnImp)btnImp.addEventListener('click',mgtImprimerPlan);
 
 /* V9 — suivi ludifié des huit défis, résultats et banque de nouvelles situations. */
 var MGT_DEFIS_ETAT={};
+window.mgtDefisEtat=function(){return MGT_DEFIS_ETAT};
 var MGT_DEFIS_META=[
  {titre:'Ajuster mon autorité',personne:1,repere:'mod-s1-02',quiz:'mod-s1-05',suite:'mgt-resultat-defi-2',maitrise:'Une autorité ajustée combine cadre, écoute et responsabilité.',vigilance:'Éviter de reprendre soi-même le dossier ou de laisser l’urgence effacer le cadre.',action:'Clarifier le résultat, répartir l’urgence et convenir d’un point de vérification.'},
  {titre:'Clarifier les responsabilités',personne:2,repere:'mod-s1-03',quiz:'mod-s1-05',suite:'mod-s1-06',maitrise:'Chacun agit dans son rôle : élu, collaborateur, administration et partenaires.',vigilance:'Une responsabilité implicite crée des doublons, des angles morts ou une parole portée au mauvais niveau.',action:'Nommer qui décide, qui prépare, qui instruit et qui rend compte.'},
@@ -7903,6 +8016,7 @@ function carnetImprimer(){
  var w=window.open('','_blank');if(!w)return;w.document.open();w.document.write(html);w.document.close()
 }
 
+window.mgtValeursRadar=function(p){return mgtValeursRadar(p)};
 function mgtValeursRadar(pass){
  return MGT_DIMENSIONS.map(function(d,i){
   var s=mgtDimensionScore(pass,i);
@@ -8442,21 +8556,47 @@ installerGuideMgt();
 })();
 </script>
 
-<script id="ux18i-lot-p-js">
-/* Lot P — bilan « Il vous reste… » sur l'écran de clôture : liens directs vers les activités non faites. */
+<script id="ux18i-lot-al-js">
+/* Lot AL — plan d'action : bilan d'ouverture (photographie, carnet, séquences) et ligne de statut finale.
+   Remplace le bloc « Il vous reste… » du lot P. */
 (function(){
- function rendre(){var fin=document.getElementById('g-fin');if(!fin||typeof window.mgtResteAFaire!=='function')return;
-  var reste=window.mgtResteAFaire().filter(function(id){return id!=='g-fin'}),box=fin.querySelector('.mgt-reste');
-  if(!box){box=document.createElement('section');box.className='mgt-reste';box.setAttribute('aria-live','polite');var h=fin.querySelector('h1');(h&&h.parentElement===fin?h:fin.firstElementChild).insertAdjacentElement('afterend',box)}
-  if(!reste.length){box.innerHTML='<p class="mgt-reste-ok">✓ Toutes les étapes du parcours sont faites. Il ne vous reste qu’à construire votre plan d’action.</p>';return}
-  var REQ={'g-pre':1,'g-post':1,'mod-s1-05':1,'mod-s2-05':1,'mod-s3-06':1,'mod-s4-07':1,'mod-s5-07':1},items=[],groupes={},ordreG=[];
-  reste.forEach(function(id){if(REQ[id]){items.push({id:id,lib:window.mgtEcranTitre(id).replace(/^S(\d) · /,'Séquence $1 · ')});return}
-   var m=id.match(/^(?:mod-s|mgt-resultat-defi-)(\d)/),g=m?(id.indexOf('mgt-resultat')===0?({1:1,2:1,3:2,4:2,5:3,6:4,7:4,8:5})[m[1]]:m[1]):'0';
-   if(!groupes[g]){groupes[g]={id:id,n:0};ordreG.push(g)}groupes[g].n++});
-  ordreG.forEach(function(g){var x=groupes[g];items.push({id:x.id,lib:(g==='0'?'Écrans d’introduction':'Séquence '+g)+' : '+x.n+' écran'+(x.n>1?'s':'')+' à parcourir'})});
-  box.innerHTML='<h2>Avant de clore : il vous reste '+items.length+' étape'+(items.length>1?'s':'')+'</h2><p>Votre parcours sera marqué « terminé » dans la plateforme une fois ces étapes faites.</p><ul>'+items.map(function(it){return '<li><button type="button" class="mgt-reste-lien" data-reste="'+it.id+'">'+it.lib+' →</button></li>'}).join('')+'</ul>';
-  box.querySelectorAll('[data-reste]').forEach(function(b){b.addEventListener('click',function(){GABARIT.aller(b.dataset.reste)})})}
- function init(){var fin=document.getElementById('g-fin');if(!fin)return;new MutationObserver(function(){if(fin.classList.contains('actif'))rendre()}).observe(fin,{attributes:true,attributeFilter:['class']});if(fin.classList.contains('actif'))rendre()}
+ var DEFI_SEQ={1:1,2:1,3:2,4:2,5:3,6:4,7:4,8:5};
+ function pts(v){return v.map(function(x,k){var a=(-90+60*k)*Math.PI/180,r=40*Math.max(0,Math.min(100,x||0))/100;return (50+r*Math.cos(a)).toFixed(1)+','+(50+r*Math.sin(a)).toFixed(1)}).join(' ')}
+ function grille(f){return pts([f,f,f,f,f,f])}
+ function radar(){var pre=[],post=[];try{pre=window.mgtValeursRadar('pre');post=window.mgtValeursRadar('post')}catch(e){}
+  var aPost=post.some(function(x){return x>0}),aPre=pre.some(function(x){return x>0});
+  var svg='<svg role="img" aria-label="Ma photographie : départ en pointillés'+(aPost?', aujourd’hui en doré':'')+'" viewBox="0 0 100 100" width="76" height="76">'+
+   '<polygon points="'+grille(100)+'" fill="none" stroke="#C9D4DC" stroke-width="1"/><polygon points="'+grille(50)+'" fill="none" stroke="#DCE5EB" stroke-width="1"/>'+
+   (aPre?'<polygon points="'+pts(pre)+'" fill="none" stroke="#58788F" stroke-width="1.6" stroke-dasharray="3 3"/>':'')+
+   (aPost?'<polygon points="'+pts(post)+'" fill="rgba(248,187,0,0.28)" stroke="#B98900" stroke-width="2"/>':'')+'</svg>';
+  return {svg:svg,aPost:aPost}}
+ function rendre(){var z=document.getElementById('mgt-pf-bilan');if(!z)return;
+  var reste=typeof window.mgtResteAFaire==='function'?window.mgtResteAFaire():[];
+  var cartes=0;try{var D=window.mgtDefisEtat();for(var n=1;n<=8;n++)if((D[n]||{}).etat==='reussi')cartes++}catch(e){}
+  var seqs=0;for(var q=1;q<=5;q++){if(!reste.some(function(id){var m=id.match(/^mod-s(\d)-/);return m&&+m[1]===q&&["mod-s1-05","mod-s2-05","mod-s3-06","mod-s4-07","mod-s5-07"].indexOf(id)<0})&&document.querySelector('section.panel[id^="mod-s'+q+'-"]'))seqs++}
+  var r=radar();
+  z.innerHTML='<div class="mgt-pf-bilan-item mgt-pf-bilan-radar">'+r.svg+'<div><b>Ma photographie</b><span>'+(r.aPost?'Départ en pointillés, aujourd’hui en doré.':'Votre point de départ.')+'</span><button type="button" class="mgt-pf-lien" data-pf-aller="'+(r.aPost?'g-post':'g-pre')+'">Revoir</button></div></div>'+
+   '<div class="mgt-pf-bilan-item"><p class="mgt-pf-chiffre">'+cartes+' <span>/ 8</span></p><span>cartes dans votre carnet de mandat</span></div>'+
+   '<div class="mgt-pf-bilan-item"><p class="mgt-pf-chiffre">'+seqs+' <span>/ 5</span></p><span>séquences parcourues</span></div>';
+  z.querySelectorAll('[data-pf-aller]').forEach(function(b){b.addEventListener('click',function(){GABARIT.aller(b.dataset.pfAller)})});
+  var st=document.getElementById('mgt-pf-statut');if(st){
+   var REQ=["g-pre","g-post","g-fin","mod-s1-05","mod-s2-05","mod-s3-06","mod-s4-07","mod-s5-07"];
+   var manque=reste.filter(function(id){return id!=='g-fin'});
+   if(!manque.length){st.innerHTML='<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Parcours terminé';st.className='mgt-pf-statut mgt-pf-ok'}
+   else{var act=manque.filter(function(id){return REQ.indexOf(id)>=0}),autres=manque.length-act.length;
+    var lib=function(id){var m=id.match(/^mod-s(\d)-/);if(id==='g-pre')return 'Positionnement d’entrée';if(id==='g-post')return 'Positionnement de sortie';
+     if(m){var d=Object.keys(DEFI_SEQ).filter(function(k){return DEFI_SEQ[k]===+m[1]});return 'Défi'+(d.length>1?'s ':' ')+d.join(' et ')}return window.mgtEcranTitre(id)};
+    var liens=act.map(function(id){return '<button type="button" class="mgt-pf-lien" data-pf-aller="'+id+'">'+lib(id)+'</button>'});
+    if(autres)liens.push('<button type="button" class="mgt-pf-lien" data-pf-aller="'+manque.filter(function(id){return REQ.indexOf(id)<0})[0]+'">'+autres+' écran'+(autres>1?'s':'')+' pas encore ouvert'+(autres>1?'s':'')+'</button>');
+    st.innerHTML='Pour valider votre parcours, il reste : '+liens.join(' · ');st.className='mgt-pf-statut'}
+   st.querySelectorAll('[data-pf-aller]').forEach(function(b){b.addEventListener('click',function(){GABARIT.aller(b.dataset.pfAller)})})}
+ }
+ function bouton(){var fin=document.getElementById('g-fin');var actif=fin&&fin.classList.contains('actif');
+  var e3=fin&&fin.querySelector('[data-plan-ecran="3"]');document.body.classList.toggle('mgt-pf-avant-fin',!!(actif&&e3&&e3.hidden))}
+ function init(){var fin=document.getElementById('g-fin');if(!fin)return;
+  new MutationObserver(function(){if(fin.classList.contains('actif'))rendre();bouton()}).observe(fin,{attributes:true,attributeFilter:['class']});
+  fin.querySelectorAll('[data-plan-ecran]').forEach(function(e){new MutationObserver(bouton).observe(e,{attributes:true,attributeFilter:['hidden']})});
+  if(fin.classList.contains('actif'))rendre();bouton()}
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
 </script>
