@@ -36,7 +36,7 @@ async def m():
     b=await p.chromium.launch()
     # 1. Suivant seul
     pg,errs=await page(b)
-    for _ in range(70):
+    for _ in range(100):  # lot AM : +18 clics de situations
       if await pg.evaluate("document.querySelector('.panel.actif').id")=='g-fin': break
       await pg.evaluate("document.getElementById('g-btn-suiv').click()"); await pg.wait_for_timeout(120)
     await pg.wait_for_timeout(300)
@@ -46,7 +46,7 @@ async def m():
     await pg.screenshot(path='p_fin_reste.png')
     # 2. Apprenant complet
     pg,errs=await page(b)
-    for _ in range(90):
+    for _ in range(120):  # lot AM : +18 clics de situations
       pid=await pg.evaluate("document.querySelector('.panel.actif').id")
       if pid in('g-pre','g-post'):
         nxt=await pos(pg,pid,None)

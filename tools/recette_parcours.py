@@ -10,7 +10,7 @@ async def m():
     import sys,pathlib
     await pg.goto(pathlib.Path(sys.argv[1] if len(sys.argv)>1 else 'src/index.html').resolve().as_uri()); await pg.wait_for_timeout(700)
     seq=[]
-    for i in range(80):
+    for i in range(120):  # lot AM : les situations se parcourent au bouton Suivant
       cur=await pg.evaluate("document.querySelector('.panel.actif').id"); seq.append(cur)
       dis=await pg.evaluate("document.getElementById('g-btn-suiv').disabled")
       if dis: break
