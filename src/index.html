@@ -4914,6 +4914,19 @@ body.mgt-pf-avant-fin #g-btn-suiv{visibility:hidden}
 </style>
 <meta name="ux18i-lot" content="ux18i-lot-aq">
 <style id="ux18i-lot-aq-css">#mgt-s3-04-zone{flex-wrap:wrap}#mgt-s3-04-zone>.mgt-card{flex:1 1 calc(50% - 8px)!important;max-width:calc(50% - 8px)!important}@media (max-width:640px){#mgt-s3-04-zone>.mgt-card{flex-basis:100%!important;max-width:100%!important}}</style>
+<style id="ux18i-lot-ar-css">
+/* Lot AR — menu en panneau, colonne de contenu centrée, plus d'air (écrans larges uniquement) */
+@media (min-width:1101px){
+ .g-page{padding-top:40px}
+ .g-layout{grid-template-columns:240px minmax(0,880px);column-gap:64px;justify-content:center}
+ .g-menu{background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(47,67,84,.08),0 0 0 1px rgba(47,67,84,.04);
+   padding:18px 14px 18px 4px;top:96px;max-height:calc(100vh - 200px);max-height:calc(100dvh - 200px)}
+ .g-menu-head{margin:0 4px 15px 14px}
+ .g-nav-bas-inner{max-width:1184px;width:calc(100% - 56px);padding:9px 0 9px 304px;box-sizing:border-box}
+ .mgt-entete{margin-bottom:36px}
+ .panel h1{margin-bottom:18px}
+}
+</style>
 </head>
 <body>
 <header class="g-chrome" role="banner">
